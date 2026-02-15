@@ -23,9 +23,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float gravityValue = -9.81f;
 
-    //[SerializeField]
-    //private InputActionMap playerMap;
-
     private InputAction moveAction;
 
     private void Awake()
@@ -52,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Read Input
         Vector2 moveDirection = moveAction.ReadValue<Vector2>();
-        Vector3 moveVector = new Vector3(moveDirection.x, 0, moveDirection.y);
+        Vector3 moveVector = transform.right * moveDirection.x + transform.forward * moveDirection.y;
         moveVector = Vector3.ClampMagnitude(moveVector, 1f);
 
         //Jump
