@@ -473,7 +473,7 @@ MonoBehaviour:
   playerController: {fileID: 686988100}
   playerInput: {fileID: 686988101}
   baseSpeed: 5
-  sprintMulti: 1
+  sprintMulti: 1.5
   jumpStrength: 5
   gravityValue: -9.81
 --- !u!143 &686988100 stripped

@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float sprintMulti = 1;
+    private float currentMulti;
 
     [SerializeField]
     private float jumpStrength = 5;
@@ -24,10 +25,13 @@ public class PlayerMovement : MonoBehaviour
     private float gravityValue = -9.81f;
 
     private InputAction moveAction;
+    private InputAction sprintAction;
+
 
     private void Awake()
     {
         moveAction = playerInput.actions.FindAction("Move");
+        sprintAction = playerInput.actions.FindAction("Sprint");
     }
 
     private void Update()
@@ -57,8 +61,23 @@ public class PlayerMovement : MonoBehaviour
         // Apply Gravity
         playerVelocity.y += gravityValue * Time.deltaTime;
 
-        Vector3 finalMove = moveVector * baseSpeed + Vector3.up * playerVelocity.y;
+        // Apply Sprint
+        Sprint();
+
+        Vector3 finalMove = moveVector * baseSpeed * currentMulti + Vector3.up * playerVelocity.y;
         playerController.Move(finalMove * Time.deltaTime);
+    }
+
+    private void Sprint() 
+    {
+        if (sprintAction.IsPressed()) 
+        {
+            currentMulti = sprintMulti;
+        }
+        else 
+        {
+            currentMulti = 1;
+        }
     }
 
     private void OnEnable()
