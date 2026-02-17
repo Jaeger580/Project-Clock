@@ -75,4 +75,16 @@ static public class TagOperator
 
         return queryMatches;
     }
+
+    static public List<T> MatchQuery<T>(List<Tag> matchingTags, List<T> taggedObjs, MatchType matchType = MatchType.ANY) where T : ITagged
+    {
+        List<T> queryMatches = new();
+
+        foreach (var obj in taggedObjs)
+        {
+            if (MatchingTags(matchingTags, obj.Tags(), matchType)) queryMatches.Add(obj);
+        }
+
+        return queryMatches;
+    }
 }

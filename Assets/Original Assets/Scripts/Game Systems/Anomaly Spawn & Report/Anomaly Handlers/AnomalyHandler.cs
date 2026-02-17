@@ -1,8 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-abstract public class AnomalyHandler : MonoBehaviour
+abstract public class AnomalyHandler : MonoBehaviour, ITagged
 {
     [SerializeField] protected AnomalyData data;
+    public AnomalyData Data => data;
+    public List<Tag> Tags() => data.Tags();
 
     protected void Start()
     {
@@ -18,4 +21,5 @@ abstract public class AnomalyHandler : MonoBehaviour
 
     abstract public void EnableAnomaly();
     abstract public void DisableAnomaly();
+
 }
