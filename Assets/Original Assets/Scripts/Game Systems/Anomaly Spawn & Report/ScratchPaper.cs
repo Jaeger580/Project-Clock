@@ -1,13 +1,24 @@
+using System;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEditor;
+using Random = UnityEngine.Random;
 
 public class ScratchPaper{ }
 
 public class AnomalyCentralController : MonoBehaviour
 {//controls WHEN and WHERE anomalies spawn (needs access to player position prolly)
+    [SerializeField, ReadOnly] private List<AnomalyRoomManager> managers = new();
+    public void SubscribeToController(AnomalyRoomManager manager)
+    {
+        managers.Add(manager);
+    }
 
+    private void TriggerAnomalySpawn()
+    {
+        //randomly pick a room the player isn't in
+    }
 }
 
 public class AnomalyRoomManager : MonoBehaviour
@@ -19,24 +30,24 @@ public class AnomalyRoomManager : MonoBehaviour
         var validAnomalies = TagOperator.MatchQuery(tagsToMatch, anomaliesInRoom.items, matchType);
 
         AnomalyData pickedAnomaly = null;
-        List<AnomalyData> tempPool = new();
+        List<AnomalyData> validPool = new();
 
         foreach(var anomaly in validAnomalies)
         {//(re)populate tempPool
-            tempPool.Add(anomaly);
+            validPool.Add(anomaly);
         }
 
         #region ROUND 1 : Unseen Valid Anomaly
-        while (tempPool.Count > 0)
+        while (validPool.Count > 0)
         {//while there's stuff in the pool, try to pull a random anomaly
-            var index = Random.Range(0, tempPool.Count);
+            var index = Random.Range(0, validPool.Count);
 
-            if (!tempPool[index].previouslySeen)
+            if (!validPool[index].previouslySeen)
             {//if it hasn't been seen before, pick it
-                pickedAnomaly = tempPool[index];
+                pickedAnomaly = validPool[index];
                 break;
             }
-            tempPool.RemoveAt(index);
+            validPool.RemoveAt(index);
         }
 
         if (pickedAnomaly != null)
@@ -45,15 +56,14 @@ public class AnomalyRoomManager : MonoBehaviour
             return;
         }
         #endregion
-
         #region ROUND 2 : Seen Valid Anomaly
         foreach (var anomaly in validAnomalies)
         {//(re)populate tempPool
-            tempPool.Add(anomaly);
+            validPool.Add(anomaly);
         }
-        if(tempPool.Count > 0)
+        if(validPool.Count > 0)
         {
-            pickedAnomaly = tempPool[Random.Range(0, tempPool.Count)];
+            pickedAnomaly = validPool[Random.Range(0, validPool.Count)];
         }
 
         if (pickedAnomaly != null)
@@ -62,12 +72,11 @@ public class AnomalyRoomManager : MonoBehaviour
             return;
         }
         #endregion
-
         #region ROUND 3 : Unseen Anomaly in Room
         int checkedCount = 0;
         var roomAnomalies = anomaliesInRoom.items;
-        while(pickedAnomaly == null && checkedCount < roomAnomalies.Count)
-        {
+        while (pickedAnomaly == null && checkedCount < roomAnomalies.Count)
+        {//while I haven't picked an unseen anomaly and haven't iterated through the full list
             checkedCount++;
             int index = Random.Range(0, roomAnomalies.Count);
             if (!roomAnomalies[index].previouslySeen)
