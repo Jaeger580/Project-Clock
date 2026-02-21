@@ -52,7 +52,7 @@ public class Interactor : MonoBehaviour
 
     }
 
-    // Could probably just make TryInteract public, but zi want to be careful.
+    // Could probably just make TryInteract public, but i want to be careful.
     public void InteractCall() 
     {
         TryInteract();

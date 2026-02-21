@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.LightTransport.PostProcessing;
 using System;
+using UnityEngine.InputSystem;
 
 public class CameraManager : MonoBehaviour, IInteractable
 {
@@ -12,6 +13,9 @@ public class CameraManager : MonoBehaviour, IInteractable
 
     private int camIndex = 0;
 
+    [SerializeField]
+    private PlayerInput PlayerInput;
+
     private void Awake()
     {
         roomCameras.Clear();
@@ -20,7 +24,7 @@ public class CameraManager : MonoBehaviour, IInteractable
 
     public void Interact(object interactor) 
     {
-        SwitchCamera();
+        EnterCamera();
     }
 
     public void AddCamera(Camera roomCam) 
@@ -35,9 +39,65 @@ public class CameraManager : MonoBehaviour, IInteractable
     }
 
     // Toggles which camera is active
-    public void SwitchCamera() 
+    public void EnterCamera()
     {
-        Debug.Log(roomCameras.Count);
+        camIndex = 0;
+
+        // Disable current camera
         roomCameras[camIndex].depth = 2;
+
+        // Change player's input actions
+        PlayerInput.SwitchCurrentActionMap("Cameras");
+    }
+
+    // Toggles which camera is active
+    public void SwitchCamRight(InputAction.CallbackContext context) 
+    {
+        if (context.performed) 
+        {
+
+            if (camIndex < roomCameras.Count - 1)
+            {
+                // Disable current camera
+                roomCameras[camIndex].depth = 0;
+
+                // Enable new camera
+                roomCameras[camIndex + 1].depth = 2;
+                camIndex++;
+            }
+            else
+            {
+                // Disable current camera
+                roomCameras[camIndex].depth = 0;
+
+                // Change player's input actions
+                PlayerInput.SwitchCurrentActionMap("Player");
+            }
+        }
+    }
+
+    public void SwitchCamLeft(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+
+            if (camIndex > 0)
+            {
+                // Disable current camera
+                roomCameras[camIndex].depth = 0;
+
+                // Enable new camera
+                roomCameras[camIndex - 1].depth = 2;
+                camIndex--;
+            }
+            else
+            {
+                // Disable current camera
+                roomCameras[camIndex].depth = 0;
+
+                // Change player's input actions
+                PlayerInput.SwitchCurrentActionMap("Player");
+            }
+        }
     }
 }
