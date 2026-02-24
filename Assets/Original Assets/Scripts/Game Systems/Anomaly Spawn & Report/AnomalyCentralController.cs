@@ -18,6 +18,7 @@ public class AnomalyCentralController : MonoBehaviour
 
     private void Start()
     {
+        managers.Clear();
         foreach (var anomalyType in anomalyTypeOrder)
             anomalyTypeQueue.Enqueue(anomalyType);
 
@@ -44,9 +45,8 @@ public class AnomalyCentralController : MonoBehaviour
         if (anomalyTypeQueue.Count <= 0) yield break;
 
         float journey = nightTimer;
-        float destination = (totalSpawned + 1f) / anomalyTypeOrder.Count;  //next percentage of the anomalies that should be spawned
-        float curvedPercent = spawnCurve.Evaluate(journey/totalNightTime);    //gives the ACTUAL percent that should've spawned at this point
-        //destination = curvedPercent * totalNightTime;   //currently giving percent of the night that should be taken between spawns
+        float destination = (totalSpawned + 1f) / anomalyTypeOrder.Count;
+        float curvedPercent = spawnCurve.Evaluate(journey/totalNightTime);
         print($"Journey: {journey} || Destination: {destination}");
 
         while (curvedPercent <= destination && journey <= totalNightTime)
@@ -56,19 +56,6 @@ public class AnomalyCentralController : MonoBehaviour
             yield return null;
         }
 
-        //while(nightTimer <= spawnCurve.Evaluate(totalSpawned + 1f / anomalyTypeOrder.Count) * totalNightTime)
-        //{
-        //    yield return null;
-        //}
-
-
-        /*
-         * spawnPlotting = percent total of anomalies that should've spawned by percentage through the night (x-axis = percent through night)
-         * curve = percentSpawned/percentTime
-         * curve = currentSpawned/maxSpawned / currentTime/maxTime
-         * curve = cS/mS * mT/cT
-         * cT = cS/mS * mT/curve
-         */
         TriggerAnomalySpawn();
         StartCoroutine(SpawnRoutine());
     }

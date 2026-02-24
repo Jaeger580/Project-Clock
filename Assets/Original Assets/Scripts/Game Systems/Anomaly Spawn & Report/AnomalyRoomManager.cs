@@ -4,9 +4,15 @@ using Random = UnityEngine.Random;
 
 public class AnomalyRoomManager : MonoBehaviour
 {//controls WHICH anomaly spawns
-    [SerializeField] protected AnomalyDataSet anomaliesInRoom = new();
+    [SerializeField] protected AnomalyDataSet anomaliesInRoom;
 
-    public void SpawnAnomaly(List<Tag> tagsToMatch, MatchType matchType = MatchType.ANY)
+    private void Start()
+    {
+        var anomalyCentralController = FindFirstObjectByType<AnomalyCentralController>();
+        anomalyCentralController.SubscribeToController(this);
+    }
+
+    public bool SpawnAnomaly(List<Tag> tagsToMatch, MatchType matchType = MatchType.ANY)
     {
         var validAnomalies = TagOperator.MatchQuery(tagsToMatch, anomaliesInRoom.items, matchType);
 
@@ -34,7 +40,7 @@ public class AnomalyRoomManager : MonoBehaviour
         if (pickedAnomaly != null)
         {//if we picked an anomaly, trigger it
             pickedAnomaly.OnAnomalyTriggered?.Invoke();
-            return;
+            return true;
         }
         #endregion
         #region ROUND 2 : Seen Valid Anomaly
@@ -50,7 +56,7 @@ public class AnomalyRoomManager : MonoBehaviour
         if (pickedAnomaly != null)
         {//if we picked an anomaly, trigger it
             pickedAnomaly.OnAnomalyTriggered?.Invoke();
-            return;
+            return true;
         }
         #endregion
         #region ROUND 3 : Unseen Anomaly in Room
@@ -66,7 +72,7 @@ public class AnomalyRoomManager : MonoBehaviour
         if (pickedAnomaly != null)
         {//if we picked an anomaly, trigger it
             pickedAnomaly.OnAnomalyTriggered?.Invoke();
-            return;
+            return true;
         }
 
         #endregion
@@ -78,10 +84,11 @@ public class AnomalyRoomManager : MonoBehaviour
         if (pickedAnomaly != null)
         {//if we picked an anomaly, trigger it
             pickedAnomaly.OnAnomalyTriggered?.Invoke();
-            return;
+            return true;
         }
         #endregion
 
         Debug.LogError($"An anomaly was requested but no anomalies were found. Likely an empty list.", this);
+        return false;
     }
 }
