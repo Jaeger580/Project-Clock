@@ -18,6 +18,8 @@ public class AnomalyCentralController : MonoBehaviour
     private void TriggerAnomalySpawn()
     {
         //randomly pick a room the player isn't in
+        var randomRoom = managers[Random.Range(0, managers.Count)];
+        //randomRoom.SpawnAnomaly();
     }
 }
 
