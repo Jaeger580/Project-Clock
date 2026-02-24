@@ -26,5 +26,3 @@ abstract public class RuntimeSet<T> : ScriptableObject
         return items == null || items.Count <= 0 || (items.Count == 1 && items[0] == null);
     }
 }
-
-//#endif
