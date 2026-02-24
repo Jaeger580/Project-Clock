@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: addccda8dc1b6448289959f45f0828d2, type: 3}
+  m_Name: Tag Search - Gameplay Phase 2
+  m_EditorClassIdentifier: Assembly-CSharp::TagSearch
+  items:
+  - {fileID: 11400000, guid: bfb4c02d0671141d2babb8dd18220eb3, type: 2}
+  - {fileID: 11400000, guid: d21cc3095d5674da2a7851fd38521d2a, type: 2}
+  - {fileID: 11400000, guid: 94fafbc42180243d79d5e8cad3c7f0c8, type: 2}
+  - {fileID: 11400000, guid: 6e8ae048c57f34329aae64898a9bcc10, type: 2}
+  - {fileID: 11400000, guid: 0d4d25089e141452fbb03e61a3735215, type: 2}
+  - {fileID: 11400000, guid: 9f0f73e1f30454cadb226b1e505b391a, type: 2}
+  - {fileID: 11400000, guid: cff875d33615946db9dcbf6404643cf0, type: 2}
+  - {fileID: 11400000, guid: 58841ed66caee4bb6af1b80cc0c76c24, type: 2}
+  filterType: 0

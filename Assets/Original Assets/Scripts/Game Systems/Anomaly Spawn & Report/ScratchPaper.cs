@@ -27,7 +27,7 @@ public class AnomalyRoomManager : MonoBehaviour
 {//controls WHICH anomaly spawns
     [SerializeField] protected AnomalyDataSet anomaliesInRoom = new();
 
-    public void SpawnAnomaly(List<Tag> tagsToMatch, TagOperator.MatchType matchType = TagOperator.MatchType.ANY)
+    public void SpawnAnomaly(List<Tag> tagsToMatch, MatchType matchType = MatchType.ANY)
     {
         var validAnomalies = TagOperator.MatchQuery(tagsToMatch, anomaliesInRoom.items, matchType);
 
