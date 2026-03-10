@@ -8,28 +8,28 @@ using UnityEngine.Events;
 
 public partial class InputHandler : MonoBehaviour
 {
-    [Header("Hub Interact Input Events")]
-    [SerializeField] private UnityEvent inputEVInteractPress;
-    [SerializeField] private UnityEvent inputEVInteractRelease;
-    [SerializeField] private UnityEvent inputEVUICancel;
+    //[Header("Hub Interact Input Events")]
+    //[SerializeField] private UnityEvent inputEVInteractPress;
+    //[SerializeField] private UnityEvent inputEVInteractRelease;
+    //[SerializeField] private UnityEvent inputEVUICancel;
 
-    public void InteractPressed(InputAction.CallbackContext context)
-    {
-        if (context.started)
-            inputEVInteractPress.Invoke();
-    }
+    //public void InteractPressed(InputAction.CallbackContext context)
+    //{
+    //    if (context.started)
+    //        inputEVInteractPress.Invoke();
+    //}
 
-    public void InteractReleased(InputAction.CallbackContext context)
-    {
-        if (context.canceled)
-            inputEVInteractRelease.Invoke();
-    }
+    //public void InteractReleased(InputAction.CallbackContext context)
+    //{
+    //    if (context.canceled)
+    //        inputEVInteractRelease.Invoke();
+    //}
 
-    public void UICancel(InputAction.CallbackContext context)
-    {
-        if (context.started)
-            inputEVUICancel.Invoke();
-    }
+    //public void UICancel(InputAction.CallbackContext context)
+    //{
+    //    if (context.started)
+    //        inputEVUICancel.Invoke();
+    //}
 }
 
 public class Interactor : MonoBehaviour
@@ -53,9 +53,12 @@ public class Interactor : MonoBehaviour
     }
 
     // Could probably just make TryInteract public, but i want to be careful.
-    public void InteractCall() 
+    public void InteractCall(InputAction.CallbackContext context) 
     {
-        TryInteract();
+        if (context.started) 
+        {
+            TryInteract();
+        }
     }
 
     private void TryInteract()
