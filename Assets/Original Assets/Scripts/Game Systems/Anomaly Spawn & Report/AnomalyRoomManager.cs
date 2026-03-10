@@ -2,25 +2,6 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class AnomalyTagger : MonoBehaviour
-{
-    [SerializeField] private float tagCheckRadius = 10f;
-    public float TagCheckRadius => tagCheckRadius;
-    [SerializeField] private List<Tag> tagsToMatch = new();
-    public List<Tag> TagsToMatch => tagsToMatch;
-
-    private void Start()
-    {
-        if(AnomalyResolver.Instance == null)
-        AnomalyResolver.Instance.SubscribeToResolver(this);
-    }
-
-    private void OnDestroy()
-    {
-        AnomalyResolver.Instance.UnsubscribeFromResolver(this);
-    }
-}
-
 public class AnomalyRoomManager : MonoBehaviour
 {//controls WHICH anomaly spawns
     //[SerializeField] protected AnomalyDataSet anomaliesInRoomOLD;
@@ -28,6 +9,10 @@ public class AnomalyRoomManager : MonoBehaviour
     public int RoomID => roomID;
     [SerializeField, ReadOnly] protected List<AnomalyHandler> anomaliesInRoom = new();
     public List<AnomalyHandler> AnomaliesInRoom => anomaliesInRoom;
+
+    private bool playerInRoom;
+    public bool PlayerInRoom => playerInRoom;
+    [SerializeField] private LayerMask playerLayer;
 
     private void Start()
     {
@@ -115,5 +100,17 @@ public class AnomalyRoomManager : MonoBehaviour
 
         Debug.LogError($"An anomaly was requested but no anomalies were found. Likely an empty list.", this);
         return false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if((playerLayer.value & (1 << other.gameObject.layer)) > 0)
+            playerInRoom = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if ((playerLayer.value & (1 << other.gameObject.layer)) > 0)
+            playerInRoom = false;
     }
 }
