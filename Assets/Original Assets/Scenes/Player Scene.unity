@@ -355,6 +355,10 @@ PrefabInstance:
       value: Camera Station
       objectReference: {fileID: 0}
     - target: {fileID: 8461438415752179188, guid: a5d352c71993e3c4787b6d7cf7651968, type: 3}
+      propertyPath: playerHUD
+      value: 
+      objectReference: {fileID: 1414166934}
+    - target: {fileID: 8461438415752179188, guid: a5d352c71993e3c4787b6d7cf7651968, type: 3}
       propertyPath: PlayerInput
       value: 
       objectReference: {fileID: 707333884}
@@ -853,6 +857,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1414166934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7384132100850675771, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+  m_PrefabInstance: {fileID: 6454685658537911955}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1475328623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1326,6 +1335,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 687652179882911152, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 2093268934145303885, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1374,6 +1387,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1678333257}
+    - target: {fileID: 2933925269467573105, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 8132694383073465522, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
       propertyPath: m_Name
       value: Player
