@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShiftTimer
   digiClock: {fileID: 0}
-  startHour: 23
-  startMinute: 59
-  endHour: 0
-  endMinute: 30
-  timeScale: 60
+  startHour: 22
+  startMinute: 0
+  endHour: 6
+  endMinute: 0
+  timeScale: 48

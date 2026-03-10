@@ -50,7 +50,7 @@ public class ShiftTimer : MonoBehaviour
             double secondsToAdd = Time.deltaTime * timeScale;
             gameStartTime = gameStartTime.AddSeconds(secondsToAdd);
 
-            finalTime = gameStartTime.ToString("h:mm tt");
+            finalTime = gameStartTime.ToString("h:00 tt");
 
             digiClock.text = finalTime;
         }
