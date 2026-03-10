@@ -18,7 +18,7 @@ public class AnomalyCentralController : MonoBehaviour
 
     private void Start()
     {
-        managers.Clear();
+        //managers.Clear();
         foreach (var anomalyType in anomalyTypeOrder)
             anomalyTypeQueue.Enqueue(anomalyType);
 
@@ -71,8 +71,8 @@ public class AnomalyCentralController : MonoBehaviour
         print($"Next anomaly type should be {nextAnomalyType.name}");
         totalSpawned++;
         //TODO: randomly pick a room the player isn't in
-        //var randomRoom = managers[Random.Range(0, managers.Count)];
-        
-        //randomRoom.SpawnAnomaly(nextAnomalyType.items, nextAnomalyType.searchType);
+        var randomRoom = managers[Random.Range(0, managers.Count)];
+
+        randomRoom.SpawnAnomaly(nextAnomalyType.items, nextAnomalyType.searchType);
     }
 }

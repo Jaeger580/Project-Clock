@@ -7,6 +7,7 @@ public class Anomaly_Toggle : AnomalyHandler
 
     public override void EnableAnomaly()
     {
+        base.EnableAnomaly();
         foreach (var obj in objsToToggleOn)
             obj.SetActive(true);
         foreach (var obj in objsToToggleOff)
@@ -14,6 +15,7 @@ public class Anomaly_Toggle : AnomalyHandler
     }
     public override void DisableAnomaly()
     {
+        base.DisableAnomaly();
         foreach (var obj in objsToToggleOn)
             obj.SetActive(false);
         foreach (var obj in objsToToggleOff)

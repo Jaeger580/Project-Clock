@@ -19,12 +19,13 @@ public class Anomaly_Position : AnomalyHandler_Gradual
 
     public override void EnableAnomaly()
     {
+        base.EnableAnomaly();
         StartCoroutine(EnableAnomalyRoutine());
     }
 
     public override void DisableAnomaly()
     {
-
+        base.DisableAnomaly();
     }
 
     protected override IEnumerator EnableAnomalyRoutine()

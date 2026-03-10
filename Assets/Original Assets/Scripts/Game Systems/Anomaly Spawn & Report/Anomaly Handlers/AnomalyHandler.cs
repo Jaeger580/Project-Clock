@@ -8,22 +8,40 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged
 {
     [SerializeField] protected AnomalyData data;
     public AnomalyData Data => data;
+
+    [SerializeField] protected bool anomalyEnabled;
+    public bool AnomalyEnabled => anomalyEnabled;
+
     public List<Tag> Tags() => data.Tags();
 
     virtual protected void Start()
     {
-        data.OnAnomalyTriggered += EnableAnomaly;
-        data.OnAnomalyFixed += DisableAnomaly;
+        if(!transform.parent.TryGetComponent(out AnomalyRoomManager roomManager))
+        {
+            print("ERR: Anomaly isn't childed under a room manager, and will be ignored.");
+            return;
+        }
+
+        roomManager.SubscribeToManager(this);
+        //data.OnAnomalyTriggered += EnableAnomaly;
+        data.OnAnomalyTriggered += () => { anomalyEnabled = true; };
+        data.OnAnomalyFixed += () => { data.previouslySeen = true; };
     }
 
     virtual protected void OnDestroy()
     {
-        data.OnAnomalyTriggered -= EnableAnomaly;
-        data.OnAnomalyFixed -= DisableAnomaly;
+        data.OnAnomalyTriggered = null;
+        data.OnAnomalyFixed = null;
     }
 
-    abstract public void EnableAnomaly();
-    abstract public void DisableAnomaly();
+    virtual public void EnableAnomaly()
+    {
+        data.OnAnomalyTriggered?.Invoke();
+    }
+    virtual public void DisableAnomaly()
+    {
+        data.OnAnomalyFixed?.Invoke();
+    }
 }
 
 abstract public class AnomalyHandler_Gradual : AnomalyHandler
