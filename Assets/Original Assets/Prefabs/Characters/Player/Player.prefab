@@ -109,7 +109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000091552734, y: -25}
+  m_AnchoredPosition: {x: -0.00012207031, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &718053056800252094
@@ -322,7 +322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000091552734, y: -25}
+  m_AnchoredPosition: {x: -0.00012207031, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &8075842434674371756
@@ -831,6 +831,7 @@ GameObject:
   - component: {fileID: 8335415044500469038}
   - component: {fileID: 3979835757899162223}
   - component: {fileID: 3374969338502631891}
+  - component: {fileID: 3628931087392716559}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -977,7 +978,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2723143058425793815}
         m_TargetAssemblyTypeName: Interactor, Assembly-CSharp
         m_MethodName: InteractCall
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1080,6 +1081,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 4995d685-bb06-406e-a8ef-e1d7db914863
     m_ActionName: 'Cameras/SwitchLeft[/Keyboard/a]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3628931087392716559}
+        m_TargetAssemblyTypeName: AnomalyRayCheck, Assembly-CSharp
+        m_MethodName: SpawnDetector
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: dbb2fab7-fb2c-4b00-8508-a764cc846c7d
+    m_ActionName: 'Player/Fire[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1143,7 +1160,6 @@ MonoBehaviour:
   playerInput: {fileID: 2120804770082781032}
   baseSpeed: 4
   sprintMulti: 1.55
-  jumpStrength: 5
   gravityValue: -9.81
 --- !u!114 &3374969338502631891
 MonoBehaviour:
@@ -1161,3 +1177,17 @@ MonoBehaviour:
   playerInput: {fileID: 2120804770082781032}
   playerCamera: {fileID: 2986571291605505998}
   sensitivity: 20
+--- !u!114 &3628931087392716559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8132694383073465522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee0021fa78db8b4fbd81a5aa4fddc98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyRayCheck
+  mainCam: {fileID: 2986571291605505998}
+  detectorPrefab: {fileID: 2471284957417566045, guid: 0714bf78b56214e44a3cd6e0f33377ff, type: 3}
