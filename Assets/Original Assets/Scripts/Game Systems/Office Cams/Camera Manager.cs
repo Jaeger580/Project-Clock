@@ -16,6 +16,9 @@ public class CameraManager : MonoBehaviour, IInteractable
     [SerializeField]
     private PlayerInput PlayerInput;
 
+    [SerializeField]
+    private GameObject playerHUD;
+
     private void Awake()
     {
         roomCameras.Clear();
@@ -43,11 +46,24 @@ public class CameraManager : MonoBehaviour, IInteractable
     {
         camIndex = 0;
 
+        playerHUD.SetActive(false);
+
         // Disable current camera
         roomCameras[camIndex].depth = 2;
 
         // Change player's input actions
         PlayerInput.SwitchCurrentActionMap("Cameras");
+    }
+
+    private void ExitCamera() 
+    {
+        // Disable current camera
+        roomCameras[camIndex].depth = 0;
+
+        // Change player's input actions
+        PlayerInput.SwitchCurrentActionMap("Player");
+
+        playerHUD.SetActive(true);
     }
 
     // Toggles which camera is active
@@ -67,11 +83,7 @@ public class CameraManager : MonoBehaviour, IInteractable
             }
             else
             {
-                // Disable current camera
-                roomCameras[camIndex].depth = 0;
-
-                // Change player's input actions
-                PlayerInput.SwitchCurrentActionMap("Player");
+                ExitCamera();
             }
         }
     }
@@ -92,11 +104,7 @@ public class CameraManager : MonoBehaviour, IInteractable
             }
             else
             {
-                // Disable current camera
-                roomCameras[camIndex].depth = 0;
-
-                // Change player's input actions
-                PlayerInput.SwitchCurrentActionMap("Player");
+                ExitCamera();
             }
         }
     }
