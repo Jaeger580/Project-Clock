@@ -18,8 +18,8 @@ public class PlayerMovement : MonoBehaviour
     private float sprintMulti = 1;
     private float currentMulti;
 
-    [SerializeField]
-    private float jumpStrength = 5;
+    //[SerializeField]
+    //private float jumpStrength = 5;
 
     [SerializeField]
     private float gravityValue = -9.81f;
