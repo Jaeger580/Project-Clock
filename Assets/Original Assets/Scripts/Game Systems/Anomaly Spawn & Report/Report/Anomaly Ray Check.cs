@@ -10,16 +10,23 @@ public class AnomalyRayCheck : MonoBehaviour
     [SerializeField]
     private GameObject detectorPrefab;
 
-    //private LayerMask layerMask;
+    private float cooldownTimer;
 
     private void Start()
     {
         camTransform = mainCam.transform;
     }
 
+    private void Update()
+    {
+        if (cooldownTimer <= 0) return;
+        cooldownTimer -= Time.deltaTime;
+    }
+
     // Cast a ray and spawn a Dector object at the hit location.
     public void SpawnDetector(InputAction.CallbackContext context) 
     {
+        if (cooldownTimer > 0) return;
         if (context.started) 
         {
             RaycastHit hit;
@@ -38,6 +45,7 @@ public class AnomalyRayCheck : MonoBehaviour
                 Debug.DrawRay(camTransform.position, camTransform.forward * hit.distance, Color.red);
             }
         }
+        cooldownTimer = AnomalyResolver.Instance.DetectorSpawnCooldown;
     }
 
 }

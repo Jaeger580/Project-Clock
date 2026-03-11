@@ -1,13 +1,29 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnomalyResolver : MonoBehaviour
 {
-    [SerializeField] private bool debug = false;
+    [SerializeField] private float detectorSpawnCooldown = 2f, resolutionDelay = 2f;
+    public float DetectorSpawnCooldown => detectorSpawnCooldown;
+    //[SerializeField] private bool debug = false;
     private List<AnomalyTagger> taggers = new();
     private List<AnomalyRoomManager> roomManagers = new();
 
     [SerializeField, ReadOnly] private LayerMask anomalyLayer;
+
+    [Header("Processing Feedback")]
+    [SerializeField] private Canvas processingCanvas;
+    [SerializeField] private Image processingBar;
+    [Header("None Found Feedback")]
+    [SerializeField] private Canvas noAnomaliesFoundCanvas;
+    [SerializeField] private TMP_Text noAnomaliesFoundText;
+    [SerializeField] private AnimationCurve fadeInOutCurve;
+    [SerializeField] private float displayTime;
+    [Header("Found Feedback")]
+    [SerializeField] private Canvas anomaliesFoundCanvas;
 
     private static AnomalyResolver instance;
     static public AnomalyResolver Instance
@@ -76,34 +92,33 @@ public class AnomalyResolver : MonoBehaviour
         }
     }
 
-    public void RoomResolutionLogic(List<Tag> tags, int roomID)
-    {
-        bool anyFound = false;
+    //public void RoomResolutionLogic(List<Tag> tags, int roomID)
+    //{
+    //    bool anyFound = false;
 
-        foreach (var room in roomManagers)
-        {
-            if (roomID != room.RoomID) continue;
+    //    foreach (var room in roomManagers)
+    //    {
+    //        if (roomID != room.RoomID) continue;
 
-            var validAnomalies = TagOperator.MatchQuery(tags, room.AnomaliesInRoom);
-            foreach (var anomaly in validAnomalies)
-            {
-                if (!anomaly.AnomalyEnabled) continue;
-                anomaly.DisableAnomaly();
-                anyFound = true;
-            }
-        }
+    //        var validAnomalies = TagOperator.MatchQuery(tags, room.AnomaliesInRoom);
+    //        foreach (var anomaly in validAnomalies)
+    //        {
+    //            if (!anomaly.AnomalyEnabled) continue;
+    //            anomaly.DisableAnomaly();
+    //            anyFound = true;
+    //        }
+    //    }
 
-        ResolutionFeedback(anyFound);
-    }
+    //    ResolutionFeedback(anyFound);
+    //}
 
     public void TaggerResolutionLogic()
     {
-        bool anyFound = false;
-
+        List<AnomalyHandler> anomaliesToDisable = new();
         foreach (var tagger in taggers)
         {
             Collider[] anomalyCandidates = new Collider[20];
-            var total = Physics.OverlapSphereNonAlloc(tagger.transform.position, tagger.TagCheckRadius, anomalyCandidates, anomalyLayer);
+            _ = Physics.OverlapSphereNonAlloc(tagger.transform.position, tagger.TagCheckRadius, anomalyCandidates, anomalyLayer);
             List<AnomalyHandler> foundAnomalies = new();
 
             foreach (var candidate in anomalyCandidates)
@@ -126,25 +141,65 @@ public class AnomalyResolver : MonoBehaviour
             var validAnomalies = TagOperator.MatchQuery(tagger.TagsToMatch, foundAnomalies);
             foreach (var anomaly in validAnomalies)
             {
-                anomaly.DisableAnomaly();   //slightly unclean but it's whatever
-                anyFound = true;
+                if (anomaliesToDisable.Contains(anomaly)) continue;
+                anomaliesToDisable.Add(anomaly);
+                //anomaly.DisableAnomaly();   //slightly unclean but it's whatever
             }
 
             Destroy(tagger.gameObject);
         }
-
-        ResolutionFeedback(anyFound);
+        StartCoroutine(ResolutionFeedback(anomaliesToDisable));
     }
 
-    private void ResolutionFeedback(bool anyAnomalyFound)
+    private IEnumerator ProcessingFeedback()
     {
-        if (anyAnomalyFound)
+        float journey = 0f;
+        float destination = detectorSpawnCooldown;
+        processingCanvas.enabled = true;
+        while (journey <= destination)
         {
-            //feedback for "some were found"; in Observation Duty, it cuts to a separate screen briefly while the anomaly "gets fixed"
+            journey += Time.deltaTime;
+
+            processingBar.fillAmount = Mathf.Lerp(0f, 1.05f, journey/destination);
+            
+            yield return null;
         }
-        else
+
+        processingCanvas.enabled = false;
+    }
+
+    private IEnumerator ResolutionFeedback(List<AnomalyHandler> anomalies)
+    {
+        yield return StartCoroutine(ProcessingFeedback());
+
+        if (anomalies.Count <= 0)
         {
-            //feedback for "none were found"; probably just text or something?
+            noAnomaliesFoundCanvas.enabled = true;
+            float journey = 0f;
+            float destination = displayTime;
+            while (journey <= destination)
+            {
+                journey += Time.deltaTime;
+
+                float curvedPercent = fadeInOutCurve.Evaluate(journey / destination);
+                var newColor = noAnomaliesFoundText.color;
+                newColor.a = curvedPercent;
+                noAnomaliesFoundText.color = newColor;
+
+                yield return null;
+            }
+            noAnomaliesFoundCanvas.enabled = false;
+
+            yield break;
         }
+        //here's where we'd turn off the lights.... IF WE HAD SOME
+        anomaliesFoundCanvas.enabled = true;
+        yield return null;  //one-frame delay before turning everything off
+        foreach (var anom in anomalies)
+        {
+            anom.DisableAnomaly();
+        }
+        yield return new WaitForSeconds(resolutionDelay);
+        anomaliesFoundCanvas.enabled = false;
     }
 }

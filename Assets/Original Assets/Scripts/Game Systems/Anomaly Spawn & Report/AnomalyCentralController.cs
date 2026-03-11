@@ -38,7 +38,7 @@ public class AnomalyCentralController : MonoBehaviour
         set
         {
             currentlySpawned = value;
-            //print($"CURRENTLY SPAWNED: {currentlySpawned}");
+            //print($"CURRENTLY SPAWNED: {currentlySpawned}"); 
             if (currentlySpawned < 0)
             {
                 currentlySpawned = 0;
