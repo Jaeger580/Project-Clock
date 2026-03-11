@@ -1018,6 +1018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 729666737}
   - component: {fileID: 729666736}
+  - component: {fileID: 729666738}
   m_Layer: 0
   m_Name: Anomaly Room Manager (1)
   m_TagString: Untagged
@@ -1039,6 +1040,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyRoomManager
   roomID: 0
   anomaliesInRoom: []
+  playerInRoom: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!4 &729666737
 Transform:
   m_ObjectHideFlags: 0
@@ -1057,6 +1062,27 @@ Transform:
   - {fileID: 1911929964}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &729666738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729666735}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &746426168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,6 +1734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1218321446}
   - component: {fileID: 1218321445}
+  - component: {fileID: 1218321447}
   m_Layer: 0
   m_Name: Anomaly Room Manager
   m_TagString: Untagged
@@ -1729,6 +1756,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyRoomManager
   roomID: 0
   anomaliesInRoom: []
+  playerInRoom: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!4 &1218321446
 Transform:
   m_ObjectHideFlags: 0
@@ -1747,6 +1778,27 @@ Transform:
   - {fileID: 506999711}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1218321447
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218321444}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1257092999
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,6 +2589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1925868847}
   - component: {fileID: 1925868846}
+  - component: {fileID: 1925868848}
   m_Layer: 0
   m_Name: Anomaly Central Controller
   m_TagString: Untagged
@@ -2567,7 +2620,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d4b610034c24e4e168ed4f0cddcb951d, type: 2}
   - {fileID: 11400000, guid: d4b610034c24e4e168ed4f0cddcb951d, type: 2}
   - {fileID: 11400000, guid: e1d9653e494aa481d90e725984193242, type: 2}
-  totalNightTime: 10
   spawnCurve:
     serializedVersion: 2
     m_Curve:
@@ -2593,6 +2645,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   managers: []
+  maxAnomaliesAllowed: 4
+  graceAtMaxAnomalies: 20
+  timeProgressesAtMaxAnomalies: 1
+  overMaxKills: 1
 --- !u!4 &1925868847
 Transform:
   m_ObjectHideFlags: 0
@@ -2608,6 +2664,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1925868848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925868845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5024a1cf2cd334e85bf7c4aaef5fed37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
+  totalShiftTime: 600
+  startTime: 22
+  endTime: 6
+  visualTime: 0
 --- !u!1 &2008857172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2779,6 +2851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2067809450}
   - component: {fileID: 2067809449}
+  - component: {fileID: 2067809451}
   m_Layer: 0
   m_Name: Anomaly Room Manager (2)
   m_TagString: Untagged
@@ -2800,6 +2873,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyRoomManager
   roomID: 0
   anomaliesInRoom: []
+  playerInRoom: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!4 &2067809450
 Transform:
   m_ObjectHideFlags: 0
@@ -2818,6 +2895,27 @@ Transform:
   - {fileID: 2008857173}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2067809451
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067809448}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2107643516
 GameObject:
   m_ObjectHideFlags: 0

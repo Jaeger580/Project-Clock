@@ -10,9 +10,16 @@ public class AnomalyRoomManager : MonoBehaviour
     [SerializeField, ReadOnly] protected List<AnomalyHandler> anomaliesInRoom = new();
     public List<AnomalyHandler> AnomaliesInRoom => anomaliesInRoom;
 
-    private bool playerInRoom;
+    [SerializeField, ReadOnly] private bool playerInRoom;
     public bool PlayerInRoom => playerInRoom;
     [SerializeField] private LayerMask playerLayer;
+
+    //[ContextMenu("UPDATESTUFF")]
+    //public void PlayerLayerFix()
+    //{
+    //    playerLayer.value = LayerMask.GetMask("Player");
+    //    UnityEditor.EditorUtility.SetDirty(this);
+    //}
 
     private void Start()
     {

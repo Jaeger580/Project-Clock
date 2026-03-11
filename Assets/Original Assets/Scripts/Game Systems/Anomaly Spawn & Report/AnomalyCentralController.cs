@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AnomalyCentralController : MonoBehaviour
 {//controls WHEN and WHERE anomalies spawn (needs access to player position prolly)
+
+    static public AnomalyCentralController Instance;
+
     [SerializeField] private List<TagSearch> anomalyTypeOrder = new();
     private Queue<TagSearch> anomalyTypeQueue = new();
     private int totalSpawned;
@@ -12,6 +15,51 @@ public class AnomalyCentralController : MonoBehaviour
     [SerializeField, ReadOnly] private List<AnomalyRoomManager> managers = new();
 
     private Timer timer;
+    [Header("Loss Settings")]
+    [Tooltip("Maximum number of anomalies allowed to stay active before the player dies.")]
+    [SerializeField] private int maxAnomaliesAllowed = 4;
+    [Tooltip("Grace period before the player dies while max anomalies are active.")]
+    [SerializeField] private float graceAtMaxAnomalies = 20f;
+    [Tooltip("Whether time still progresses while the maximum number of anomalies is active.")]
+    [SerializeField] private bool timeProgressesAtMaxAnomalies = true;
+    [Tooltip("If the total of currently spawned anomalies exceeds max, does the player die? (Also controls whether it can even exceed max in the first place.)")]
+    [SerializeField] private bool overMaxKills = true;
+
+    private bool gameOver;
+    private float graceTimer;
+
+    private int currentlySpawned;
+    public int CurrentlySpawned
+    {
+        get
+        {
+            return currentlySpawned;
+        }
+        set
+        {
+            currentlySpawned = value;
+            if (currentlySpawned < 0)
+            {
+                currentlySpawned = 0;
+                print("ERR: Somehow you reduced the total by too many, this should never happen. Likely getting double-called?");
+            }
+
+            if (overMaxKills && currentlySpawned > maxAnomaliesAllowed) TriggerGameOver();
+        }
+    }
+
+    private void TriggerGameOver()
+    {
+        StopAllCoroutines();
+        gameOver = true;
+    }
+
+    private void Awake()
+    {
+        if (Instance != null) { Destroy(this); return; }
+
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -19,9 +67,17 @@ public class AnomalyCentralController : MonoBehaviour
         foreach (var anomalyType in anomalyTypeOrder)
             anomalyTypeQueue.Enqueue(anomalyType);
 
-        StartCoroutine(SpawnRoutine());
-
         timer = FindAnyObjectByType<Timer>();
+        StartCoroutine(SpawnRoutine());
+    }
+
+    private void Update()
+    {
+        if (currentlySpawned != maxAnomaliesAllowed) return;
+
+        graceTimer += Time.deltaTime;
+        if (graceTimer >= graceAtMaxAnomalies)
+            TriggerGameOver();
     }
 
     public void SubscribeToController(AnomalyRoomManager manager)
@@ -41,6 +97,12 @@ public class AnomalyCentralController : MonoBehaviour
 
         while (curvedPercent <= destination && journey <= totalShiftTime)
         {
+            if(!overMaxKills && !timeProgressesAtMaxAnomalies && currentlySpawned == maxAnomaliesAllowed)
+            {//if I can't spawn more than max but time does progress while at max, and I *AM* at max, pause the spawner
+                yield return null;
+                continue;
+            }
+
             journey += Time.deltaTime;
             curvedPercent = spawnCurve.Evaluate(journey / totalShiftTime);
             yield return null;
@@ -76,5 +138,6 @@ public class AnomalyCentralController : MonoBehaviour
             spawnComplete = shuffledRooms[index].SpawnAnomaly(nextAnomalyType.items, nextAnomalyType.searchType);
             index++;
         }
+        graceTimer = 0f;
     }
 }
