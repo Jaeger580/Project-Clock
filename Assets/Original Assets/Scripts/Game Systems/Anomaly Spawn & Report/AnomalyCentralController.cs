@@ -38,6 +38,7 @@ public class AnomalyCentralController : MonoBehaviour
         set
         {
             currentlySpawned = value;
+            //print($"CURRENTLY SPAWNED: {currentlySpawned}");
             if (currentlySpawned < 0)
             {
                 currentlySpawned = 0;
@@ -138,6 +139,7 @@ public class AnomalyCentralController : MonoBehaviour
             spawnComplete = shuffledRooms[index].SpawnAnomaly(nextAnomalyType.items, nextAnomalyType.searchType);
             index++;
         }
+        print("Spawning!");
         graceTimer = 0f;
     }
 }

@@ -7,12 +7,16 @@ public class Anomaly_Composite : AnomalyHandler
 
     public override void EnableAnomaly()
     {
+        if (anomalyEnabled) return;
+
         foreach (var handler in underlyingHandlers)
             handler.EnableAnomaly();
     }
 
     public override void DisableAnomaly()
     {
+        if (!anomalyEnabled) return;
+
         foreach (var handler in underlyingHandlers)
             handler.DisableAnomaly();
     }

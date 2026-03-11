@@ -25,7 +25,7 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged
         roomManager.SubscribeToManager(this);
         //data.OnAnomalyTriggered += EnableAnomaly;
         data.OnAnomalyTriggered += () => { anomalyEnabled = true; AnomalyCentralController.Instance.CurrentlySpawned++; };
-        data.OnAnomalyFixed += () => { data.previouslySeen = true; AnomalyCentralController.Instance.CurrentlySpawned--; };
+        data.OnAnomalyFixed += () => { anomalyEnabled = false; data.previouslySeen = true; AnomalyCentralController.Instance.CurrentlySpawned--; };
     }
 
     virtual protected void OnDestroy()

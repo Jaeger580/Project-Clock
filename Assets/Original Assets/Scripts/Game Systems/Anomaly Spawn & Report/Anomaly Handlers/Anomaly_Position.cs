@@ -19,13 +19,20 @@ public class Anomaly_Position : AnomalyHandler_Gradual
 
     public override void EnableAnomaly()
     {
+        if (anomalyEnabled) return;
         base.EnableAnomaly();
         StartCoroutine(EnableAnomalyRoutine());
     }
 
     public override void DisableAnomaly()
     {
+        if (!anomalyEnabled) return;
         base.DisableAnomaly();
+        StopAllCoroutines();
+        foreach (var kvp in og_positions)
+        {
+            kvp.Key.localPosition = kvp.Value;
+        }
     }
 
     protected override IEnumerator EnableAnomalyRoutine()

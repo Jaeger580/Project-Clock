@@ -37,14 +37,14 @@ public class AnomalyRoomManager : MonoBehaviour
     {
         var validAnomalies = TagOperator.MatchQuery(tagsToMatch, anomaliesInRoom, matchType);
 
-        AnomalyHandler pickedAnomaly = null;
         List<AnomalyHandler> validPool = new();
 
         bool TryTriggerPicked(AnomalyHandler picked)
         {
             if (picked == null) return false;
+            if (picked.AnomalyEnabled) return false;
             picked.EnableAnomaly();
-            picked.Data.OnAnomalyTriggered?.Invoke();
+            //picked.Data.OnAnomalyTriggered?.Invoke();
             return true;
         }
 
@@ -53,59 +53,51 @@ public class AnomalyRoomManager : MonoBehaviour
             validPool.Add(anomaly);
         }
 
+        validPool.Shuffle();
+
         #region ROUND 1 : Unseen Valid Anomaly
-        while (validPool.Count > 0)
-        {//while there's stuff in the pool, try to pull a random anomaly
-            var index = Random.Range(0, validPool.Count);
 
-            if (!validPool[index].Data.previouslySeen)
-            {//if it hasn't been seen before, pick it
-                pickedAnomaly = validPool[index];
-                break;
-            }
-            validPool.RemoveAt(index);
+        foreach(var option in validPool)
+        {//go down the shuffled list until you hit one you haven't seen before
+            if (option.Data.previouslySeen) continue;
+            if (TryTriggerPicked(option)) return true;
         }
-
-        if (TryTriggerPicked(pickedAnomaly)) return true;
 
         #endregion
         #region ROUND 2 : Seen Valid Anomaly
-        foreach (var anomaly in validAnomalies)
-        {//(re)populate tempPool
-            validPool.Add(anomaly);
-        }
-        if (validPool.Count > 0)
-        {
-            pickedAnomaly = validPool[Random.Range(0, validPool.Count)];
-        }
 
-        if (TryTriggerPicked(pickedAnomaly)) return true;
+        foreach (var option in validPool)
+        {//go down the shuffled list until you hit one you haven't seen before
+            if (TryTriggerPicked(option)) return true;
+        }
 
         #endregion
         #region ROUND 3 : Unseen Anomaly in Room
-        int checkedCount = 0;
-        var roomAnomalies = anomaliesInRoom;
-        while (pickedAnomaly == null && checkedCount < roomAnomalies.Count)
-        {//while I haven't picked an unseen anomaly and haven't iterated through the full list
-            checkedCount++;
-            int index = Random.Range(0, roomAnomalies.Count);
-            if (!roomAnomalies[index].Data.previouslySeen)
-                pickedAnomaly = roomAnomalies[index];
+        //expand the search
+        validPool.Clear();
+        foreach (var anomaly in anomaliesInRoom)
+        {//(re)populate temp pool
+            validPool.Add(anomaly);
         }
+        validPool.Shuffle();
 
-        if (TryTriggerPicked(pickedAnomaly)) return true;
+        foreach (var option in validPool)
+        {//go down the shuffled list until you hit one you haven't seen before
+            if (option.Data.previouslySeen) continue;
+            if (TryTriggerPicked(option)) return true;
+        }
 
         #endregion
         #region ROUND 4 : Any Anomaly in Room
 
-        if (roomAnomalies.Count > 0)
-            pickedAnomaly = roomAnomalies[Random.Range(0, roomAnomalies.Count)];
-
-        if (TryTriggerPicked(pickedAnomaly)) return true;
+        foreach (var option in validPool)
+        {//go down the shuffled list until you get a valid one
+            if (!TryTriggerPicked(option)) return true;
+        }
 
         #endregion
 
-        Debug.LogError($"An anomaly was requested but no anomalies were found. Likely an empty list.", this);
+        Debug.LogWarning($"An anomaly was requested but no anomalies were found. Likely an empty list.", this);
         return false;
     }
 

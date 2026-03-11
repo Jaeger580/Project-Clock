@@ -465,7 +465,8 @@ GameObject:
   - component: {fileID: 338474526}
   - component: {fileID: 338474525}
   - component: {fileID: 338474524}
-  m_Layer: 0
+  - component: {fileID: 338474527}
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,6 +565,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338474522}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &338474527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338474522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &360812511
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 360812512}
   - component: {fileID: 360812513}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TEST_ANOMALY (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de21effa4495345e9990fa939c352332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Toggle
-  data: {fileID: 11400000, guid: a817322598e7c4953820d7101c221497, type: 2}
+  data: {fileID: 11400000, guid: 80e780b6ef1d34145b249aad8afa7bea, type: 2}
   anomalyEnabled: 0
   objsToToggleOn:
   - {fileID: 338474522}
@@ -785,7 +799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 506999711}
   - component: {fileID: 506999712}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TEST_ANOMALY (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de21effa4495345e9990fa939c352332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Toggle
-  data: {fileID: 11400000, guid: a817322598e7c4953820d7101c221497, type: 2}
+  data: {fileID: 11400000, guid: 95501c0748f1748bfb72a3e989fb57af, type: 2}
   anomalyEnabled: 0
   objsToToggleOn:
   - {fileID: 1303960791}
@@ -1430,9 +1444,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1001826492}
-  - component: {fileID: 1001826493}
   - component: {fileID: 1001826494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TEST_ANOMALY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1455,23 +1468,6 @@ Transform:
   - {fileID: 2037560558}
   m_Father: {fileID: 1218321446}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1001826493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001826491}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de21effa4495345e9990fa939c352332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Toggle
-  data: {fileID: 11400000, guid: a817322598e7c4953820d7101c221497, type: 2}
-  anomalyEnabled: 0
-  objsToToggleOn:
-  - {fileID: 2037560557}
-  objsToToggleOff: []
 --- !u!114 &1001826494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1598,6 +1594,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e7ede203f7e4784918c2178d2932ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyResolver
+  debug: 0
+  anomalyLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &1024627568
 Transform:
   m_ObjectHideFlags: 0
@@ -1861,7 +1861,8 @@ GameObject:
   - component: {fileID: 1303960795}
   - component: {fileID: 1303960794}
   - component: {fileID: 1303960793}
-  m_Layer: 0
+  - component: {fileID: 1303960796}
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1960,6 +1961,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303960791}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1303960796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303960791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1001 &1475328623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2676,9 +2690,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5024a1cf2cd334e85bf7c4aaef5fed37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  totalShiftTime: 600
+  totalShiftTime: 10
   startTime: 22
-  endTime: 6
+  endTime: 30
   visualTime: 0
 --- !u!1 &2008857172
 GameObject:
@@ -2742,7 +2756,8 @@ GameObject:
   - component: {fileID: 2037560561}
   - component: {fileID: 2037560560}
   - component: {fileID: 2037560559}
-  m_Layer: 0
+  - component: {fileID: 2037560562}
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2841,6 +2856,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037560557}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2037560562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037560557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &2067809448
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AnomalyTagger : MonoBehaviour
@@ -8,14 +9,27 @@ public class AnomalyTagger : MonoBehaviour
     [SerializeField] private List<Tag> tagsToMatch = new();
     public List<Tag> TagsToMatch => tagsToMatch;
 
-    private void Start()
+    private IEnumerator Start()
     {
         if (AnomalyResolver.Instance == null)
-            AnomalyResolver.Instance.SubscribeToResolver(this);
+        {
+            Destroy(gameObject);
+            yield break;
+        }
+        AnomalyResolver.Instance?.SubscribeToResolver(this);
+
+        //yield return new WaitForSeconds(0.5f);
+        yield return null;
+        AnomalyResolver.Instance?.TaggerResolutionLogic();
     }
 
     private void OnDestroy()
     {
-        AnomalyResolver.Instance.UnsubscribeFromResolver(this);
+        AnomalyResolver.Instance?.UnsubscribeFromResolver(this);
+    }
+
+    public void SetTags(List<Tag> tagsToSet)
+    {
+        tagsToMatch = tagsToSet;
     }
 }
