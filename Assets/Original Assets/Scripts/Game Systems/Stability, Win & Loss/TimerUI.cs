@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimerUI : MonoBehaviour
 {
-    [SerializeField] private bool militaryTime = false;
+    [SerializeField] private bool militaryTime = false, hoursOnly = false;
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private Timer timer;
     private void Start()
@@ -25,14 +25,15 @@ public class TimerUI : MonoBehaviour
                 hours -= 12;
             }
             TimeSpan span = TimeSpan.FromHours(hours);
-            var txt = $"{span:hh\\:mm} {ampm}";
+            var shownTime = hoursOnly ? $"{span.Hours}" : $"{span:hh\\:mm}";
+            var txt = $"{shownTime} {ampm}";
             timerText.text = txt;
         }
         else
         {
             TimeSpan span = TimeSpan.FromHours(hours);
-            var txt = $"{span:hh\\:mm}";
-            timerText.text = txt;
+            var shownTime = hoursOnly ? $"{span.Hours}" : $"{span:hh\\:mm}";
+            timerText.text = shownTime;
         }
 
     }

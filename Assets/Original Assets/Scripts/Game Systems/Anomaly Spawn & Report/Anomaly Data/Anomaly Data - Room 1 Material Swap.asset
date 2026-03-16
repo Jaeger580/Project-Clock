@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd9d55127abb3439897f6e59bd5b22d7, type: 3}
-  m_Name: Anomaly Data - TEST
+  m_Name: Anomaly Data - Room 1 Material Swap
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyData
   tags:
-  - {fileID: 11400000, guid: 94fafbc42180243d79d5e8cad3c7f0c8, type: 2}
+  - {fileID: 11400000, guid: 58841ed66caee4bb6af1b80cc0c76c24, type: 2}
   previouslySeen: 0

@@ -142,6 +142,7 @@ public class AnomalyResolver : MonoBehaviour
             foreach (var anomaly in validAnomalies)
             {
                 if (anomaliesToDisable.Contains(anomaly)) continue;
+                if (!anomaly.AnomalyEnabled) continue;
                 anomaliesToDisable.Add(anomaly);
                 //anomaly.DisableAnomaly();   //slightly unclean but it's whatever
             }

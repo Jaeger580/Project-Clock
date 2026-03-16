@@ -32,4 +32,10 @@ public class AnomalyTagger : MonoBehaviour
     {
         tagsToMatch = tagsToSet;
     }
+    public void SetTags(Tag tagToSet)
+    {
+        tagsToMatch.Clear();
+        tagsToMatch.Add(tagToSet);
+        //print(tagToSet.humanReadableTagIdentifier);
+    }
 }

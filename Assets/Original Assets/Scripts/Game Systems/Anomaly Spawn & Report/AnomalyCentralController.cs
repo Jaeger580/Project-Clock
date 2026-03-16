@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AnomalyCentralController : MonoBehaviour
 {//controls WHEN and WHERE anomalies spawn (needs access to player position prolly)
 
     static public AnomalyCentralController Instance;
+
+    [SerializeField] private List<int> sceneBuildIndices = new();
 
     [SerializeField] private List<TagSearch> anomalyTypeOrder = new();
     private Queue<TagSearch> anomalyTypeQueue = new();
@@ -28,7 +31,7 @@ public class AnomalyCentralController : MonoBehaviour
     private bool gameOver;
     private float graceTimer;
 
-    private int currentlySpawned;
+    [SerializeField, ReadOnly] private int currentlySpawned;
     public int CurrentlySpawned
     {
         get
@@ -51,8 +54,10 @@ public class AnomalyCentralController : MonoBehaviour
 
     private void TriggerGameOver()
     {
+        if (gameOver) return;
         StopAllCoroutines();
         gameOver = true;
+        print("GAME OVER, TOO MANY ANOMALIES ACTIVE AT ONCE.");
     }
 
     private void Awake()
@@ -60,6 +65,11 @@ public class AnomalyCentralController : MonoBehaviour
         if (Instance != null) { Destroy(this); return; }
 
         Instance = this;
+
+        foreach(var scene in sceneBuildIndices)
+        {
+            SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+        }
     }
 
     private void Start()
@@ -75,6 +85,7 @@ public class AnomalyCentralController : MonoBehaviour
     private void Update()
     {
         if (currentlySpawned != maxAnomaliesAllowed) return;
+        if (gameOver) return;
 
         graceTimer += Time.deltaTime;
         if (graceTimer >= graceAtMaxAnomalies)

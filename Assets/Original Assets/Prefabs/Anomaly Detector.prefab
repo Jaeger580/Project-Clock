@@ -125,14 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyTagger
   tagCheckRadius: 3
-  tagsToMatch:
-  - {fileID: 11400000, guid: 58841ed66caee4bb6af1b80cc0c76c24, type: 2}
-  - {fileID: 11400000, guid: 0d4d25089e141452fbb03e61a3735215, type: 2}
-  - {fileID: 11400000, guid: 9f0f73e1f30454cadb226b1e505b391a, type: 2}
-  - {fileID: 11400000, guid: cff875d33615946db9dcbf6404643cf0, type: 2}
-  - {fileID: 11400000, guid: c0577ed94ee2c4df3885b3bbaa5c7738, type: 2}
-  - {fileID: 11400000, guid: 6e8ae048c57f34329aae64898a9bcc10, type: 2}
-  - {fileID: 11400000, guid: 94fafbc42180243d79d5e8cad3c7f0c8, type: 2}
-  - {fileID: 11400000, guid: bfb4c02d0671141d2babb8dd18220eb3, type: 2}
-  - {fileID: 11400000, guid: d21cc3095d5674da2a7851fd38521d2a, type: 2}
-  - {fileID: 11400000, guid: acd667c6309a54880b83bc85b2966d4b, type: 2}
+  tagsToMatch: []

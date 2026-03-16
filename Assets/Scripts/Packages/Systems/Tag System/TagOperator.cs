@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 public interface ITagged
 {
@@ -91,7 +92,6 @@ static public class TagOperator
     static public List<T> MatchQuery<T>(List<Tag> matchingTags, List<T> taggedObjs, MatchType matchType = MatchType.ANY) where T : ITagged
     {
         List<T> queryMatches = new();
-
         foreach (var obj in taggedObjs)
         {
             if (MatchingTags(matchingTags, obj.Tags(), matchType)) queryMatches.Add(obj);

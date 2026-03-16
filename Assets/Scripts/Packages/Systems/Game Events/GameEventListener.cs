@@ -46,4 +46,23 @@ public class GameEventListener : MonoBehaviour
 
     public void OnEventTriggered(GameEvent ge)
     { GEResponse?.Invoke(ge); }
+
+    static public GameEventListener AddGeneralListener(GameObject obj, GameEvent evt)
+    {
+        var listener = obj.AddComponent<GameEventListener>();
+        listener.Events.Add(evt);
+        evt.RegisterListener(listener);
+        return listener;
+    }
+
+    static public GameEventListener AddGeneralListener(GameObject obj, List<GameEvent> gameEvents)
+    {
+        var listener = obj.AddComponent<GameEventListener>();
+        foreach (var evt in gameEvents)
+        {
+            listener.Events.Add(evt);
+            evt.RegisterListener(listener);
+        }
+        return listener;
+    }
 }

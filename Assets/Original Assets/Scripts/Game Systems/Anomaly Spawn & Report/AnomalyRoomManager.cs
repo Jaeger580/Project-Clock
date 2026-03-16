@@ -92,7 +92,7 @@ public class AnomalyRoomManager : MonoBehaviour
 
         foreach (var option in validPool)
         {//go down the shuffled list until you get a valid one
-            if (!TryTriggerPicked(option)) return true;
+            if (TryTriggerPicked(option)) return true;
         }
 
         #endregion

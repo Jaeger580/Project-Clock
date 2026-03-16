@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (AnomalyTagChooser.FreeMouse) return;    //TODO: Replace with action map switching later, this is quick and dirty
+
         Move();
     }
 

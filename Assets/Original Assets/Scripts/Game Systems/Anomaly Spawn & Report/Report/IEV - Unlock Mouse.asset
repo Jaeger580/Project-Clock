@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f70002e4cbd4132b1c523a69a45c80, type: 3}
-  m_Name: Tag - Exclusion
-  m_EditorClassIdentifier: Assembly-CSharp::Tag
-  humanReadableTagIdentifier: Exclusion
+  m_Script: {fileID: 11500000, guid: 91286ba9d389d4a32a1b3a3e09ceb382, type: 3}
+  m_Name: IEV - Unlock Mouse
+  m_EditorClassIdentifier: Assembly-CSharp::GameEvent
+  exampleVal: 0
