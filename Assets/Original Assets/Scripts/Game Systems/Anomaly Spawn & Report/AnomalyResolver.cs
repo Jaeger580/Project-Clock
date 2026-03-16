@@ -128,13 +128,13 @@ public class AnomalyResolver : MonoBehaviour
                 {
                     if (foundAnomalies.Contains(handler)) continue;
                     foundAnomalies.Add(handler);
-                    print("Found anomaly.");
+                    //print("Found anomaly.");
                 }
                 else if (candidate.TryGetComponent(out AnomalyHandlerPassthrough passthrough))
                 {
                     if (foundAnomalies.Contains(passthrough.ParentAnomaly)) continue;
                     foundAnomalies.Add(passthrough.ParentAnomaly);
-                    print("Found parent anomaly.");
+                    //print("Found parent anomaly.");
                 }
             }
 

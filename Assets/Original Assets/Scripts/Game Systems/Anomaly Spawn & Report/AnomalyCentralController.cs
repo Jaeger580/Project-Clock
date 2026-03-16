@@ -94,7 +94,7 @@ public class AnomalyCentralController : MonoBehaviour
         float totalShiftTime = timer.TotalShiftTime;
         float destination = (totalSpawned + 1f) / anomalyTypeOrder.Count;
         float curvedPercent = spawnCurve.Evaluate(journey/totalShiftTime);
-        print($"Journey: {journey} || Destination: {destination}");
+        //print($"Journey: {journey} || Destination: {destination}");
 
         while (curvedPercent <= destination && journey <= totalShiftTime)
         {
@@ -121,7 +121,7 @@ public class AnomalyCentralController : MonoBehaviour
             return;
         }
 
-        print($"Next anomaly type should be {nextAnomalyType.name}");
+        //print($"Next anomaly type should be {nextAnomalyType.name}");
         totalSpawned++;
 
         List<AnomalyRoomManager> shuffledRooms = new();
@@ -139,7 +139,7 @@ public class AnomalyCentralController : MonoBehaviour
             spawnComplete = shuffledRooms[index].SpawnAnomaly(nextAnomalyType.items, nextAnomalyType.searchType);
             index++;
         }
-        print("Spawning!");
+        //print("Spawning!");
         graceTimer = 0f;
     }
 }

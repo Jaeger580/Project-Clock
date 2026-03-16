@@ -20,7 +20,7 @@ public class Anomaly_Size : AnomalyHandler_Gradual
     public override void EnableAnomaly()
     {
         if (anomalyEnabled) return;
-
+        base.EnableAnomaly();
         StartCoroutine(EnableAnomalyRoutine());
     }
     public override void DisableAnomaly()

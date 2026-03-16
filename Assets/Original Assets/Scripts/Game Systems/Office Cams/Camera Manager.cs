@@ -33,7 +33,7 @@ public class CameraManager : MonoBehaviour, IInteractable
     public void AddCamera(Camera roomCam) 
     {
         roomCameras.Add(roomCam);
-        Debug.Log("Camera Added");
+        //Debug.Log("Camera Added");
     }
 
     public void RemoveCamera(Camera roomCam)
