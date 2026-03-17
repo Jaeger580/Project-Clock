@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 01249f25d29f2d54585c2e43cbc6ff9b
   - enabled: 1
     path: Assets/Original Assets/Scenes/Main Game.unity
-    guid: 7c54d50ee7b04a74e8b5dae1fc793fd0
+    guid: af1a25b5fd4ba164dba6a8969c6c6e55
   - enabled: 1
     path: Assets/Original Assets/Scenes/Allan Test - Anomaly Spawning.unity
     guid: 77e73ad37b7644a4cbf3411918e9dd4b
