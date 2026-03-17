@@ -2064,8 +2064,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f956a4e88784e4487402f94a75f6ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimerUI
-  militaryTime: 0
-  hoursOnly: 0
+  militaryTime: 1
+  hoursOnly: 1
   timerText: {fileID: 1136515468842727398}
   timer: {fileID: 0}
 --- !u!1 &7774088187970895257

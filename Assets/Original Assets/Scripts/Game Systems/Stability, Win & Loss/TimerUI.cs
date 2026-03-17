@@ -25,14 +25,14 @@ public class TimerUI : MonoBehaviour
                 hours -= 12;
             }
             TimeSpan span = TimeSpan.FromHours(hours);
-            var shownTime = hoursOnly ? $"{span.Hours}" : $"{span:hh\\:mm}";
+            var shownTime = hoursOnly ? $"{span.Hours}:00" : $"{span:hh\\:mm}";
             var txt = $"{shownTime} {ampm}";
             timerText.text = txt;
         }
         else
         {
             TimeSpan span = TimeSpan.FromHours(hours);
-            var shownTime = hoursOnly ? $"{span.Hours}" : $"{span:hh\\:mm}";
+            var shownTime = hoursOnly ? $"{span.Hours}:00" : $"{span:hh\\:mm}";
             timerText.text = shownTime;
         }
 
