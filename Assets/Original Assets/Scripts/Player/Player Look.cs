@@ -28,6 +28,8 @@ public class PlayerLook : MonoBehaviour
 
     private void Update()
     {
+        if (AnomalyTagChooser.FreeMouse) return;    //TODO: Replace with action map switching later, this is quick and dirty
+
         MouseLook();
     }
 

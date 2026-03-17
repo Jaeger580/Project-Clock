@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Original Assets/Scenes/Main Game.unity
     guid: 7c54d50ee7b04a74e8b5dae1fc793fd0
+  - enabled: 1
+    path: Assets/Original Assets/Scenes/Allan Test - Anomaly Spawning.unity
+    guid: 77e73ad37b7644a4cbf3411918e9dd4b
+  - enabled: 1
+    path: Assets/Original Assets/Scenes/Room Scenes/Room 1.unity
+    guid: d8526c1a4171045b8afb8ffa80ebb868
+  - enabled: 1
+    path: Assets/Original Assets/Scenes/Room Scenes/Room 2.unity
+    guid: 43340d5e2aba847b2bab9cde88cc7431
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: fe8e72ba4f4b33b4fb2d0fb1aaf9fc98, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

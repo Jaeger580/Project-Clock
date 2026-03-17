@@ -33,7 +33,7 @@ public class CameraManager : MonoBehaviour, IInteractable
     public void AddCamera(Camera roomCam) 
     {
         roomCameras.Add(roomCam);
-        Debug.Log("Camera Added");
+        //Debug.Log("Camera Added");
     }
 
     public void RemoveCamera(Camera roomCam)
@@ -48,8 +48,9 @@ public class CameraManager : MonoBehaviour, IInteractable
 
         playerHUD.SetActive(false);
 
-        // Disable current camera
-        roomCameras[camIndex].depth = 2;
+        //roomCameras[camIndex].depth = 2;
+        var nextCam = roomCameras[camIndex];
+        nextCam.enabled = true;
 
         // Change player's input actions
         PlayerInput.SwitchCurrentActionMap("Cameras");
@@ -58,7 +59,13 @@ public class CameraManager : MonoBehaviour, IInteractable
     private void ExitCamera() 
     {
         // Disable current camera
-        roomCameras[camIndex].depth = 0;
+
+        foreach(var cam in roomCameras)
+        {
+            cam.enabled = false;
+        }
+        
+        //roomCameras[camIndex].depth = 0;
 
         // Change player's input actions
         PlayerInput.SwitchCurrentActionMap("Player");
@@ -71,15 +78,20 @@ public class CameraManager : MonoBehaviour, IInteractable
     {
         if (context.performed) 
         {
-
             if (camIndex < roomCameras.Count - 1)
             {
-                // Disable current camera
-                roomCameras[camIndex].depth = 0;
+                var previousCam = roomCameras[camIndex];
+                var nextCam = roomCameras[++camIndex];
 
-                // Enable new camera
-                roomCameras[camIndex + 1].depth = 2;
-                camIndex++;
+                previousCam.enabled = false;
+                nextCam.enabled = true;
+
+                //// Disable current camera
+                //roomCameras[camIndex].depth = 0;
+
+                //// Enable new camera
+                //roomCameras[camIndex + 1].depth = 2;
+                //camIndex++;
             }
             else
             {
@@ -92,15 +104,20 @@ public class CameraManager : MonoBehaviour, IInteractable
     {
         if (context.performed)
         {
-
             if (camIndex > 0)
             {
-                // Disable current camera
-                roomCameras[camIndex].depth = 0;
+                var previousCam = roomCameras[camIndex];
+                var nextCam = roomCameras[--camIndex];
 
-                // Enable new camera
-                roomCameras[camIndex - 1].depth = 2;
-                camIndex--;
+                previousCam.enabled = false;
+                nextCam.enabled = true;
+
+                //// Disable current camera
+                //roomCameras[camIndex].depth = 0;
+
+                //// Enable new camera
+                //roomCameras[camIndex - 1].depth = 2;
+                //camIndex--;
             }
             else
             {

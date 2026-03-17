@@ -19,12 +19,20 @@ public class Anomaly_Position : AnomalyHandler_Gradual
 
     public override void EnableAnomaly()
     {
+        if (anomalyEnabled) return;
+        base.EnableAnomaly();
         StartCoroutine(EnableAnomalyRoutine());
     }
 
     public override void DisableAnomaly()
     {
-
+        if (!anomalyEnabled) return;
+        base.DisableAnomaly();
+        StopAllCoroutines();
+        foreach (var kvp in og_positions)
+        {
+            kvp.Key.localPosition = kvp.Value;
+        }
     }
 
     protected override IEnumerator EnableAnomalyRoutine()
@@ -47,15 +55,15 @@ public class Anomaly_Position : AnomalyHandler_Gradual
         if (loopType == LoopType.REPEAT) StartCoroutine(EnableAnomalyRoutine());
         if (loopType != LoopType.PINGPONG) yield break;
 
-        journey = 0f;
+        journey = duration;
 
-        while (journey <= duration)
+        while (journey >= 0f)
         {
-            journey += Time.deltaTime;
+            journey -= Time.deltaTime;
 
             foreach (var obj in objsToMove)
             {
-                var newPos = Vector3.Lerp(newLocalPosition, og_positions[obj], gradualCurve.Evaluate(journey / duration));
+                var newPos = Vector3.Lerp(og_positions[obj], newLocalPosition, gradualCurve.Evaluate(journey / duration));
                 obj.localPosition = newPos;
             }
 

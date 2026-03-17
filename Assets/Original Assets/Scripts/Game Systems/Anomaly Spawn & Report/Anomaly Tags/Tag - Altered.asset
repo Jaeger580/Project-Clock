@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f70002e4cbd4132b1c523a69a45c80, type: 3}
   m_Name: Tag - Altered
   m_EditorClassIdentifier: Assembly-CSharp::Tag
-  humanReadableTagIdentifier: 
+  humanReadableTagIdentifier: Altered

@@ -8,18 +8,27 @@ public class AnomalyRayCheck : MonoBehaviour
     private Transform camTransform;
 
     [SerializeField]
-    private GameObject detectorPrefab;
+    private AnomalyTagger detectorPrefab;
+    [SerializeField, ReadOnly] public Tag anomalyType;
 
-    //private LayerMask layerMask;
+    private float cooldownTimer;
 
     private void Start()
     {
         camTransform = mainCam.transform;
     }
 
+    private void Update()
+    {
+        if (cooldownTimer <= 0) return;
+        cooldownTimer -= Time.deltaTime;
+    }
+
     // Cast a ray and spawn a Dector object at the hit location.
     public void SpawnDetector(InputAction.CallbackContext context) 
     {
+        if (AnomalyTagChooser.FreeMouse) return;    //TODO: Replace with action map switching later, this is quick and dirty
+        if (cooldownTimer > 0) return;
         if (context.started) 
         {
             RaycastHit hit;
@@ -30,7 +39,8 @@ public class AnomalyRayCheck : MonoBehaviour
                 Debug.DrawRay(camTransform.position, camTransform.forward * hit.distance, Color.red);
 
                 // Spawn Detector
-                Instantiate(detectorPrefab, hit.point, Quaternion.identity);
+                var tagger = Instantiate(detectorPrefab, hit.point, Quaternion.identity);
+                tagger.SetTags(anomalyType);
             }
             else
             {
@@ -38,6 +48,7 @@ public class AnomalyRayCheck : MonoBehaviour
                 Debug.DrawRay(camTransform.position, camTransform.forward * hit.distance, Color.red);
             }
         }
+        cooldownTimer = AnomalyResolver.Instance.DetectorSpawnCooldown;
     }
 
 }

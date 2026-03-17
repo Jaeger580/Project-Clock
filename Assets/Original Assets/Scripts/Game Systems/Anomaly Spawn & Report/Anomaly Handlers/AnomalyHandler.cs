@@ -8,22 +8,53 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged
 {
     [SerializeField] protected AnomalyData data;
     public AnomalyData Data => data;
-    public List<Tag> Tags() => data.Tags();
+    [SerializeField] protected bool anomalyEnabled;
+    public bool AnomalyEnabled => anomalyEnabled;
+
+    public List<Tag> Tags()
+    {
+        return data ? data.Tags() : parentData.Tags();
+    }
+    protected AnomalyData parentData;
 
     virtual protected void Start()
     {
-        data.OnAnomalyTriggered += EnableAnomaly;
-        data.OnAnomalyFixed += DisableAnomaly;
+        if(!transform.parent.TryGetComponent(out AnomalyRoomManager roomManager))
+        {
+            print("ERR: Anomaly isn't childed under a room manager, and will be ignored.");
+            return;
+        }
+        if (data == null) return;
+        roomManager.SubscribeToManager(this);
+        //data.OnAnomalyTriggered += EnableAnomaly;
+        data.OnAnomalyTriggered += () => {  AnomalyCentralController.Instance.CurrentlySpawned++; };
+        data.OnAnomalyFixed += () => { data.previouslySeen = true; AnomalyCentralController.Instance.CurrentlySpawned--; };
     }
 
     virtual protected void OnDestroy()
     {
-        data.OnAnomalyTriggered -= EnableAnomaly;
-        data.OnAnomalyFixed -= DisableAnomaly;
+        if (data == null) return;
+        data.OnAnomalyTriggered = null;
+        data.OnAnomalyFixed = null;
     }
 
-    abstract public void EnableAnomaly();
-    abstract public void DisableAnomaly();
+    virtual public void EnableAnomaly()
+    {
+        anomalyEnabled = true;
+        if (data == null) return;
+        data.OnAnomalyTriggered?.Invoke();
+    }
+    virtual public void DisableAnomaly()
+    {
+        anomalyEnabled = false;
+        if (data == null) return;
+        data.OnAnomalyFixed?.Invoke();
+    }
+
+    public void SetData(AnomalyData parentData)
+    {
+        this.parentData = parentData;
+    }
 }
 
 abstract public class AnomalyHandler_Gradual : AnomalyHandler

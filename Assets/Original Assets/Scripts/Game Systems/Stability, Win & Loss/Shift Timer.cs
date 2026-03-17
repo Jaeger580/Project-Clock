@@ -1,9 +1,6 @@
-using JetBrains.Annotations;
 using System;
-using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem.iOS;
 
 public class ShiftTimer : MonoBehaviour
 {
@@ -15,7 +12,6 @@ public class ShiftTimer : MonoBehaviour
     [SerializeField]
     private int startHour, startMinute, endHour, endMinute;
     private DateTime gameStartTime;
-
     [SerializeField]
     private float timeScale = 60f; // This is how many seconds IN-GAME will pass for ever ONE real second.
 
@@ -29,8 +25,7 @@ public class ShiftTimer : MonoBehaviour
         gameStartTime = new DateTime(2026, 02, 25, startHour, startMinute, 0);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         UpdateTime();
 
@@ -45,11 +40,10 @@ public class ShiftTimer : MonoBehaviour
 
     private void UpdateTime() 
     {
-        if (!pauseTime) 
+        if (!pauseTime)
         {
             double secondsToAdd = Time.deltaTime * timeScale;
             gameStartTime = gameStartTime.AddSeconds(secondsToAdd);
-
             finalTime = gameStartTime.ToString("h:00 tt");
 
             digiClock.text = finalTime;
@@ -61,5 +55,10 @@ public class ShiftTimer : MonoBehaviour
         pauseTime = true;
         hasWon = true;
         Debug.Log("USE SURVIVED THE NIGHT!!!!!!!!!!");
+    }
+
+    public float TotalNightTime()
+    {
+        return 0;
     }
 }

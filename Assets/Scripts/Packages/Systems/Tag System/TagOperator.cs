@@ -1,14 +1,27 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 public interface ITagged
 {
     public List<Tag> Tags();
 }
 
+public enum MatchType { ANY, ALL, NONE, EXACT }
+
+/*
+ *      matching    /   amt     / wanted
+ *      y           /   any     / y         = return any
+ *      y           /   any     / n         = filter any = return anything that doesn't contain
+ *      y           /   all     / y         = return the ones that contain at least all the requested tags
+ *      y           /   all     / n         = filter the ones that contain at least all the requested tags
+ *      y           /   none    / y         = return the ones that contain none (i.e. filter out "any"; redundant unless we prefer "none")
+ *      y           /   none    / n         = filter the ones that contain none (i.e. return "any"; redundant)
+ *      y           /   exact   / y         = return exact (no more no less)
+ *      y           /   exact   / n         = filter exact (i.e. return anything that isn't exact)
+ */
+
 static public class TagOperator
 {
-    public enum MatchType { ANY, ALL, NONE, EXACT }
-
     //private List<ITagged> AnyMatch
 
     /// <summary>
@@ -79,7 +92,6 @@ static public class TagOperator
     static public List<T> MatchQuery<T>(List<Tag> matchingTags, List<T> taggedObjs, MatchType matchType = MatchType.ANY) where T : ITagged
     {
         List<T> queryMatches = new();
-
         foreach (var obj in taggedObjs)
         {
             if (MatchingTags(matchingTags, obj.Tags(), matchType)) queryMatches.Add(obj);
