@@ -1,0 +1,12 @@
+Att.txt (Paks)
+
+A list of the paks and assets used in this project that are not-original
+along with notes! 
+
+-------------------
+Asset Paks (Unity Store)
+-------------------
+Abandoned Asylum - Lukas Bobor []
+
+//Some Assets Altered for compatability & functionality
+-------------------
