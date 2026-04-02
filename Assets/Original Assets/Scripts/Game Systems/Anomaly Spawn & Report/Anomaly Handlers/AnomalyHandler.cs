@@ -61,6 +61,7 @@ abstract public class AnomalyHandler_Gradual : AnomalyHandler
 {
     [SerializeField] protected AnimationCurve gradualCurve;
     [Tooltip("Duration before its gradual effect either ends or, if selected, loops.")]
+    [Min(0.00001f)]
     [SerializeField] protected float duration;
     [SerializeField] protected LoopType loopType;
     abstract protected IEnumerator EnableAnomalyRoutine();
