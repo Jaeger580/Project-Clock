@@ -575,6 +575,8 @@ GameObject:
   - component: {fileID: 51027018}
   - component: {fileID: 51027020}
   - component: {fileID: 51027019}
+  - component: {fileID: 51027022}
+  - component: {fileID: 51027021}
   m_Layer: 0
   m_Name: Tv_Retro_AA
   m_TagString: Untagged
@@ -653,6 +655,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51027017}
   m_Mesh: {fileID: -9164296140832457863, guid: 20deeb90086a21e46922fbb663b49026, type: 3}
+--- !u!65 &51027021
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51027017}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9044683, y: 1.0019301, z: 0.5314814}
+  m_Center: {x: 0.018515114, y: 0.50096494, z: 0.06608069}
+--- !u!114 &51027022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51027017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &52257871
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +878,8 @@ GameObject:
   - component: {fileID: 67587451}
   - component: {fileID: 67587453}
   - component: {fileID: 67587452}
+  - component: {fileID: 67587455}
+  - component: {fileID: 67587454}
   m_Layer: 0
   m_Name: Bench_AA
   m_TagString: Untagged
@@ -920,6 +958,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67587450}
   m_Mesh: {fileID: 8045189503755746167, guid: 84b9e5afa1c7fcb4fa583b3a15fe11a9, type: 3}
+--- !u!65 &67587454
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67587450}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7546365, y: 0.691463, z: 0.28340808}
+  m_Center: {x: 0, y: 0.34378248, z: 0.00000093877316}
+--- !u!114 &67587455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67587450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &71470006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,6 +1872,8 @@ GameObject:
   - component: {fileID: 164173137}
   - component: {fileID: 164173139}
   - component: {fileID: 164173138}
+  - component: {fileID: 164173141}
+  - component: {fileID: 164173140}
   m_Layer: 0
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
@@ -1878,6 +1952,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164173136}
   m_Mesh: {fileID: 888079997960467146, guid: 89f82597b3e8f6949bbcc7034c05eba2, type: 3}
+--- !u!65 &164173140
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164173136}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48733914, y: 1.1759181, z: 0.57796705}
+  m_Center: {x: 0.0034137897, y: 0.588004, z: 0.04876939}
+--- !u!114 &164173141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164173136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 1379064077}
 --- !u!1 &172782755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,6 +2577,8 @@ GameObject:
   - component: {fileID: 210709889}
   - component: {fileID: 210709891}
   - component: {fileID: 210709890}
+  - component: {fileID: 210709893}
+  - component: {fileID: 210709892}
   m_Layer: 0
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
@@ -2547,6 +2657,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210709888}
   m_Mesh: {fileID: 888079997960467146, guid: 89f82597b3e8f6949bbcc7034c05eba2, type: 3}
+--- !u!65 &210709892
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210709888}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48733914, y: 1.1759181, z: 0.57796705}
+  m_Center: {x: 0.003414028, y: 0.588004, z: 0.04876939}
+--- !u!114 &210709893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210709888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 1379064077}
 --- !u!1 &211892660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,6 +2702,8 @@ GameObject:
   - component: {fileID: 211892661}
   - component: {fileID: 211892663}
   - component: {fileID: 211892662}
+  - component: {fileID: 211892665}
+  - component: {fileID: 211892664}
   m_Layer: 0
   m_Name: Plate_AA
   m_TagString: Untagged
@@ -2636,6 +2782,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211892660}
   m_Mesh: {fileID: -2198655035996724871, guid: d502d69f38442074fa6c6d36bcc16c65, type: 3}
+--- !u!65 &211892664
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211892660}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.582498, y: 0.037467036, z: 0.582498}
+  m_Center: {x: -2.1326223e-25, y: 0.019919505, z: 2.6363246e-25}
+--- !u!114 &211892665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211892660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &212459037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2736,6 +2916,8 @@ GameObject:
   - component: {fileID: 216863304}
   - component: {fileID: 216863306}
   - component: {fileID: 216863305}
+  - component: {fileID: 216863308}
+  - component: {fileID: 216863307}
   m_Layer: 0
   m_Name: Mug_AA (4)
   m_TagString: Untagged
@@ -2814,6 +2996,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216863303}
   m_Mesh: {fileID: 8605250102760741311, guid: c9aaa45d584d85944aa0fb0ec78ee810, type: 3}
+--- !u!65 &216863307
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216863303}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.229763, y: 0.17250602, z: 0.17250602}
+  m_Center: {x: 0.028624684, y: 0.085893996, z: -0.000000007450581}
+--- !u!114 &216863308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216863303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &245049328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3270,6 +3486,8 @@ GameObject:
   - component: {fileID: 274516822}
   - component: {fileID: 274516824}
   - component: {fileID: 274516823}
+  - component: {fileID: 274516826}
+  - component: {fileID: 274516825}
   m_Layer: 0
   m_Name: Plate_AA (2)
   m_TagString: Untagged
@@ -3348,6 +3566,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274516821}
   m_Mesh: {fileID: -2198655035996724871, guid: d502d69f38442074fa6c6d36bcc16c65, type: 3}
+--- !u!65 &274516825
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274516821}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.582498, y: 0.037467036, z: 0.582498}
+  m_Center: {x: -2.1326223e-25, y: 0.019919505, z: 2.6363246e-25}
+--- !u!114 &274516826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274516821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &277748915
 GameObject:
   m_ObjectHideFlags: 0
@@ -3537,6 +3789,8 @@ GameObject:
   - component: {fileID: 301031212}
   - component: {fileID: 301031214}
   - component: {fileID: 301031213}
+  - component: {fileID: 301031215}
+  - component: {fileID: 301031216}
   m_Layer: 0
   m_Name: Wheelchair_AA
   m_TagString: Untagged
@@ -3615,6 +3869,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301031211}
   m_Mesh: {fileID: 8372658648035340205, guid: 228341038b59c6f4589e1d0d7def25ac, type: 3}
+--- !u!114 &301031215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301031211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
+--- !u!65 &301031216
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301031211}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.75787693, y: 0.9966361, z: 1.139342}
+  m_Center: {x: 0.009484499, y: 0.498935, z: 0.010549038}
 --- !u!1 &309154867
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,6 +3914,8 @@ GameObject:
   - component: {fileID: 309154868}
   - component: {fileID: 309154870}
   - component: {fileID: 309154869}
+  - component: {fileID: 309154872}
+  - component: {fileID: 309154871}
   m_Layer: 0
   m_Name: Case_Main_AA (5)
   m_TagString: Untagged
@@ -3706,6 +3996,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309154867}
   m_Mesh: {fileID: -8276135323262360863, guid: 8d90bff2e4fc5c94190a1ef713c01a44, type: 3}
+--- !u!65 &309154871
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309154867}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0998421, y: 2.120283, z: 0.569955}
+  m_Center: {x: 0.0011710227, y: 1.0572644, z: -0.01797162}
+--- !u!114 &309154872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309154867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &331692521
 GameObject:
   m_ObjectHideFlags: 0
@@ -5323,6 +5647,8 @@ GameObject:
   - component: {fileID: 483030585}
   - component: {fileID: 483030587}
   - component: {fileID: 483030586}
+  - component: {fileID: 483030589}
+  - component: {fileID: 483030588}
   m_Layer: 0
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
@@ -5401,6 +5727,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483030584}
   m_Mesh: {fileID: 888079997960467146, guid: 89f82597b3e8f6949bbcc7034c05eba2, type: 3}
+--- !u!65 &483030588
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483030584}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48733914, y: 1.1759181, z: 0.57796705}
+  m_Center: {x: 0.003414028, y: 0.588004, z: 0.04876939}
+--- !u!114 &483030589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483030584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 1379064077}
 --- !u!1 &483882637
 GameObject:
   m_ObjectHideFlags: 0
@@ -5412,6 +5772,8 @@ GameObject:
   - component: {fileID: 483882638}
   - component: {fileID: 483882640}
   - component: {fileID: 483882639}
+  - component: {fileID: 483882642}
+  - component: {fileID: 483882641}
   m_Layer: 0
   m_Name: MirrorShelf_AA
   m_TagString: Untagged
@@ -5492,6 +5854,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483882637}
   m_Mesh: {fileID: 5577512393784554116, guid: adafbad4777fdc4459b9a6b804085050, type: 3}
+--- !u!65 &483882641
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483882637}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48746198, y: 0.516856, z: 0.16793405}
+  m_Center: {x: -0.0026599988, y: 0.267624, z: -0.087434016}
+--- !u!114 &483882642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483882637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &493085465
 GameObject:
   m_ObjectHideFlags: 0
@@ -6603,131 +6999,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577448247}
   m_Mesh: {fileID: -7055139100931250454, guid: 655113eeddfb0984092159f13f03d145, type: 3}
---- !u!1 &586396722
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 586396723}
-  - component: {fileID: 586396727}
-  - component: {fileID: 586396726}
-  - component: {fileID: 586396725}
-  - component: {fileID: 586396724}
-  m_Layer: 7
-  m_Name: Cube (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &586396723
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586396722}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1350478655}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &586396724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586396722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
-  parentAnomaly: {fileID: 0}
---- !u!65 &586396725
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586396722}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &586396726
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586396722}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 5a7ca585a9b2b3c4587125916713263d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &586396727
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586396722}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &586626214
 GameObject:
   m_ObjectHideFlags: 0
@@ -6828,6 +7099,8 @@ GameObject:
   - component: {fileID: 598588077}
   - component: {fileID: 598588079}
   - component: {fileID: 598588078}
+  - component: {fileID: 598588081}
+  - component: {fileID: 598588080}
   m_Layer: 0
   m_Name: Mug_AA (3)
   m_TagString: Untagged
@@ -6906,6 +7179,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 598588076}
   m_Mesh: {fileID: 8605250102760741311, guid: c9aaa45d584d85944aa0fb0ec78ee810, type: 3}
+--- !u!65 &598588080
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598588076}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.229763, y: 0.17250602, z: 0.17250602}
+  m_Center: {x: 0.028624684, y: 0.085893996, z: -0.000000007450581}
+--- !u!114 &598588081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598588076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &605702664
 GameObject:
   m_ObjectHideFlags: 0
@@ -6917,6 +7224,8 @@ GameObject:
   - component: {fileID: 605702665}
   - component: {fileID: 605702667}
   - component: {fileID: 605702666}
+  - component: {fileID: 605702669}
+  - component: {fileID: 605702668}
   m_Layer: 0
   m_Name: Plate_AA (3)
   m_TagString: Untagged
@@ -6995,6 +7304,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605702664}
   m_Mesh: {fileID: -2198655035996724871, guid: d502d69f38442074fa6c6d36bcc16c65, type: 3}
+--- !u!65 &605702668
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605702664}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.582498, y: 0.037467036, z: 0.582498}
+  m_Center: {x: -2.1326223e-25, y: 0.019919505, z: 2.6363246e-25}
+--- !u!114 &605702669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605702664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &621759647
 GameObject:
   m_ObjectHideFlags: 0
@@ -7362,6 +7705,8 @@ GameObject:
   - component: {fileID: 650398554}
   - component: {fileID: 650398556}
   - component: {fileID: 650398555}
+  - component: {fileID: 650398558}
+  - component: {fileID: 650398557}
   m_Layer: 0
   m_Name: Mug_AA (2)
   m_TagString: Untagged
@@ -7440,6 +7785,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650398553}
   m_Mesh: {fileID: 8605250102760741311, guid: c9aaa45d584d85944aa0fb0ec78ee810, type: 3}
+--- !u!65 &650398557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650398553}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.229763, y: 0.17250602, z: 0.17250602}
+  m_Center: {x: 0.028624684, y: 0.085893996, z: -0.000000007450581}
+--- !u!114 &650398558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650398553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &651699148
 GameObject:
   m_ObjectHideFlags: 0
@@ -8863,6 +9242,8 @@ GameObject:
   - component: {fileID: 782114203}
   - component: {fileID: 782114205}
   - component: {fileID: 782114204}
+  - component: {fileID: 782114207}
+  - component: {fileID: 782114206}
   m_Layer: 0
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
@@ -8941,6 +9322,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782114202}
   m_Mesh: {fileID: 888079997960467146, guid: 89f82597b3e8f6949bbcc7034c05eba2, type: 3}
+--- !u!65 &782114206
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782114202}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48733914, y: 1.1759181, z: 0.57796705}
+  m_Center: {x: 0.0034149818, y: 0.588004, z: 0.04876748}
+--- !u!114 &782114207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782114202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 1379064077}
 --- !u!1 &784272659
 GameObject:
   m_ObjectHideFlags: 0
@@ -9884,6 +10299,8 @@ GameObject:
   - component: {fileID: 845187732}
   - component: {fileID: 845187734}
   - component: {fileID: 845187733}
+  - component: {fileID: 845187736}
+  - component: {fileID: 845187735}
   m_Layer: 0
   m_Name: Mug_AA (1)
   m_TagString: Untagged
@@ -9962,6 +10379,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845187731}
   m_Mesh: {fileID: 8605250102760741311, guid: c9aaa45d584d85944aa0fb0ec78ee810, type: 3}
+--- !u!65 &845187735
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845187731}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.229763, y: 0.17250602, z: 0.17250602}
+  m_Center: {x: 0.028628498, y: 0.085893996, z: -0.000000007450581}
+--- !u!114 &845187736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845187731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &848504263
 GameObject:
   m_ObjectHideFlags: 0
@@ -10062,6 +10513,8 @@ GameObject:
   - component: {fileID: 850334962}
   - component: {fileID: 850334964}
   - component: {fileID: 850334963}
+  - component: {fileID: 850334966}
+  - component: {fileID: 850334965}
   m_Layer: 0
   m_Name: Case_Main_AA
   m_TagString: Untagged
@@ -10142,6 +10595,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850334961}
   m_Mesh: {fileID: -8276135323262360863, guid: 8d90bff2e4fc5c94190a1ef713c01a44, type: 3}
+--- !u!65 &850334965
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850334961}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0998421, y: 2.120283, z: 0.569955}
+  m_Center: {x: 0.0011710227, y: 1.0572644, z: -0.01797162}
+--- !u!114 &850334966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850334961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &865612830
 GameObject:
   m_ObjectHideFlags: 0
@@ -10420,6 +10907,8 @@ GameObject:
   - component: {fileID: 883214519}
   - component: {fileID: 883214521}
   - component: {fileID: 883214520}
+  - component: {fileID: 883214523}
+  - component: {fileID: 883214522}
   m_Layer: 0
   m_Name: Surgerytable_AA
   m_TagString: Untagged
@@ -10498,6 +10987,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883214518}
   m_Mesh: {fileID: 6274327950217233313, guid: 1fa1bb901e47ffc479e06c4fd5fddd9e, type: 3}
+--- !u!65 &883214522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883214518}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45121014, y: 0.76529104, z: 0.6547192}
+  m_Center: {x: -0.002108999, y: 0.3813745, z: -0.00009368362}
+--- !u!114 &883214523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883214518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &892671099
 GameObject:
   m_ObjectHideFlags: 0
@@ -10722,6 +11245,8 @@ GameObject:
   - component: {fileID: 934779666}
   - component: {fileID: 934779668}
   - component: {fileID: 934779667}
+  - component: {fileID: 934779670}
+  - component: {fileID: 934779669}
   m_Layer: 0
   m_Name: Case_Main_AA (2)
   m_TagString: Untagged
@@ -10802,6 +11327,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934779665}
   m_Mesh: {fileID: -8276135323262360863, guid: 8d90bff2e4fc5c94190a1ef713c01a44, type: 3}
+--- !u!65 &934779669
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934779665}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0998421, y: 2.120283, z: 0.569955}
+  m_Center: {x: 0.0011710227, y: 1.0572644, z: -0.01797162}
+--- !u!114 &934779670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934779665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &953596687
 GameObject:
   m_ObjectHideFlags: 0
@@ -12502,7 +13061,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   duration: 0.63
   loopType: 1
-  newLocalRotation: {x: 0, y: 90, z: 0}
+  newLocalRotation: {x: 0, y: -90, z: 0}
   objsToMove:
   - {fileID: 1416070223}
   - {fileID: 33242615}
@@ -12568,7 +13127,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   duration: 0.4
   loopType: 1
-  newLocalRotation: {x: 0, y: 90, z: 0}
+  newLocalRotation: {x: 0, y: -90, z: 0}
   objsToMove:
   - {fileID: 204146618}
   - {fileID: 1983451254}
@@ -12782,6 +13341,8 @@ GameObject:
   - component: {fileID: 1188928473}
   - component: {fileID: 1188928475}
   - component: {fileID: 1188928474}
+  - component: {fileID: 1188928477}
+  - component: {fileID: 1188928476}
   m_Layer: 0
   m_Name: Plate_AA (1)
   m_TagString: Untagged
@@ -12860,6 +13421,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188928472}
   m_Mesh: {fileID: -2198655035996724871, guid: d502d69f38442074fa6c6d36bcc16c65, type: 3}
+--- !u!65 &1188928476
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188928472}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.582498, y: 0.037467036, z: 0.582498}
+  m_Center: {x: -2.1326223e-25, y: 0.019919505, z: 2.6363246e-25}
+--- !u!114 &1188928477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188928472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &1195302102
 GameObject:
   m_ObjectHideFlags: 0
@@ -14667,7 +15262,6 @@ Transform:
   m_Children:
   - {fileID: 1856784141}
   - {fileID: 67587451}
-  - {fileID: 586396723}
   m_Father: {fileID: 1218321446}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1350478656
@@ -16171,6 +16765,8 @@ GameObject:
   - component: {fileID: 1458311900}
   - component: {fileID: 1458311902}
   - component: {fileID: 1458311901}
+  - component: {fileID: 1458311904}
+  - component: {fileID: 1458311903}
   m_Layer: 0
   m_Name: Case_Main_AA (3)
   m_TagString: Untagged
@@ -16251,6 +16847,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458311899}
   m_Mesh: {fileID: -8276135323262360863, guid: 8d90bff2e4fc5c94190a1ef713c01a44, type: 3}
+--- !u!65 &1458311903
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458311899}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0998421, y: 2.120283, z: 0.569955}
+  m_Center: {x: 0.0011710227, y: 1.0572644, z: -0.01797162}
+--- !u!114 &1458311904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458311899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &1458841652
 GameObject:
   m_ObjectHideFlags: 0
@@ -17687,6 +18317,8 @@ GameObject:
   - component: {fileID: 1567582138}
   - component: {fileID: 1567582140}
   - component: {fileID: 1567582139}
+  - component: {fileID: 1567582142}
+  - component: {fileID: 1567582141}
   m_Layer: 0
   m_Name: Television_AA
   m_TagString: Untagged
@@ -17765,6 +18397,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567582137}
   m_Mesh: {fileID: -1298639212422161818, guid: 9dbe4180b7bfdf84fb3ecfc293060d40, type: 3}
+--- !u!65 &1567582141
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567582137}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.40506208, y: 0.674274, z: 0.41251612}
+  m_Center: {x: 0.00026699906, y: 0.33835998, z: 0.057932913}
+--- !u!114 &1567582142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567582137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &1571181341
 GameObject:
   m_ObjectHideFlags: 0
@@ -17865,6 +18531,8 @@ GameObject:
   - component: {fileID: 1594090413}
   - component: {fileID: 1594090415}
   - component: {fileID: 1594090414}
+  - component: {fileID: 1594090417}
+  - component: {fileID: 1594090416}
   m_Layer: 0
   m_Name: Case_Main_AA (1)
   m_TagString: Untagged
@@ -17945,6 +18613,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594090412}
   m_Mesh: {fileID: -8276135323262360863, guid: 8d90bff2e4fc5c94190a1ef713c01a44, type: 3}
+--- !u!65 &1594090416
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594090412}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0998421, y: 2.120283, z: 0.569955}
+  m_Center: {x: 0.0011710227, y: 1.0572644, z: -0.01797162}
+--- !u!114 &1594090417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594090412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &1595034597
 GameObject:
   m_ObjectHideFlags: 0
@@ -18080,6 +18782,8 @@ GameObject:
   - component: {fileID: 1610281125}
   - component: {fileID: 1610281127}
   - component: {fileID: 1610281126}
+  - component: {fileID: 1610281129}
+  - component: {fileID: 1610281128}
   m_Layer: 0
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
@@ -18158,6 +18862,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610281124}
   m_Mesh: {fileID: 888079997960467146, guid: 89f82597b3e8f6949bbcc7034c05eba2, type: 3}
+--- !u!65 &1610281128
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610281124}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48733914, y: 1.1759181, z: 0.57796705}
+  m_Center: {x: 0.0034149818, y: 0.588004, z: 0.04876748}
+--- !u!114 &1610281129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610281124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 1379064077}
 --- !u!1 &1618993963
 GameObject:
   m_ObjectHideFlags: 0
@@ -18382,6 +19120,8 @@ GameObject:
   - component: {fileID: 1645329537}
   - component: {fileID: 1645329539}
   - component: {fileID: 1645329538}
+  - component: {fileID: 1645329541}
+  - component: {fileID: 1645329540}
   m_Layer: 0
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
@@ -18460,6 +19200,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645329536}
   m_Mesh: {fileID: 888079997960467146, guid: 89f82597b3e8f6949bbcc7034c05eba2, type: 3}
+--- !u!65 &1645329540
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645329536}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48733914, y: 1.1759181, z: 0.57796705}
+  m_Center: {x: 0.003414505, y: 0.588004, z: 0.04876939}
+--- !u!114 &1645329541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645329536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 1379064077}
 --- !u!1 &1652047150
 GameObject:
   m_ObjectHideFlags: 0
@@ -18592,6 +19366,8 @@ GameObject:
   - component: {fileID: 1657031027}
   - component: {fileID: 1657031029}
   - component: {fileID: 1657031028}
+  - component: {fileID: 1657031031}
+  - component: {fileID: 1657031030}
   m_Layer: 0
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
@@ -18670,6 +19446,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657031026}
   m_Mesh: {fileID: 888079997960467146, guid: 89f82597b3e8f6949bbcc7034c05eba2, type: 3}
+--- !u!65 &1657031030
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657031026}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48733914, y: 1.1759181, z: 0.57796705}
+  m_Center: {x: 0.003414505, y: 0.588004, z: 0.04876748}
+--- !u!114 &1657031031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657031026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 1379064077}
 --- !u!1 &1667004570
 GameObject:
   m_ObjectHideFlags: 0
@@ -18681,6 +19491,8 @@ GameObject:
   - component: {fileID: 1667004571}
   - component: {fileID: 1667004573}
   - component: {fileID: 1667004572}
+  - component: {fileID: 1667004575}
+  - component: {fileID: 1667004574}
   m_Layer: 0
   m_Name: Case_Main_AA (4)
   m_TagString: Untagged
@@ -18761,6 +19573,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667004570}
   m_Mesh: {fileID: -8276135323262360863, guid: 8d90bff2e4fc5c94190a1ef713c01a44, type: 3}
+--- !u!65 &1667004574
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667004570}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0998421, y: 2.120283, z: 0.569955}
+  m_Center: {x: 0.0011710227, y: 1.0572644, z: -0.01797162}
+--- !u!114 &1667004575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667004570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &1683888486
 GameObject:
   m_ObjectHideFlags: 0
@@ -18772,6 +19618,8 @@ GameObject:
   - component: {fileID: 1683888487}
   - component: {fileID: 1683888489}
   - component: {fileID: 1683888488}
+  - component: {fileID: 1683888491}
+  - component: {fileID: 1683888490}
   m_Layer: 0
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
@@ -18850,6 +19698,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683888486}
   m_Mesh: {fileID: 888079997960467146, guid: 89f82597b3e8f6949bbcc7034c05eba2, type: 3}
+--- !u!65 &1683888490
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683888486}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48733914, y: 1.1759181, z: 0.57796705}
+  m_Center: {x: 0.0034142665, y: 0.588004, z: 0.04876748}
+--- !u!114 &1683888491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683888486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 1379064077}
 --- !u!1 &1696741075
 GameObject:
   m_ObjectHideFlags: 0
@@ -19430,6 +20312,8 @@ GameObject:
   - component: {fileID: 1829449530}
   - component: {fileID: 1829449532}
   - component: {fileID: 1829449531}
+  - component: {fileID: 1829449534}
+  - component: {fileID: 1829449533}
   m_Layer: 0
   m_Name: SheetRack_AA
   m_TagString: Untagged
@@ -19520,6 +20404,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829449529}
   m_Mesh: {fileID: -733829505707995218, guid: 4409ac2eb3660094cb89ac9adb60bb92, type: 3}
+--- !u!65 &1829449533
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829449529}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.563849, y: 1.202999, z: 0.511464}
+  m_Center: {x: 0.0000064969063, y: 0.6055065, z: 0.008442007}
+--- !u!114 &1829449534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829449529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &1845351955
 GameObject:
   m_ObjectHideFlags: 0
@@ -19709,6 +20627,8 @@ GameObject:
   - component: {fileID: 1856784141}
   - component: {fileID: 1856784143}
   - component: {fileID: 1856784142}
+  - component: {fileID: 1856784145}
+  - component: {fileID: 1856784144}
   m_Layer: 0
   m_Name: Sofa_AA
   m_TagString: Untagged
@@ -19789,6 +20709,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856784140}
   m_Mesh: {fileID: -1574574358922670481, guid: 225f2344fb0431245a59467679ec1b7f, type: 3}
+--- !u!65 &1856784144
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856784140}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.1612282, y: 1.0051589, z: 1.216182}
+  m_Center: {x: -0.00069928187, y: 0.50233924, z: 0.04169045}
+--- !u!114 &1856784145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856784140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &1859037894
 GameObject:
   m_ObjectHideFlags: 0
@@ -20119,6 +21073,8 @@ GameObject:
   - component: {fileID: 1920049036}
   - component: {fileID: 1920049038}
   - component: {fileID: 1920049037}
+  - component: {fileID: 1920049040}
+  - component: {fileID: 1920049039}
   m_Layer: 0
   m_Name: Carpet_AA
   m_TagString: Untagged
@@ -20197,6 +21153,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920049035}
   m_Mesh: {fileID: -178661909579514099, guid: 07e2e2cbe02dfb043be044bdc4f2ff56, type: 3}
+--- !u!65 &1920049039
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920049035}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 0.008211778, z: 2.943846}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1920049040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920049035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 0}
 --- !u!1 &1921738836
 GameObject:
   m_ObjectHideFlags: 0
