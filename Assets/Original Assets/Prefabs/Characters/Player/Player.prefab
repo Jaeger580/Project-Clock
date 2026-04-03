@@ -2826,7 +2826,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.4
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.000001
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -2862,7 +2862,7 @@ MonoBehaviour:
   playerController: {fileID: 8335415044500469038}
   playerInput: {fileID: 2120804770082781032}
   playerCamera: {fileID: 2986571291605505998}
-  sensitivity: 20
+  sensitivity: 0.1
 --- !u!114 &3628931087392716559
 MonoBehaviour:
   m_ObjectHideFlags: 0

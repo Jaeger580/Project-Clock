@@ -36,8 +36,8 @@ public class PlayerLook : MonoBehaviour
     private void MouseLook() 
     {
         Vector2 input = lookAction.ReadValue<Vector2>();
-        pitch -= input.y * sensitivity * Time.deltaTime;
-        yaw = input.x * sensitivity * Time.deltaTime;
+        pitch -= input.y * sensitivity;
+        yaw = input.x * sensitivity;
 
 
         // Clamp pitch to avoid issues and sign flips at +/- 90
