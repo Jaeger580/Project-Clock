@@ -36,7 +36,7 @@ public class PlayerLook : MonoBehaviour
     private void MouseLook() 
     {
         Vector2 input = lookAction.ReadValue<Vector2>();
-        pitch -= input.y * sensitivity * Time.deltaTime;
+        pitch -= input.y * sensitivity;
         yaw = input.x * sensitivity;
 
 
@@ -47,6 +47,6 @@ public class PlayerLook : MonoBehaviour
         playerCamera.transform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
 
         // Horizontal Rotation
-        transform.Rotate(Vector3.up * yaw * Time.deltaTime);
+        transform.Rotate(Vector3.up * yaw);
     }
 }
