@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         //Jump
 
         // Apply Gravity
-        playerVelocity.y += gravityValue * Time.deltaTime;
+        playerVelocity.y += gravityValue;
 
         // Apply Sprint
         Sprint();

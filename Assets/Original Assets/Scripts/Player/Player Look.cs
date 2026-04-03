@@ -37,7 +37,7 @@ public class PlayerLook : MonoBehaviour
     {
         Vector2 input = lookAction.ReadValue<Vector2>();
         pitch -= input.y * sensitivity * Time.deltaTime;
-        yaw = input.x * sensitivity;
+        yaw = input.x * sensitivity * Time.deltaTime;
 
 
         // Clamp pitch to avoid issues and sign flips at +/- 90
@@ -47,6 +47,6 @@ public class PlayerLook : MonoBehaviour
         playerCamera.transform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
 
         // Horizontal Rotation
-        transform.Rotate(Vector3.up * yaw * Time.deltaTime);
+        transform.Rotate(Vector3.up * yaw);
     }
 }
