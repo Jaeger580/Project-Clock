@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 33242615}
   - component: {fileID: 33242617}
   - component: {fileID: 33242616}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Door_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 51027019}
   - component: {fileID: 51027022}
   - component: {fileID: 51027021}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tv_Retro_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1874,7 +1874,7 @@ GameObject:
   - component: {fileID: 164173138}
   - component: {fileID: 164173141}
   - component: {fileID: 164173140}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2488,7 +2488,7 @@ GameObject:
   - component: {fileID: 204146618}
   - component: {fileID: 204146620}
   - component: {fileID: 204146619}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Door_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2579,7 +2579,7 @@ GameObject:
   - component: {fileID: 210709890}
   - component: {fileID: 210709893}
   - component: {fileID: 210709892}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2704,7 +2704,7 @@ GameObject:
   - component: {fileID: 211892662}
   - component: {fileID: 211892665}
   - component: {fileID: 211892664}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plate_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2918,7 +2918,7 @@ GameObject:
   - component: {fileID: 216863305}
   - component: {fileID: 216863308}
   - component: {fileID: 216863307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mug_AA (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3219,7 +3219,7 @@ GameObject:
   - component: {fileID: 249888481}
   - component: {fileID: 249888483}
   - component: {fileID: 249888482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Door_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3488,7 +3488,7 @@ GameObject:
   - component: {fileID: 274516823}
   - component: {fileID: 274516826}
   - component: {fileID: 274516825}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plate_AA (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3791,7 +3791,7 @@ GameObject:
   - component: {fileID: 301031213}
   - component: {fileID: 301031215}
   - component: {fileID: 301031216}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wheelchair_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3916,7 +3916,7 @@ GameObject:
   - component: {fileID: 309154869}
   - component: {fileID: 309154872}
   - component: {fileID: 309154871}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Main_AA (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4041,7 +4041,7 @@ GameObject:
   - component: {fileID: 331692522}
   - component: {fileID: 331692524}
   - component: {fileID: 331692523}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRackCase_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5240,7 +5240,8 @@ GameObject:
   m_Component:
   - component: {fileID: 455068868}
   - component: {fileID: 455068869}
-  m_Layer: 0
+  - component: {fileID: 455068870}
+  m_Layer: 7
   m_Name: Mirror Shelf Anomaly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5280,6 +5281,27 @@ MonoBehaviour:
   objsToToggleOn: []
   objsToToggleOff:
   - {fileID: 483882637}
+--- !u!65 &455068870
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455068867}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48746198, y: 0.516856, z: 0.16793405}
+  m_Center: {x: -0.0026599988, y: 0.267624, z: -0.087434016}
 --- !u!1 &459830286
 GameObject:
   m_ObjectHideFlags: 0
@@ -5291,7 +5313,7 @@ GameObject:
   - component: {fileID: 459830287}
   - component: {fileID: 459830289}
   - component: {fileID: 459830288}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Door_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5649,7 +5671,7 @@ GameObject:
   - component: {fileID: 483030586}
   - component: {fileID: 483030589}
   - component: {fileID: 483030588}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5774,7 +5796,7 @@ GameObject:
   - component: {fileID: 483882639}
   - component: {fileID: 483882642}
   - component: {fileID: 483882641}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MirrorShelf_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6377,7 +6399,7 @@ GameObject:
   - component: {fileID: 540006617}
   - component: {fileID: 540006619}
   - component: {fileID: 540006618}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Door_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6466,7 +6488,7 @@ GameObject:
   - component: {fileID: 549269915}
   - component: {fileID: 549269917}
   - component: {fileID: 549269916}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRackCase_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7101,7 +7123,7 @@ GameObject:
   - component: {fileID: 598588078}
   - component: {fileID: 598588081}
   - component: {fileID: 598588080}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mug_AA (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7226,7 +7248,7 @@ GameObject:
   - component: {fileID: 605702666}
   - component: {fileID: 605702669}
   - component: {fileID: 605702668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plate_AA (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7707,7 +7729,7 @@ GameObject:
   - component: {fileID: 650398555}
   - component: {fileID: 650398558}
   - component: {fileID: 650398557}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mug_AA (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8851,7 +8873,7 @@ GameObject:
   - component: {fileID: 755488000}
   - component: {fileID: 755488002}
   - component: {fileID: 755488001}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Door_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9153,7 +9175,7 @@ GameObject:
   - component: {fileID: 776277014}
   - component: {fileID: 776277016}
   - component: {fileID: 776277015}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRackCase_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9244,7 +9266,7 @@ GameObject:
   - component: {fileID: 782114204}
   - component: {fileID: 782114207}
   - component: {fileID: 782114206}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10301,7 +10323,7 @@ GameObject:
   - component: {fileID: 845187733}
   - component: {fileID: 845187736}
   - component: {fileID: 845187735}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mug_AA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10515,7 +10537,7 @@ GameObject:
   - component: {fileID: 850334963}
   - component: {fileID: 850334966}
   - component: {fileID: 850334965}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Main_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10909,7 +10931,7 @@ GameObject:
   - component: {fileID: 883214520}
   - component: {fileID: 883214523}
   - component: {fileID: 883214522}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Surgerytable_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11247,7 +11269,7 @@ GameObject:
   - component: {fileID: 934779667}
   - component: {fileID: 934779670}
   - component: {fileID: 934779669}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Main_AA (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12220,7 +12242,7 @@ GameObject:
   - component: {fileID: 1071273944}
   - component: {fileID: 1071273946}
   - component: {fileID: 1071273945}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRackCase_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12885,7 +12907,7 @@ GameObject:
   - component: {fileID: 1163892388}
   - component: {fileID: 1163892390}
   - component: {fileID: 1163892389}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Door_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13343,7 +13365,7 @@ GameObject:
   - component: {fileID: 1188928474}
   - component: {fileID: 1188928477}
   - component: {fileID: 1188928476}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plate_AA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13555,7 +13577,7 @@ GameObject:
   - component: {fileID: 1200178592}
   - component: {fileID: 1200178594}
   - component: {fileID: 1200178593}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Door_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13733,7 +13755,7 @@ GameObject:
   - component: {fileID: 1215799168}
   - component: {fileID: 1215799170}
   - component: {fileID: 1215799169}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRackCase_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14885,7 +14907,7 @@ GameObject:
   - component: {fileID: 1299300564}
   - component: {fileID: 1299300566}
   - component: {fileID: 1299300565}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRackCase_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15382,7 +15404,7 @@ GameObject:
   - component: {fileID: 1363229491}
   - component: {fileID: 1363229493}
   - component: {fileID: 1363229492}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pillows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15802,7 +15824,7 @@ GameObject:
   - component: {fileID: 1390530216}
   - component: {fileID: 1390530218}
   - component: {fileID: 1390530217}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MirrorShelf_DoorL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15891,7 +15913,7 @@ GameObject:
   - component: {fileID: 1396203880}
   - component: {fileID: 1396203882}
   - component: {fileID: 1396203881}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16159,7 +16181,7 @@ GameObject:
   - component: {fileID: 1416070223}
   - component: {fileID: 1416070225}
   - component: {fileID: 1416070224}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Door_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16676,7 +16698,7 @@ GameObject:
   - component: {fileID: 1450953139}
   - component: {fileID: 1450953141}
   - component: {fileID: 1450953140}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MirrorShelf_DoorR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16767,7 +16789,7 @@ GameObject:
   - component: {fileID: 1458311901}
   - component: {fileID: 1458311904}
   - component: {fileID: 1458311903}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Main_AA (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16892,7 +16914,7 @@ GameObject:
   - component: {fileID: 1458841653}
   - component: {fileID: 1458841655}
   - component: {fileID: 1458841654}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Door_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17382,7 +17404,7 @@ GameObject:
   - component: {fileID: 1499011836}
   - component: {fileID: 1499011838}
   - component: {fileID: 1499011837}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRackCase_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17738,7 +17760,7 @@ GameObject:
   - component: {fileID: 1522397894}
   - component: {fileID: 1522397896}
   - component: {fileID: 1522397895}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRackCase_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18319,7 +18341,7 @@ GameObject:
   - component: {fileID: 1567582139}
   - component: {fileID: 1567582142}
   - component: {fileID: 1567582141}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Television_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18533,7 +18555,7 @@ GameObject:
   - component: {fileID: 1594090414}
   - component: {fileID: 1594090417}
   - component: {fileID: 1594090416}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Main_AA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18784,7 +18806,7 @@ GameObject:
   - component: {fileID: 1610281126}
   - component: {fileID: 1610281129}
   - component: {fileID: 1610281128}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19122,7 +19144,7 @@ GameObject:
   - component: {fileID: 1645329538}
   - component: {fileID: 1645329541}
   - component: {fileID: 1645329540}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19368,7 +19390,7 @@ GameObject:
   - component: {fileID: 1657031028}
   - component: {fileID: 1657031031}
   - component: {fileID: 1657031030}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19493,7 +19515,7 @@ GameObject:
   - component: {fileID: 1667004572}
   - component: {fileID: 1667004575}
   - component: {fileID: 1667004574}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Main_AA (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19620,7 +19642,7 @@ GameObject:
   - component: {fileID: 1683888488}
   - component: {fileID: 1683888491}
   - component: {fileID: 1683888490}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chairoffice_AA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20223,7 +20245,7 @@ GameObject:
   - component: {fileID: 1821609309}
   - component: {fileID: 1821609311}
   - component: {fileID: 1821609310}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRackCase_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20314,7 +20336,7 @@ GameObject:
   - component: {fileID: 1829449531}
   - component: {fileID: 1829449534}
   - component: {fileID: 1829449533}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRack_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20629,7 +20651,7 @@ GameObject:
   - component: {fileID: 1856784142}
   - component: {fileID: 1856784145}
   - component: {fileID: 1856784144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sofa_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21075,7 +21097,7 @@ GameObject:
   - component: {fileID: 1920049037}
   - component: {fileID: 1920049040}
   - component: {fileID: 1920049039}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Carpet_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21433,7 +21455,7 @@ GameObject:
   - component: {fileID: 1983451254}
   - component: {fileID: 1983451256}
   - component: {fileID: 1983451255}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Door_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21775,7 +21797,7 @@ GameObject:
   - component: {fileID: 2009182950}
   - component: {fileID: 2009182952}
   - component: {fileID: 2009182951}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRackCase_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21864,7 +21886,7 @@ GameObject:
   - component: {fileID: 2020556482}
   - component: {fileID: 2020556484}
   - component: {fileID: 2020556483}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRackCase_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22643,7 +22665,7 @@ GameObject:
   - component: {fileID: 2109109370}
   - component: {fileID: 2109109372}
   - component: {fileID: 2109109371}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Case_Door_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23090,7 +23112,7 @@ GameObject:
   - component: {fileID: 2127339690}
   - component: {fileID: 2127339692}
   - component: {fileID: 2127339691}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SheetRackCase_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
