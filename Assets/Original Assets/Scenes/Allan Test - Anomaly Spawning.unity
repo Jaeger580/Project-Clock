@@ -4844,7 +4844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4dbf128be46049c68357a30cc8b7501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyCentralController
-  sceneBuildIndices: 0300000004000000
+  sceneBuildIndices: 04000000
   anomalyTypeOrder:
   - {fileID: 11400000, guid: 2170dd8bc5dc7422097f2ddfea334bbd, type: 2}
   - {fileID: 11400000, guid: 2170dd8bc5dc7422097f2ddfea334bbd, type: 2}
@@ -4899,7 +4899,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   managers: []
-  maxAnomaliesAllowed: 4
+  maxAnomaliesAllowed: 50
   graceAtMaxAnomalies: 20
   timeProgressesAtMaxAnomalies: 1
   overMaxKills: 1

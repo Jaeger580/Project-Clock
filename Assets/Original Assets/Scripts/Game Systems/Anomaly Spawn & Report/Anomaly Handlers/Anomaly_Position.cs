@@ -5,6 +5,8 @@ using UnityEngine;
 public class Anomaly_Position : AnomalyHandler_Gradual
 {
     [SerializeField] private Vector3 newLocalPosition = new();
+    [SerializeField] private bool treatAsOffset = false;
+    [SerializeField] private bool ignoreAtNegativeThousand = false;
     [SerializeField] private List<Transform> objsToMove = new();
     private Dictionary<Transform, Vector3> og_positions = new();
 
@@ -45,7 +47,24 @@ public class Anomaly_Position : AnomalyHandler_Gradual
 
             foreach (var obj in objsToMove)
             {
-                var newPos = Vector3.Lerp(og_positions[obj], newLocalPosition, gradualCurve.Evaluate(journey / duration));
+                Vector3 newPos;
+                var og_pos = og_positions[obj];
+                if (!treatAsOffset)
+                {
+                    newPos = Vector3.Lerp(og_pos, newLocalPosition, gradualCurve.Evaluate(journey / duration));
+                }
+                else
+                {
+                    newPos = og_pos + Vector3.Lerp(Vector3.zero, newLocalPosition, gradualCurve.Evaluate(journey/duration));
+                }
+
+                if (ignoreAtNegativeThousand)
+                {
+                    newPos.x = newLocalPosition.x == -1000f ? og_pos.x : newPos.x;
+                    newPos.y = newLocalPosition.y == -1000f ? og_pos.y : newPos.y;
+                    newPos.z = newLocalPosition.z == -1000f ? og_pos.z : newPos.z;
+                }
+
                 obj.localPosition = newPos;
             }
 
@@ -63,7 +82,25 @@ public class Anomaly_Position : AnomalyHandler_Gradual
 
             foreach (var obj in objsToMove)
             {
-                var newPos = Vector3.Lerp(og_positions[obj], newLocalPosition, gradualCurve.Evaluate(journey / duration));
+                Vector3 newPos;
+                var og_pos = og_positions[obj];
+
+                if (!treatAsOffset)
+                {
+                    newPos = Vector3.Lerp(og_pos, newLocalPosition, gradualCurve.Evaluate(journey / duration));
+                }
+                else
+                {
+                    newPos = og_pos + Vector3.Lerp(Vector3.zero, newLocalPosition, gradualCurve.Evaluate(journey / duration));
+                }
+
+                if (ignoreAtNegativeThousand)
+                {
+                    newPos.x = newLocalPosition.x == -1000f ? og_pos.x : newPos.x;
+                    newPos.y = newLocalPosition.y == -1000f ? og_pos.y : newPos.y;
+                    newPos.z = newLocalPosition.z == -1000f ? og_pos.z : newPos.z;
+                }
+
                 obj.localPosition = newPos;
             }
 
