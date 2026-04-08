@@ -1030,7 +1030,7 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 18
-  m_Range: 20
+  m_Range: 15
   m_SpotAngle: 41.265137
   m_InnerSpotAngle: 36.423203
   m_CookieSize: 10
@@ -1041,7 +1041,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.54
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
