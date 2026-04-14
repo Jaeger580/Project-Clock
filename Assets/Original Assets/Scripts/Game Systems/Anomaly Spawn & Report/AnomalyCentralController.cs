@@ -58,6 +58,7 @@ public class AnomalyCentralController : MonoBehaviour
         StopAllCoroutines();
         gameOver = true;
         print("GAME OVER, TOO MANY ANOMALIES ACTIVE AT ONCE.");
+        SceneManager.LoadScene("Loss");
     }
 
     private void Awake()

@@ -19,6 +19,9 @@ public class PlayerLook : MonoBehaviour
     private float pitch;
     private float yaw;
 
+    [SerializeField]
+    private GameObject flashLight;
+
     private void Awake()
     {
         lookAction = playerInput.actions.FindAction("Look");
@@ -48,5 +51,19 @@ public class PlayerLook : MonoBehaviour
 
         // Horizontal Rotation
         transform.Rotate(Vector3.up * yaw);
+    }
+
+    // Toggles the players flashlight on and off
+    // might not make the most sense in this script, but don't want a new one for this.
+    public void ToggleFlashlight() 
+    {
+        if (flashLight.activeSelf == true)
+        {
+            flashLight.SetActive(false);
+        }
+        else 
+        {
+            flashLight.SetActive(true);
+        }
     }
 }

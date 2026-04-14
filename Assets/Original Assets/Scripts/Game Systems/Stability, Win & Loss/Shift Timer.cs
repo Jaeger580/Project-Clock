@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShiftTimer : MonoBehaviour
 {
@@ -55,6 +56,7 @@ public class ShiftTimer : MonoBehaviour
         pauseTime = true;
         hasWon = true;
         Debug.Log("USE SURVIVED THE NIGHT!!!!!!!!!!");
+        SceneManager.LoadScene("Win");
     }
 
     public float TotalNightTime()
