@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -24,7 +25,11 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        if (ShiftComplete()) return;
+        if (ShiftComplete()) 
+        {
+            SceneManager.LoadScene("Win");
+        }
+        ;
         if (paused) return;
 
         totalElapsedTime += Time.deltaTime;

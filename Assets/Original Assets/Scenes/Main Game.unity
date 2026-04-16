@@ -12208,7 +12208,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   managers: []
-  maxAnomaliesAllowed: 4
+  maxAnomaliesAllowed: 5
   graceAtMaxAnomalies: 20
   timeProgressesAtMaxAnomalies: 1
   overMaxKills: 1
@@ -12240,7 +12240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5024a1cf2cd334e85bf7c4aaef5fed37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  totalShiftTime: 180
+  totalShiftTime: 600
   startTime: 22
   endTime: 30
   visualTime: 0
