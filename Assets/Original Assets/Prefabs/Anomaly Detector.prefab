@@ -124,5 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9242ea319e04951afc42b947b20469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyTagger
-  tagCheckRadius: 3
+  tagCheckRadius: 0.5
   tagsToMatch: []
