@@ -11567,28 +11567,28 @@ MonoBehaviour:
     You can "unlock" your mouse by holding
     right click, or left-Alt button
 
-    Interact with the camera (the grey box
-    the player starts looking at) with "e"
+    Interact with the camera (the grey box the
+    player starts looking at) with "e"
 
-    You can swap cameras with A/D to
-    go to the next or previous cameras - if you go past the "first" or "last" camera,
-    it''ll kick you out of the camera view
+    You can swap cameras with A/D to go to
+    the next or previous cameras - if you go past the "first" or "last" camera, it''ll
+    kick you out of the camera view
 
-    The two main rooms have anomalies
-    that sometimes spawn, these are "differences" in the world that happen over time
+    The two main rooms have anomalies that sometimes
+    spawn, these are "differences" in the world that happen over time
 
-    When
-    you see something that is possibly an anomaly, you''ll need to first select the
-    type of anomaly you think it is (by freeing your mouse and selecting from the
-    dropdown on the left)
+    When you
+    see something that is possibly an anomaly, you''ll need to first select the type
+    of anomaly you think it is (by freeing your mouse and selecting from the dropdown
+    on the left)
 
-    Once you''ve chosen which anomaly type you think
-    it is, you left click on the spot where the anomaly is happening
+    Once you''ve chosen which anomaly type you think it is, you
+    left click on the spot where the anomaly is happening
 
-    After
-    a brief delay it''ll tell you whether you were right or wrong, and if you were
-    right it''ll fix it for you (though if another one spawns at the same time it
-    might re-spawn the one you just fixed, this will be less of an issue in the future)
+    After a brief delay
+    it''ll tell you whether you were right or wrong, and if you were right it''ll
+    fix it for you (though if another one spawns at the same time it might re-spawn
+    the one you just fixed, this will be less of an issue in the future)
 
     If
     it doesn''t work but you think it should''ve, you either missed the anomaly with
@@ -11685,6 +11685,10 @@ PrefabInstance:
     - target: {fileID: 5576777435374653609, guid: 0511a90be31a7454d918c0727e2864cb, type: 3}
       propertyPath: m_Name
       value: Room Camera (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576777435374653609, guid: 0511a90be31a7454d918c0727e2864cb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6111973646773483680, guid: 0511a90be31a7454d918c0727e2864cb, type: 3}
       propertyPath: m_LocalPosition.x
