@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 29669491}
   - component: {fileID: 29669493}
   - component: {fileID: 29669492}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,8 +481,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.2
-  m_Range: 6
+  m_Intensity: 2.5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2725,7 +2725,7 @@ GameObject:
   - component: {fileID: 200683984}
   - component: {fileID: 200683986}
   - component: {fileID: 200683985}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2787,8 +2787,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.2
-  m_Range: 6
+  m_Intensity: 2.5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -3894,7 +3894,9 @@ GameObject:
   - component: {fileID: 267027333}
   - component: {fileID: 267027335}
   - component: {fileID: 267027334}
-  m_Layer: 0
+  - component: {fileID: 267027336}
+  - component: {fileID: 267027337}
+  m_Layer: 7
   m_Name: Neonlamp_AA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3972,6 +3974,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267027332}
   m_Mesh: {fileID: 6058261783575842836, guid: e393893055af5e64a80a9348d3f2ea75, type: 3}
+--- !u!65 &267027336
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267027332}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.99974024, y: 0.16875002, z: 0.26429406}
+  m_Center: {x: 0.0000009536743, y: -0.077250004, z: -0.0000018924475}
+--- !u!114 &267027337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267027332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 712615766}
 --- !u!1 &274516821
 GameObject:
   m_ObjectHideFlags: 0
@@ -4558,7 +4594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 313832646}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7085,7 +7121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 535489740}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7474,7 +7510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 567778855}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LIGHTS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9378,6 +9414,7 @@ MonoBehaviour:
   - {fileID: 313832646}
   - {fileID: 1740627073}
   - {fileID: 535489740}
+  - {fileID: 4970597545316426448}
 --- !u!114 &712615766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9390,7 +9427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25cc679c01970402ebea1297ef7fd219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Composite
-  data: {fileID: 11400000, guid: 0a015488fb8f64a50a65f245cccbc044, type: 2}
+  data: {fileID: 11400000, guid: 54ee6f6f55b4b4ff58202ebbc4bc662a, type: 2}
   anomalyEnabled: 0
   underlyingHandlers:
   - {fileID: 712615765}
@@ -9494,7 +9531,7 @@ GameObject:
   - component: {fileID: 734636456}
   - component: {fileID: 734636458}
   - component: {fileID: 734636457}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9556,8 +9593,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.2
-  m_Range: 6
+  m_Intensity: 2.5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -10846,7 +10883,7 @@ GameObject:
   - component: {fileID: 805042185}
   - component: {fileID: 805042187}
   - component: {fileID: 805042186}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10908,8 +10945,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.2
-  m_Range: 6
+  m_Intensity: 2.5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -13715,7 +13752,9 @@ GameObject:
   - component: {fileID: 1092956955}
   - component: {fileID: 1092956957}
   - component: {fileID: 1092956956}
-  m_Layer: 0
+  - component: {fileID: 1092956958}
+  - component: {fileID: 1092956959}
+  m_Layer: 7
   m_Name: Neonlamp_AA (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13793,6 +13832,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092956954}
   m_Mesh: {fileID: 6058261783575842836, guid: e393893055af5e64a80a9348d3f2ea75, type: 3}
+--- !u!65 &1092956958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092956954}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.99974024, y: 0.16875002, z: 0.26429406}
+  m_Center: {x: 0.0000019073486, y: -0.077250004, z: 0.000000014901165}
+--- !u!114 &1092956959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092956954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 712615766}
 --- !u!1 &1100174515
 GameObject:
   m_ObjectHideFlags: 0
@@ -15347,7 +15420,9 @@ GameObject:
   - component: {fileID: 1226434754}
   - component: {fileID: 1226434756}
   - component: {fileID: 1226434755}
-  m_Layer: 0
+  - component: {fileID: 1226434757}
+  - component: {fileID: 1226434758}
+  m_Layer: 7
   m_Name: Neonlamp_AA (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15425,6 +15500,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226434753}
   m_Mesh: {fileID: 6058261783575842836, guid: e393893055af5e64a80a9348d3f2ea75, type: 3}
+--- !u!65 &1226434757
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226434753}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.99974, y: 0.16875002, z: 0.264294}
+  m_Center: {x: -0.0000038146973, y: -0.077250004, z: 0.0000019222498}
+--- !u!114 &1226434758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226434753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 712615766}
 --- !u!1 &1227888128
 GameObject:
   m_ObjectHideFlags: 0
@@ -21572,7 +21681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1740627073}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23291,6 +23400,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7521653924751408218, guid: ea8a159a96705834399db908d9fd07b6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521653924751408218, guid: ea8a159a96705834399db908d9fd07b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -23305,6 +23418,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7521653924751408218, guid: ea8a159a96705834399db908d9fd07b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1983739310}
+    - targetCorrespondingSourceObject: {fileID: 7521653924751408218, guid: ea8a159a96705834399db908d9fd07b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1983739311}
     - targetCorrespondingSourceObject: {fileID: -9196016574880351367, guid: ea8a159a96705834399db908d9fd07b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1983739309}
@@ -23398,6 +23514,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3070774627847343358, guid: ea8a159a96705834399db908d9fd07b6, type: 3}
+--- !u!114 &1983739311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983739307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 712615766}
 --- !u!1 &1985082307
 GameObject:
   m_ObjectHideFlags: 0
@@ -24000,7 +24129,9 @@ GameObject:
   - component: {fileID: 2067641090}
   - component: {fileID: 2067641092}
   - component: {fileID: 2067641091}
-  m_Layer: 0
+  - component: {fileID: 2067641093}
+  - component: {fileID: 2067641094}
+  m_Layer: 7
   m_Name: Neonlamp_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24078,6 +24209,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067641089}
   m_Mesh: {fileID: 6058261783575842836, guid: e393893055af5e64a80a9348d3f2ea75, type: 3}
+--- !u!65 &2067641093
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067641089}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.99974, y: 0.16875002, z: 0.264294}
+  m_Center: {x: 8.270541e-25, y: -0.077250004, z: 0.0000009685755}
+--- !u!114 &2067641094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067641089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 712615766}
 --- !u!1 &2076448971
 GameObject:
   m_ObjectHideFlags: 0
@@ -24475,7 +24640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2112099144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25305,13 +25470,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5576777435374653609, guid: 0511a90be31a7454d918c0727e2864cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4970597545316426450}
   m_SourcePrefab: {fileID: 100100000, guid: 0511a90be31a7454d918c0727e2864cb, type: 3}
 --- !u!4 &4970597545316426448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6111973646773483680, guid: 0511a90be31a7454d918c0727e2864cb, type: 3}
   m_PrefabInstance: {fileID: 4970597545316426447}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4970597545316426449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5576777435374653609, guid: 0511a90be31a7454d918c0727e2864cb, type: 3}
+  m_PrefabInstance: {fileID: 4970597545316426447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4970597545316426450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4970597545316426449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 712615766}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
