@@ -18,6 +18,8 @@ public class CameraManager : MonoBehaviour, IInteractable
 
     [SerializeField]
     private GameObject playerHUD;
+    [SerializeField]
+    private GameObject cameraHUD;
 
     private void Awake()
     {
@@ -47,6 +49,8 @@ public class CameraManager : MonoBehaviour, IInteractable
         camIndex = 0;
 
         playerHUD.SetActive(false);
+        cameraHUD.SetActive(true);
+
 
         //roomCameras[camIndex].depth = 2;
         var nextCam = roomCameras[camIndex];
@@ -70,7 +74,9 @@ public class CameraManager : MonoBehaviour, IInteractable
         // Change player's input actions
         PlayerInput.SwitchCurrentActionMap("Player");
 
+        cameraHUD.SetActive(false);
         playerHUD.SetActive(true);
+
     }
 
     // Toggles which camera is active
