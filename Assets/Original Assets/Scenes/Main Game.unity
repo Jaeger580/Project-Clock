@@ -13257,6 +13257,70 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1678333257}
+    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1678333257}
+    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectCam
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CameraManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1678333257}
+    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectCam
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CameraManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6762399887950539844, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
       propertyPath: m_SizeDelta.x
       value: 225

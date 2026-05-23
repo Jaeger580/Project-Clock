@@ -58,6 +58,8 @@ public class CameraManager : MonoBehaviour, IInteractable
 
         // Change player's input actions
         PlayerInput.SwitchCurrentActionMap("Cameras");
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 
     private void ExitCamera() 
@@ -76,6 +78,9 @@ public class CameraManager : MonoBehaviour, IInteractable
 
         cameraHUD.SetActive(false);
         playerHUD.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
     }
 
@@ -130,5 +135,14 @@ public class CameraManager : MonoBehaviour, IInteractable
                 ExitCamera();
             }
         }
+    }
+
+    public void SelectCam(int camDex)
+    {
+        var previousCam = roomCameras[camIndex];
+        var nextCam = roomCameras[camDex];
+
+        previousCam.enabled = false;
+        nextCam.enabled = true;
     }
 }
