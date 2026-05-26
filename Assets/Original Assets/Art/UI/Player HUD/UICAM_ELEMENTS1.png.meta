@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2c1d476071d250f46971bb2d01eb1399
+guid: 573d8749f31194f07b503130dd6235cb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_CAM_Elements1_24
+      name: UICAM_ELEMENTS1_24
       rect:
         serializedVersion: 2
         x: 425
@@ -125,14 +125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf42accd20d514e5e9903ff183c49afa
-      internalID: 15635184
+      spriteID: 0ec42ca2f821e47c39d52f378a8529e3
+      internalID: 647878872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_CAM_Elements1_25
+      name: UICAM_ELEMENTS1_25
       rect:
         serializedVersion: 2
         x: 772
@@ -147,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5d3409f23b804644a3faacb3ca6db2f
-      internalID: -1705747594
+      spriteID: 3520275c1811a43babedd7d0f28ccd69
+      internalID: 1899813403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_CAM_Elements1_29
+      name: UICAM_ELEMENTS1_29
       rect:
         serializedVersion: 2
         x: 1127
@@ -169,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89a56039bc0f2446fa24943a39395933
-      internalID: 716166667
+      spriteID: f1341b7b8b0744c6289ad7aa3d871721
+      internalID: 376139162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_CAM_Elements1_30
+      name: UICAM_ELEMENTS1_30
       rect:
         serializedVersion: 2
         x: 1235
@@ -191,14 +191,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 684a64e43838d41b18b806215024ff51
-      internalID: 1222349261
+      spriteID: 2e7c41f9de34c4f2a97271304b6a2b0d
+      internalID: -1397590071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_CAM_Elements1_31
+      name: UICAM_ELEMENTS1_31
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 234
+        width: 82
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77e315ab31c14ea4bea60056a1dd207
+      internalID: 987338192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_32
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 294
+        width: 61
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c9f192234f344daa1b700848b1cabb
+      internalID: 1471386572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_33
       rect:
         serializedVersion: 2
         x: 1223
@@ -213,14 +257,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fd153176f88f4e5a8c2ac366b95e03f
-      internalID: -998345173
+      spriteID: 78e61083cc58c4766aa7e1e2f73dbe4c
+      internalID: 881046486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_CAM_Elements1_32
+      name: UICAM_ELEMENTS1_34
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 234
+        width: 73
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c37fdc96a82452ebd3a290cdea3458
+      internalID: 1570683046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_35
       rect:
         serializedVersion: 2
         x: 1127
@@ -235,14 +301,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d591b47055dc4853aafb8173b38266c
-      internalID: -700995937
+      spriteID: d46c86a007f6e4e769d37d3fe5ed7a4b
+      internalID: 637956073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_CAM_Elements1_33
+      name: UICAM_ELEMENTS1_36
       rect:
         serializedVersion: 2
         x: 1235
@@ -257,14 +323,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89260fddef645443f8d75aa1a51fc2ae
-      internalID: -1657600297
+      spriteID: a730f9d4370c740bea86948959d21f7c
+      internalID: 1242170386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_CAM_Elements1_34
+      name: UICAM_ELEMENTS1_37
       rect:
         serializedVersion: 2
         x: 1223
@@ -279,8 +345,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02b67bbfeab94428690ce94118eec762
-      internalID: -1119020255
+      spriteID: 536b9f940aed444c8b4ba2afcd3b5fbb
+      internalID: 1651975549
       vertices: []
       indices: 
       edges: []
@@ -289,7 +355,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 2dcf98471ae754982a4baddca52bb4f0
     internalID: 0
     vertices: []
     indices: 
@@ -301,41 +367,44 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      UI_CAM_Elements1_0: 834714098
-      UI_CAM_Elements1_1: -1287666070
-      UI_CAM_Elements1_10: 1684655554
-      UI_CAM_Elements1_11: -1985696234
-      UI_CAM_Elements1_12: -1877513051
-      UI_CAM_Elements1_13: 1449420992
-      UI_CAM_Elements1_14: -1139099646
-      UI_CAM_Elements1_15: -2046217866
-      UI_CAM_Elements1_16: 1199367045
-      UI_CAM_Elements1_17: -1925517904
-      UI_CAM_Elements1_18: 394590547
-      UI_CAM_Elements1_19: 599256901
-      UI_CAM_Elements1_2: -209519658
-      UI_CAM_Elements1_20: -1148332552
-      UI_CAM_Elements1_21: -294296409
-      UI_CAM_Elements1_22: 153800381
-      UI_CAM_Elements1_23: 1987922587
-      UI_CAM_Elements1_24: 15635184
-      UI_CAM_Elements1_25: -1705747594
-      UI_CAM_Elements1_26: 264342982
-      UI_CAM_Elements1_27: -768441004
-      UI_CAM_Elements1_28: -778142481
-      UI_CAM_Elements1_29: 716166667
-      UI_CAM_Elements1_3: 1848578512
-      UI_CAM_Elements1_30: 1222349261
-      UI_CAM_Elements1_31: -998345173
-      UI_CAM_Elements1_32: -700995937
-      UI_CAM_Elements1_33: -1657600297
-      UI_CAM_Elements1_34: -1119020255
-      UI_CAM_Elements1_4: 947100288
-      UI_CAM_Elements1_5: 206463740
-      UI_CAM_Elements1_6: 1659855269
-      UI_CAM_Elements1_7: 1890004786
-      UI_CAM_Elements1_8: 1716161463
-      UI_CAM_Elements1_9: 2009158893
+      UICAM_ELEMENTS1_0: 1838000419
+      UICAM_ELEMENTS1_1: 814953701
+      UICAM_ELEMENTS1_10: 1323324370
+      UICAM_ELEMENTS1_11: -1933822036
+      UICAM_ELEMENTS1_12: -1552744335
+      UICAM_ELEMENTS1_13: -666878199
+      UICAM_ELEMENTS1_14: -894919842
+      UICAM_ELEMENTS1_15: 490516328
+      UICAM_ELEMENTS1_16: 603387481
+      UICAM_ELEMENTS1_17: -920619723
+      UICAM_ELEMENTS1_18: 2139342746
+      UICAM_ELEMENTS1_19: -688485066
+      UICAM_ELEMENTS1_2: -950689207
+      UICAM_ELEMENTS1_20: 2103807897
+      UICAM_ELEMENTS1_21: -597061876
+      UICAM_ELEMENTS1_22: -26752471
+      UICAM_ELEMENTS1_23: -1886475737
+      UICAM_ELEMENTS1_24: 647878872
+      UICAM_ELEMENTS1_25: 1899813403
+      UICAM_ELEMENTS1_26: 1342545972
+      UICAM_ELEMENTS1_27: -1864276845
+      UICAM_ELEMENTS1_28: 450858708
+      UICAM_ELEMENTS1_29: 376139162
+      UICAM_ELEMENTS1_3: -1700007998
+      UICAM_ELEMENTS1_30: -1397590071
+      UICAM_ELEMENTS1_31: 987338192
+      UICAM_ELEMENTS1_32: 1471386572
+      UICAM_ELEMENTS1_33: 881046486
+      UICAM_ELEMENTS1_34: 1570683046
+      UICAM_ELEMENTS1_35: 637956073
+      UICAM_ELEMENTS1_36: 1242170386
+      UICAM_ELEMENTS1_37: 1651975549
+      UICAM_ELEMENTS1_4: -1192515762
+      UICAM_ELEMENTS1_5: -807880098
+      UICAM_ELEMENTS1_6: 1702756337
+      UICAM_ELEMENTS1_7: -1423113956
+      UICAM_ELEMENTS1_8: -1664573075
+      UICAM_ELEMENTS1_9: 1864373446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

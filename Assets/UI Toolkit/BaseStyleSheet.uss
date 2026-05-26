@@ -1,0 +1,70 @@
+:root {
+}
+
+.baseScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    flex-direction: row;
+}
+
+.ltrAnchor {
+    width: 30%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.ttbAnchor {
+    width: 100%;
+    height: 30%;
+}
+
+.camTitle {
+    -unity-font-definition: url("project://database/Assets/Original%20Assets/Art/UI/Fonts/VT323-Regular.ttf?fileID=12800000&guid=8ad098bcf6a89344dbe881a7d4107d73&type=3#VT323-Regular");
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.camTitleHolder {
+    padding-top: 10%;
+    padding-right: 0%;
+    padding-bottom: 0%;
+    padding-left: 0%;
+}
+
+.camRoomFill {
+    -unity-background-image-tint-color: rgb(64, 64, 64);
+    transition-duration: 0.075s;
+    transition-timing-function: ease-out;
+}
+
+.camRoomOutline {
+    transition-duration: 0.075s;
+    transition-timing-function: ease-in;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.5);
+}
+
+.camRoomFill:hover {
+    -unity-background-image-tint-color: rgb(115, 115, 115);
+}
+
+.camRoomFill:hover .camRoomOutline {
+    -unity-background-image-tint-color: rgba(254, 255, 138, 0.5);
+}
+
+.camRoomFill:focus {
+    -unity-background-image-tint-color: rgb(54, 66, 77);
+}
+
+.camRoomFill:focus .camRoomOutline {
+    -unity-background-image-tint-color: rgba(0, 153, 255, 0.7);
+}
