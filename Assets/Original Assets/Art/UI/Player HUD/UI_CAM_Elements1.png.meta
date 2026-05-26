@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -93,9 +93,198 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: UI_CAM_Elements1_24
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 53
+        width: 303
+        height: 477
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf42accd20d514e5e9903ff183c49afa
+      internalID: 15635184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_CAM_Elements1_25
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 54
+        width: 301
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d3409f23b804644a3faacb3ca6db2f
+      internalID: -1705747594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_CAM_Elements1_29
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 233
+        width: 82
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a56039bc0f2446fa24943a39395933
+      internalID: 716166667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_CAM_Elements1_30
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 293
+        width: 61
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684a64e43838d41b18b806215024ff51
+      internalID: 1222349261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_CAM_Elements1_31
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 233
+        width: 73
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd153176f88f4e5a8c2ac366b95e03f
+      internalID: -998345173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_CAM_Elements1_32
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 80
+        width: 82
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d591b47055dc4853aafb8173b38266c
+      internalID: -700995937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_CAM_Elements1_33
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 140
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89260fddef645443f8d75aa1a51fc2ae
+      internalID: -1657600297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_CAM_Elements1_34
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 80
+        width: 73
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b67bbfeab94428690ce94118eec762
+      internalID: -1119020255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -108,8 +297,45 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      UI_CAM_Elements1_0: 834714098
+      UI_CAM_Elements1_1: -1287666070
+      UI_CAM_Elements1_10: 1684655554
+      UI_CAM_Elements1_11: -1985696234
+      UI_CAM_Elements1_12: -1877513051
+      UI_CAM_Elements1_13: 1449420992
+      UI_CAM_Elements1_14: -1139099646
+      UI_CAM_Elements1_15: -2046217866
+      UI_CAM_Elements1_16: 1199367045
+      UI_CAM_Elements1_17: -1925517904
+      UI_CAM_Elements1_18: 394590547
+      UI_CAM_Elements1_19: 599256901
+      UI_CAM_Elements1_2: -209519658
+      UI_CAM_Elements1_20: -1148332552
+      UI_CAM_Elements1_21: -294296409
+      UI_CAM_Elements1_22: 153800381
+      UI_CAM_Elements1_23: 1987922587
+      UI_CAM_Elements1_24: 15635184
+      UI_CAM_Elements1_25: -1705747594
+      UI_CAM_Elements1_26: 264342982
+      UI_CAM_Elements1_27: -768441004
+      UI_CAM_Elements1_28: -778142481
+      UI_CAM_Elements1_29: 716166667
+      UI_CAM_Elements1_3: 1848578512
+      UI_CAM_Elements1_30: 1222349261
+      UI_CAM_Elements1_31: -998345173
+      UI_CAM_Elements1_32: -700995937
+      UI_CAM_Elements1_33: -1657600297
+      UI_CAM_Elements1_34: -1119020255
+      UI_CAM_Elements1_4: 947100288
+      UI_CAM_Elements1_5: 206463740
+      UI_CAM_Elements1_6: 1659855269
+      UI_CAM_Elements1_7: 1890004786
+      UI_CAM_Elements1_8: 1716161463
+      UI_CAM_Elements1_9: 2009158893
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
