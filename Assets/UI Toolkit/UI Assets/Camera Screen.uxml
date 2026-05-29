@@ -1,0 +1,41 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/BaseStyleSheet.uss?fileID=7433441132597879392&amp;guid=a330b67b1dff24c55b04d92c73580618&amp;type=3#BaseStyleSheet" />
+    <ui:VisualElement name="CameraScreen" picking-mode="Ignore" class="baseScreen" style="background-image: url(&quot;project://database/Assets/Original%20Assets/Art/UI/Player%20HUD/UI_CAM_Frame1.png?fileID=2800000&amp;guid=f8e2ea081e71f974580dad4ab43bea69&amp;type=3#UI_CAM_Frame1&quot;); background-color: rgb(0, 0, 0);">
+        <ui:VisualElement name="LeftAnchor" picking-mode="Ignore" class="ltrAnchor" style="width: 22%;">
+            <ui:VisualElement name="TopAnchor" picking-mode="Ignore" class="ttbAnchor" style="height: 50%;">
+                <ui:VisualElement name="CamsTitleHolder" class="camTitleHolder">
+                    <ui:Label text="CAMERA LIST" name="CamsTitle" class="camTitle" style="-unity-font-style: normal;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="CamsList" style="height: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="BottomAnchor" picking-mode="Ignore" class="ttbAnchor" style="height: 50%;">
+                <ui:VisualElement name="MapTitleHolder" class="camTitleHolder" style="padding-top: 2.5%; padding-right: 0%; padding-bottom: 0%; padding-left: 0%;">
+                    <ui:Label text="CAMERA LIST" name="MapTitle" class="camTitle" style="-unity-font-style: normal;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Maps" picking-mode="Ignore" style="height: 100%; padding-top: 5%; padding-right: 5%; padding-bottom: 5%; padding-left: 5%; justify-content: center; align-items: center;">
+                    <ui:VisualElement name="FullMap" enabled="true" picking-mode="Ignore" style="flex-grow: 1; width: 100%; height: 100%; align-items: center; justify-content: center;">
+                        <ui:VisualElement name="MapFill" picking-mode="Ignore" style="position: absolute; width: 59%; height: 93%; background-image: url(&quot;project://database/Assets/Original%20Assets/Art/UI/Player%20HUD/UICAM_ELEMENTS1.png?fileID=1899813403&amp;guid=573d8749f31194f07b503130dd6235cb&amp;type=3#UICAM_ELEMENTS1_25&quot;); -unity-background-image-tint-color: rgb(41, 41, 41); scale: 0.99 0.99;">
+                            <ui:VisualElement name="MapOutline" picking-mode="Ignore" style="position: absolute; background-image: url(&quot;project://database/Assets/Original%20Assets/Art/UI/Player%20HUD/UICAM_ELEMENTS1.png?fileID=647878872&amp;guid=573d8749f31194f07b503130dd6235cb&amp;type=3#UICAM_ELEMENTS1_24&quot;); width: 100%; height: 100%;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="MapRooms" picking-mode="Ignore" style="flex-grow: 1; align-items: center; justify-content: center; position: absolute; width: 90%; height: 90%;">
+                        <ui:VisualElement name="Room1" picking-mode="Ignore" style="width: 100%; height: 100%;">
+                            <ui:VisualElement name="LoungeFill" focusable="true" class="camRoomFill" style="width: 59%; height: 70%; background-image: url(&quot;project://database/Assets/Original%20Assets/Art/UI/Player%20HUD/UICAM_ELEMENTS1.png?fileID=637956073&amp;guid=573d8749f31194f07b503130dd6235cb&amp;type=3#UICAM_ELEMENTS1_35&quot;); scale: 0.25 0.25; align-content: stretch; position: absolute; top: -61px; left: 13px;">
+                                <ui:VisualElement name="LoungeOutline" focusable="false" picking-mode="Ignore" class="camRoomOutline" style="height: 100%; width: 100%; background-image: url(&quot;project://database/Assets/Original%20Assets/Art/UI/Player%20HUD/UICAM_ELEMENTS1.png?fileID=987338192&amp;guid=573d8749f31194f07b503130dd6235cb&amp;type=3#UICAM_ELEMENTS1_31&quot;);" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ExamFill" focusable="true" class="camRoomFill" style="width: 55%; height: 29%; scale: 0.25 0.25; align-content: stretch; position: absolute; top: 126px; left: 122px; background-image: url(&quot;project://database/Assets/Original%20Assets/Art/UI/Player%20HUD/UICAM_ELEMENTS1.png?fileID=1651975549&amp;guid=573d8749f31194f07b503130dd6235cb&amp;type=3#UICAM_ELEMENTS1_37&quot;);">
+                                <ui:VisualElement name="ExamOutline" focusable="false" picking-mode="Ignore" class="camRoomOutline" style="height: 100%; width: 100%; background-image: url(&quot;project://database/Assets/Original%20Assets/Art/UI/Player%20HUD/UICAM_ELEMENTS1.png?fileID=1570683046&amp;guid=573d8749f31194f07b503130dd6235cb&amp;type=3#UICAM_ELEMENTS1_34&quot;);" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="RightAnchor" class="ltrAnchor" style="width: 78%;">
+            <ui:VisualElement name="TopAnchor" class="ttbAnchor" style="height: 70%; padding-top: 2%; padding-right: 1.5%; padding-bottom: 2%; padding-left: 1%;">
+                <ui:VisualElement name="CamBG" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Original%20Assets/Art/Textures/Target%20Textures/Cam%20Texture.asset?fileID=8600000&amp;guid=cd335e72b4f6c7a4f961da56503fa7e4&amp;type=2#Cam Texture&quot;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="BottomAnchor" class="ttbAnchor" style="height: 26%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

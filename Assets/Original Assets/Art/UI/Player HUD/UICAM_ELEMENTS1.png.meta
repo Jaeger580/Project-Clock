@@ -1,0 +1,412 @@
+fileFormatVersion: 2
+guid: 573d8749f31194f07b503130dd6235cb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_24
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 53
+        width: 303
+        height: 477
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec42ca2f821e47c39d52f378a8529e3
+      internalID: 647878872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_25
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 54
+        width: 301
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3520275c1811a43babedd7d0f28ccd69
+      internalID: 1899813403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_29
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 233
+        width: 82
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1341b7b8b0744c6289ad7aa3d871721
+      internalID: 376139162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_30
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 293
+        width: 61
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7c41f9de34c4f2a97271304b6a2b0d
+      internalID: -1397590071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_31
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 234
+        width: 82
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77e315ab31c14ea4bea60056a1dd207
+      internalID: 987338192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_32
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 294
+        width: 61
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c9f192234f344daa1b700848b1cabb
+      internalID: 1471386572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_33
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 233
+        width: 73
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e61083cc58c4766aa7e1e2f73dbe4c
+      internalID: 881046486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_34
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 234
+        width: 73
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c37fdc96a82452ebd3a290cdea3458
+      internalID: 1570683046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_35
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 80
+        width: 82
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46c86a007f6e4e769d37d3fe5ed7a4b
+      internalID: 637956073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_36
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 140
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a730f9d4370c740bea86948959d21f7c
+      internalID: 1242170386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICAM_ELEMENTS1_37
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 80
+        width: 73
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536b9f940aed444c8b4ba2afcd3b5fbb
+      internalID: 1651975549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2dcf98471ae754982a4baddca52bb4f0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      UICAM_ELEMENTS1_0: 1838000419
+      UICAM_ELEMENTS1_1: 814953701
+      UICAM_ELEMENTS1_10: 1323324370
+      UICAM_ELEMENTS1_11: -1933822036
+      UICAM_ELEMENTS1_12: -1552744335
+      UICAM_ELEMENTS1_13: -666878199
+      UICAM_ELEMENTS1_14: -894919842
+      UICAM_ELEMENTS1_15: 490516328
+      UICAM_ELEMENTS1_16: 603387481
+      UICAM_ELEMENTS1_17: -920619723
+      UICAM_ELEMENTS1_18: 2139342746
+      UICAM_ELEMENTS1_19: -688485066
+      UICAM_ELEMENTS1_2: -950689207
+      UICAM_ELEMENTS1_20: 2103807897
+      UICAM_ELEMENTS1_21: -597061876
+      UICAM_ELEMENTS1_22: -26752471
+      UICAM_ELEMENTS1_23: -1886475737
+      UICAM_ELEMENTS1_24: 647878872
+      UICAM_ELEMENTS1_25: 1899813403
+      UICAM_ELEMENTS1_26: 1342545972
+      UICAM_ELEMENTS1_27: -1864276845
+      UICAM_ELEMENTS1_28: 450858708
+      UICAM_ELEMENTS1_29: 376139162
+      UICAM_ELEMENTS1_3: -1700007998
+      UICAM_ELEMENTS1_30: -1397590071
+      UICAM_ELEMENTS1_31: 987338192
+      UICAM_ELEMENTS1_32: 1471386572
+      UICAM_ELEMENTS1_33: 881046486
+      UICAM_ELEMENTS1_34: 1570683046
+      UICAM_ELEMENTS1_35: 637956073
+      UICAM_ELEMENTS1_36: 1242170386
+      UICAM_ELEMENTS1_37: 1651975549
+      UICAM_ELEMENTS1_4: -1192515762
+      UICAM_ELEMENTS1_5: -807880098
+      UICAM_ELEMENTS1_6: 1702756337
+      UICAM_ELEMENTS1_7: -1423113956
+      UICAM_ELEMENTS1_8: -1664573075
+      UICAM_ELEMENTS1_9: 1864373446
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
