@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,7 +9,7 @@ public class AnomalyRoomManager : MonoBehaviour
     [SerializeField] protected int roomID;
     public int RoomID => roomID;
 
-    [SerializeField] protected Camera roomCam;
+    [SerializeField] protected CinemachineCamera roomCam;
     private int camIndex = -1;
     public int CamIndex => camIndex;
     [SerializeField, ReadOnly] protected List<AnomalyHandler> anomaliesInRoom = new();

@@ -15,7 +15,6 @@ public class CameraManager : MonoBehaviour, IInteractable
 
     private bool playerInCams = false;
     public bool PlayerInCams => playerInCams;
-    private List<Camera> roomCameras = new List<Camera>();
 
     private int camIndex = 0;
     public int CamIndex => camIndex;
@@ -40,7 +39,7 @@ public class CameraManager : MonoBehaviour, IInteractable
     }
 
 
-    public int AddCamera(Camera roomCam) 
+    public int AddCamera(CinemachineCamera roomCam) 
     {
         roomCameras.Add(roomCam);
         return roomCameras.IndexOf(roomCam);
