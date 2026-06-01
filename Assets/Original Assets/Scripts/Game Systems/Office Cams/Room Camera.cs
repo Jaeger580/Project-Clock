@@ -7,8 +7,6 @@ public class RoomCamera : MonoBehaviour
     [SerializeField]
     private CinemachineCamera thisCam;
 
-
-
     // Camera Registers itself to the camera manager in a simple manner.
     // Needs to be called after Awake to make sure the Camera Manager is ready.
     private void Start()

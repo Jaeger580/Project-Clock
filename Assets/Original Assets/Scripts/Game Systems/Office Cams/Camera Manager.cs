@@ -9,10 +9,16 @@ using Unity.Cinemachine;
 public class CameraManager : MonoBehaviour, IInteractable
 {
     private List<CinemachineCamera> roomCameras = new List<CinemachineCamera>();
+
     // Allows the camera objects to look for and call this script
     public static CameraManager instance;
 
+    private bool playerInCams = false;
+    public bool PlayerInCams => playerInCams;
+    private List<Camera> roomCameras = new List<Camera>();
+
     private int camIndex = 0;
+    public int CamIndex => camIndex;
 
     [SerializeField]
     private PlayerInput PlayerInput;
@@ -33,9 +39,12 @@ public class CameraManager : MonoBehaviour, IInteractable
         EnterCamera();
     }
 
-    public void AddCamera(CinemachineCamera roomCam) 
+
+    public int AddCamera(Camera roomCam) 
     {
         roomCameras.Add(roomCam);
+        return roomCameras.IndexOf(roomCam);
+        //Debug.Log("Camera Added");
     }
 
     public void RemoveCamera(CinemachineCamera roomCam)
@@ -46,6 +55,7 @@ public class CameraManager : MonoBehaviour, IInteractable
     // Toggles which camera is active
     public void EnterCamera()
     {
+        playerInCams = true;
         camIndex = 0;
 
         playerHUD.SetActive(false);
@@ -79,7 +89,7 @@ public class CameraManager : MonoBehaviour, IInteractable
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        playerInCams = false;
     }
 
     // Toggles which camera is active

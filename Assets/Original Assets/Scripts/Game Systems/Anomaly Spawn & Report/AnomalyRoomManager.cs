@@ -7,6 +7,10 @@ public class AnomalyRoomManager : MonoBehaviour
     //[SerializeField] protected AnomalyDataSet anomaliesInRoomOLD;
     [SerializeField] protected int roomID;
     public int RoomID => roomID;
+
+    [SerializeField] protected Camera roomCam;
+    private int camIndex = -1;
+    public int CamIndex => camIndex;
     [SerializeField, ReadOnly] protected List<AnomalyHandler> anomaliesInRoom = new();
     public List<AnomalyHandler> AnomaliesInRoom => anomaliesInRoom;
 
@@ -26,6 +30,23 @@ public class AnomalyRoomManager : MonoBehaviour
         var anomalyCentralController = FindFirstObjectByType<AnomalyCentralController>();
         anomalyCentralController.SubscribeToController(this);
         AnomalyResolver.Instance.SubscribeToResolver(this);
+
+        if (CameraManager.instance != null)
+        {
+            camIndex = CameraManager.instance.AddCamera(roomCam);
+        }
+        else
+        {
+            Debug.Log("No Manager");
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (CameraManager.instance != null)
+        {
+            CameraManager.instance.RemoveCamera(roomCam);
+        }
     }
 
     public void SubscribeToManager(AnomalyHandler handler)
@@ -33,7 +54,7 @@ public class AnomalyRoomManager : MonoBehaviour
         anomaliesInRoom.Add(handler);
     }
 
-    public bool SpawnAnomaly(List<Tag> tagsToMatch, MatchType matchType = MatchType.ANY)
+    public bool SpawnAnomaly(List<Tag> tagsToMatch, MatchType matchType = MatchType.ANY, bool mustMatch = false)
     {
         var validAnomalies = TagOperator.MatchQuery(tagsToMatch, anomaliesInRoom, matchType);
 
@@ -67,13 +88,16 @@ public class AnomalyRoomManager : MonoBehaviour
         #region ROUND 2 : Seen Valid Anomaly
 
         foreach (var option in validPool)
-        {//go down the shuffled list until you hit one you haven't seen before
+        {//go down the shuffled list until you find a valid, not-already-spawned one
             if (TryTriggerPicked(option)) return true;
         }
 
         #endregion
+
+        if (mustMatch) return false;    //if we got here without an anomaly, then try a different room
+
         #region ROUND 3 : Unseen Anomaly in Room
-        //expand the search
+        //expand the search to ANY anomaly, not just valid anomalies
         validPool.Clear();
         foreach (var anomaly in anomaliesInRoom)
         {//(re)populate temp pool
@@ -91,7 +115,7 @@ public class AnomalyRoomManager : MonoBehaviour
         #region ROUND 4 : Any Anomaly in Room
 
         foreach (var option in validPool)
-        {//go down the shuffled list until you get a valid one
+        {//go down the shuffled list until you find one that isn't currently spawned
             if (TryTriggerPicked(option)) return true;
         }
 
