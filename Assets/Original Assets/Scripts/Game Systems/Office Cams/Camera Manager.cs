@@ -4,10 +4,11 @@ using System.Collections.Generic;
 //using UnityEngine.LightTransport.PostProcessing;
 using System;
 using UnityEngine.InputSystem;
+using Unity.Cinemachine;
 
 public class CameraManager : MonoBehaviour, IInteractable
 {
-    private List<Camera> roomCameras = new List<Camera>();
+    private List<CinemachineCamera> roomCameras = new List<CinemachineCamera>();
     // Allows the camera objects to look for and call this script
     public static CameraManager instance;
 
@@ -32,13 +33,12 @@ public class CameraManager : MonoBehaviour, IInteractable
         EnterCamera();
     }
 
-    public void AddCamera(Camera roomCam) 
+    public void AddCamera(CinemachineCamera roomCam) 
     {
         roomCameras.Add(roomCam);
-        //Debug.Log("Camera Added");
     }
 
-    public void RemoveCamera(Camera roomCam)
+    public void RemoveCamera(CinemachineCamera roomCam)
     {
         roomCameras.Remove(roomCam);
     }
@@ -71,8 +71,6 @@ public class CameraManager : MonoBehaviour, IInteractable
             cam.enabled = false;
         }
         
-        //roomCameras[camIndex].depth = 0;
-
         // Change player's input actions
         PlayerInput.SwitchCurrentActionMap("Player");
 
@@ -97,12 +95,6 @@ public class CameraManager : MonoBehaviour, IInteractable
                 previousCam.enabled = false;
                 nextCam.enabled = true;
 
-                //// Disable current camera
-                //roomCameras[camIndex].depth = 0;
-
-                //// Enable new camera
-                //roomCameras[camIndex + 1].depth = 2;
-                //camIndex++;
             }
             else
             {
@@ -123,12 +115,6 @@ public class CameraManager : MonoBehaviour, IInteractable
                 previousCam.enabled = false;
                 nextCam.enabled = true;
 
-                //// Disable current camera
-                //roomCameras[camIndex].depth = 0;
-
-                //// Enable new camera
-                //roomCameras[camIndex - 1].depth = 2;
-                //camIndex--;
             }
             else
             {

@@ -1,10 +1,11 @@
 using UnityEngine;
+using Unity.Cinemachine;
 //using System.Collections.Generic;
 
 public class RoomCamera : MonoBehaviour
 {
     [SerializeField]
-    private Camera thisCam;
+    private CinemachineCamera thisCam;
 
 
 
