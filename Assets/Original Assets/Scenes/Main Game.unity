@@ -12384,7 +12384,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 60
   orthographic: 0
   orthographic size: 10
   m_Depth: 1
@@ -12773,7 +12773,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2063854404}
   - component: {fileID: 2063854407}
-  - component: {fileID: 2063854406}
   - component: {fileID: 2063854405}
   - component: {fileID: 2063854408}
   m_Layer: 0
@@ -12842,14 +12841,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!81 &2063854406
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063854403}
-  m_Enabled: 1
 --- !u!20 &2063854407
 Camera:
   m_ObjectHideFlags: 0
@@ -13464,26 +13455,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1862081433}
     m_Modifications:
-    - target: {fileID: 1156970495373807978, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 604
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156970495373807978, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 288
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156970495373807978, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156970495373807978, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 86
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156970495373807978, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 67
-      objectReference: {fileID: 0}
     - target: {fileID: 2093268934145303885, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13533,162 +13504,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1678333257}
     - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1678333257}
-    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectCam
-      objectReference: {fileID: 0}
-    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: CameraManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1678333257}
     - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectCam
-      objectReference: {fileID: 0}
-    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: CameraManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4953260577009259518, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6762399887950539844, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 225
-      objectReference: {fileID: 0}
-    - target: {fileID: 6762399887950539844, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 6862088995947294540, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -40
-      objectReference: {fileID: 0}
-    - target: {fileID: 7062788868351148800, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7839366900028473383, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1678333257}
     - target: {fileID: 8132694383073465522, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8613721458381226115, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -65
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4891188066428148864, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+    - {fileID: 4953260577009259518, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+    - {fileID: 845815691743853343, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2986571291605505998, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 6454685658537911958}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
 --- !u!4 &6454685658537911956 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2093268934145303885, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
   m_PrefabInstance: {fileID: 6454685658537911955}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6454685658537911957 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2986571291605505998, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-  m_PrefabInstance: {fileID: 6454685658537911955}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6454685658537911958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6454685658537911957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
-  Priority:
-    Enabled: 1
-    m_Value: 0
-  OutputChannel: 1
-  StandbyUpdate: 2
-  m_StreamingVersion: 20241001
-  m_LegacyPriority: 0
-  Target:
-    TrackingTarget: {fileID: 0}
-    LookAtTarget: {fileID: 0}
-    CustomLookAtTarget: 0
-  Lens:
-    FieldOfView: 40
-    OrthographicSize: 10
-    NearClipPlane: 0.1
-    FarClipPlane: 5000
-    Dutch: 0
-    ModeOverride: 0
-    PhysicalProperties:
-      GateFit: 2
-      SensorSize: {x: 21.946, y: 16.002}
-      LensShift: {x: 0, y: 0}
-      FocusDistance: 10
-      Iso: 200
-      ShutterSpeed: 0.005
-      Aperture: 16
-      BladeCount: 5
-      Curvature: {x: 2, y: 11}
-      BarrelClipping: 0.25
-      Anamorphism: 0
-  BlendHint: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
