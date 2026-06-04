@@ -3745,11 +3745,35 @@ MonoBehaviour:
     m_ActionId: 852140f2-7766-474d-8707-702459ba45f3
     m_ActionName: 'Player/Interact[/Keyboard/e]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7289382674088333458}
+        m_TargetAssemblyTypeName: ToolTagSelector, Assembly-CSharp
+        m_MethodName: ShiftTagsUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 2776c80d-3c14-4091-8c56-d04ced07a2b0
     m_ActionName: 'Player/Previous[/Keyboard/1]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7289382674088333458}
+        m_TargetAssemblyTypeName: ToolTagSelector, Assembly-CSharp
+        m_MethodName: ShiftTagsDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b7230bb6-fc9b-4f52-8b25-f5e19cb2c2ba
     m_ActionName: 'Player/Next[/Keyboard/2]'
   - m_PersistentCalls:
@@ -4025,7 +4049,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8132694383073465522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fd49979d9b234ef893abf1ea2a42a11, type: 3}
   m_Name: 
@@ -4183,6 +4207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder
       objectReference: {fileID: 0}
+    - target: {fileID: 2606528191798467907, guid: 0420f319bc7f7f6409259eacfe6d7ff3, type: 3}
+      propertyPath: taggerSpawner
+      value: 
+      objectReference: {fileID: 3628931087392716559}
     - target: {fileID: 2653952551748434336, guid: 0420f319bc7f7f6409259eacfe6d7ff3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4305,3 +4333,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8552691366259724111, guid: 0420f319bc7f7f6409259eacfe6d7ff3, type: 3}
   m_PrefabInstance: {fileID: 4685196613891411409}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7289382674088333458 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2606528191798467907, guid: 0420f319bc7f7f6409259eacfe6d7ff3, type: 3}
+  m_PrefabInstance: {fileID: 4685196613891411409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75ae42b45e04934580f7ac7aa9f68e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToolTagSelector

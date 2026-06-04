@@ -145,6 +145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8552691366259724111}
+  - component: {fileID: 2606528191798467907}
   m_Layer: 0
   m_Name: Temp Tool
   m_TagString: Untagged
@@ -169,6 +170,23 @@ Transform:
   - {fileID: 8048416993925621459}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2606528191798467907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743699447687814014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75ae42b45e04934580f7ac7aa9f68e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToolTagSelector
+  taggerSpawner: {fileID: 0}
+  tags: {fileID: 11400000, guid: 44610508c3ac6403fbb200ea6b011582, type: 2}
+  textOne: {fileID: 3363851629875215169}
+  textTwo: {fileID: 4308650122378273109}
+  textThree: {fileID: 5154991320688338869}
 --- !u!1 &2414183567851691833
 GameObject:
   m_ObjectHideFlags: 0
