@@ -2445,7 +2445,7 @@ GameObject:
   - component: {fileID: 223513939}
   - component: {fileID: 223513938}
   m_Layer: 0
-  m_Name: Anomalies Found Canvas
+  m_Name: Aberrations Found Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2937,7 +2937,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fixing anomaly...
+  m_text: Clearing Aberrations...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5403,7 +5403,7 @@ GameObject:
   - component: {fileID: 769081306}
   - component: {fileID: 769081305}
   m_Layer: 0
-  m_Name: No Anomalies Found Canvas
+  m_Name: No Aberrations Found Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11840,7 +11840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: No anomalies found.
+  m_text: No Aberrations found.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13455,6 +13455,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1862081433}
     m_Modifications:
+    - target: {fileID: 1206126510361819753, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206126510361819753, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206126510361819753, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2093268934145303885, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13496,29 +13508,42 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2120804770082781032, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1678333257}
     - target: {fileID: 2120804770082781032, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: m_ActionEvents.Array.data[17].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1678333257}
-    - target: {fileID: 3968061348704793097, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1678333257}
-    - target: {fileID: 4240905687368405254, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1678333257}
+    - target: {fileID: 4595409236976613869, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595409236976613869, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595409236976613869, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336806585196917873, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336806585196917873, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336806585196917873, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8132694383073465522, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4891188066428148864, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-    - {fileID: 4953260577009259518, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
-    - {fileID: 845815691743853343, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
