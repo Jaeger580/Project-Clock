@@ -5068,6 +5068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyRoomManager
   roomID: 0
+  roomCam: {fileID: 0}
   anomaliesInRoom: []
   playerInRoom: 0
   playerLayer:
@@ -11969,6 +11970,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyCentralController
   sceneBuildIndices: 0300000004000000
+  maxLoadedRooms: 2
+  randomizeRooms: 0
   anomalyTypeOrder:
   - {fileID: 11400000, guid: 2170dd8bc5dc7422097f2ddfea334bbd, type: 2}
   - {fileID: 11400000, guid: 2170dd8bc5dc7422097f2ddfea334bbd, type: 2}
@@ -11980,6 +11983,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d4b610034c24e4e168ed4f0cddcb951d, type: 2}
   - {fileID: 11400000, guid: d4b610034c24e4e168ed4f0cddcb951d, type: 2}
   - {fileID: 11400000, guid: e1d9653e494aa481d90e725984193242, type: 2}
+  unseenTag: {fileID: 0}
   spawnCurve:
     serializedVersion: 2
     m_Curve:
@@ -12955,6 +12959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyRoomManager
   roomID: 0
+  roomCam: {fileID: 0}
   anomaliesInRoom: []
   playerInRoom: 0
   playerLayer:

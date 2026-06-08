@@ -30,6 +30,8 @@ public class CameraManager : MonoBehaviour, IInteractable
     private void Awake()
     {
         roomCameras.Clear();
+        if (instance != null)
+            Destroy(instance);
         instance = this;
     }
 
@@ -59,7 +61,6 @@ public class CameraManager : MonoBehaviour, IInteractable
 
         playerHUD.SetActive(false);
         cameraHUD.SetActive(true);
-
 
         //roomCameras[camIndex].depth = 2;
         var nextCam = roomCameras[camIndex];
@@ -103,7 +104,6 @@ public class CameraManager : MonoBehaviour, IInteractable
 
                 previousCam.enabled = false;
                 nextCam.enabled = true;
-
             }
             else
             {

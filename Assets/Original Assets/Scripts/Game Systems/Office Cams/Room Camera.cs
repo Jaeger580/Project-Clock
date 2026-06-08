@@ -11,21 +11,22 @@ public class RoomCamera : MonoBehaviour
     // Needs to be called after Awake to make sure the Camera Manager is ready.
     private void Start()
     {
-        if (CameraManager.instance != null)
-        {
-            CameraManager.instance.AddCamera(thisCam);
-        }
-        else 
-        {
-            Debug.Log("No Manager");
-        }
+        //DEPRECATED; handled by the AnomalyRoomManager right now because we need more fine control, for button creation
+        //if (CameraManager.instance != null)
+        //{
+        //    CameraManager.instance.AddCamera(thisCam);
+        //}
+        //else 
+        //{
+        //    Debug.Log("No Manager");
+        //}
     }
 
     private void OnDestroy()
     {
-        if (CameraManager.instance != null)
-        {
-            CameraManager.instance.RemoveCamera(thisCam);
-        }
+        //if (CameraManager.instance != null)
+        //{
+        //    CameraManager.instance.RemoveCamera(thisCam);
+        //}
     }
 }

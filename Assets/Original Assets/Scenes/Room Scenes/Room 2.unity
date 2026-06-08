@@ -15266,6 +15266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyRoomManager
   roomID: 0
+  roomCam: {fileID: 4970597545316426451}
   anomaliesInRoom: []
   playerInRoom: 0
   playerLayer:
@@ -25518,6 +25519,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
   parentAnomaly: {fileID: 712615766}
+--- !u!114 &4970597545316426451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7630969910059656430, guid: 0511a90be31a7454d918c0727e2864cb, type: 3}
+  m_PrefabInstance: {fileID: 4970597545316426447}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
