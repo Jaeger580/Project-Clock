@@ -55,15 +55,18 @@ public class PlayerLook : MonoBehaviour
 
     // Toggles the players flashlight on and off
     // might not make the most sense in this script, but don't want a new one for this.
-    public void ToggleFlashlight() 
+    public void ToggleFlashlight(InputAction.CallbackContext context) 
     {
-        if (flashLight.activeSelf == true)
+        if (context.started) 
         {
-            flashLight.SetActive(false);
-        }
-        else 
-        {
-            flashLight.SetActive(true);
+            if (flashLight.activeSelf == true)
+            {
+                flashLight.SetActive(false);
+            }
+            else
+            {
+                flashLight.SetActive(true);
+            }
         }
     }
 }
