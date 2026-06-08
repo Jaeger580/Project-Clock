@@ -11983,7 +11983,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d4b610034c24e4e168ed4f0cddcb951d, type: 2}
   - {fileID: 11400000, guid: d4b610034c24e4e168ed4f0cddcb951d, type: 2}
   - {fileID: 11400000, guid: e1d9653e494aa481d90e725984193242, type: 2}
-  unseenTag: {fileID: 0}
+  unseenTag: {fileID: 11400000, guid: e8c5cb6ad4bd448469f561dccb8c207c, type: 2}
   spawnCurve:
     serializedVersion: 2
     m_Curve:
