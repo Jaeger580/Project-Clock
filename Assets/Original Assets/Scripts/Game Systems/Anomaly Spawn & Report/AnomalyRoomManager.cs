@@ -28,7 +28,8 @@ public class AnomalyRoomManager : MonoBehaviour
 
     private void Start()
     {
-        var anomalyCentralController = FindFirstObjectByType<AnomalyCentralController>();
+        //var anomalyCentralController = FindFirstObjectByType<AnomalyCentralController>();
+        var anomalyCentralController = AnomalyCentralController.Instance;
         anomalyCentralController.SubscribeToController(this);
         AnomalyResolver.Instance.SubscribeToResolver(this);
 

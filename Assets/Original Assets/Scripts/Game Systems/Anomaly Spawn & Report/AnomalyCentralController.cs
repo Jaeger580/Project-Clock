@@ -18,6 +18,7 @@ public class AnomalyCentralController : MonoBehaviour
     [SerializeField] private Tag unseenTag;
     [SerializeField] private AnimationCurve spawnCurve;
     [SerializeField, ReadOnly] private List<AnomalyRoomManager> managers = new();
+    public List<AnomalyRoomManager> Managers => managers;
 
     private Timer timer;
     [Header("Loss Settings")]
@@ -91,7 +92,7 @@ public class AnomalyCentralController : MonoBehaviour
             }
 
             foreach(var scene in sceneBuildIndices)
-            {//for all thee rooms in the list, if it's supposed to be enabled, spawn it
+            {//for all the rooms in the list, if it's supposed to be enabled, spawn it
                 if (enabledScenes[scene]) SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
             }
         }

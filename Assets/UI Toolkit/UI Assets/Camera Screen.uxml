@@ -1,7 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/BaseStyleSheet.uss?fileID=7433441132597879392&amp;guid=a330b67b1dff24c55b04d92c73580618&amp;type=3#BaseStyleSheet" />
     <ui:VisualElement name="CameraScreen" picking-mode="Ignore" class="baseScreen" style="background-image: url(&quot;project://database/Assets/Original%20Assets/Art/UI/Player%20HUD/UI_CAM_Frame1.png?fileID=2800000&amp;guid=f8e2ea081e71f974580dad4ab43bea69&amp;type=3#UI_CAM_Frame1&quot;); background-color: rgb(0, 0, 0);">
-        <ui:VisualElement name="LeftAnchor" picking-mode="Ignore" class="ltrAnchor" style="width: 22%;">
+        <ui:VisualElement name="LeftAnchor" picking-mode="Ignore" class="ltrAnchor" style="width: 21.75%;">
             <ui:VisualElement name="TopAnchor" picking-mode="Ignore" class="ttbAnchor" style="height: 50%;">
                 <ui:VisualElement name="CamsTitleHolder" class="camTitleHolder">
                     <ui:Label text="CAMERA LIST" name="CamsTitle" class="camTitle" style="-unity-font-style: normal;" />
@@ -19,7 +19,7 @@
                         </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement name="MapRooms" picking-mode="Ignore" style="flex-grow: 1; align-items: center; justify-content: center; position: absolute; width: 90%; height: 90%;">
-                        <ui:VisualElement name="Room1" picking-mode="Ignore" style="width: 100%; height: 100%;">
+                        <ui:VisualElement name="Map" picking-mode="Ignore" style="width: 100%; height: 100%;">
                             <ui:VisualElement name="LoungeFill" focusable="true" class="camRoomFill" style="width: 59%; height: 70%; background-image: url(&quot;project://database/Assets/Original%20Assets/Art/UI/Player%20HUD/UICAM_ELEMENTS1.png?fileID=637956073&amp;guid=573d8749f31194f07b503130dd6235cb&amp;type=3#UICAM_ELEMENTS1_35&quot;); scale: 0.25 0.25; align-content: stretch; position: absolute; top: -61px; left: 13px;">
                                 <ui:VisualElement name="LoungeOutline" focusable="false" picking-mode="Ignore" class="camRoomOutline" style="height: 100%; width: 100%; background-image: url(&quot;project://database/Assets/Original%20Assets/Art/UI/Player%20HUD/UICAM_ELEMENTS1.png?fileID=987338192&amp;guid=573d8749f31194f07b503130dd6235cb&amp;type=3#UICAM_ELEMENTS1_31&quot;);" />
                             </ui:VisualElement>

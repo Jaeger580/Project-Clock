@@ -3591,6 +3591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera Station
       objectReference: {fileID: 0}
+    - target: {fileID: 2532420233671006422, guid: a5d352c71993e3c4787b6d7cf7651968, type: 3}
+      propertyPath: uidoc
+      value: 
+      objectReference: {fileID: 2135090147}
     - target: {fileID: 8461438415752179188, guid: a5d352c71993e3c4787b6d7cf7651968, type: 3}
       propertyPath: cameraHUD
       value: 
@@ -13389,6 +13393,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7839366900028473383, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
   m_PrefabInstance: {fileID: 6454685658537911955}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2135090147 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1637378506915208666, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+  m_PrefabInstance: {fileID: 6454685658537911955}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135090146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!1 &2140072599
 GameObject:
   m_ObjectHideFlags: 0
