@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum LoopType { NONE, REPEAT, PINGPONG}
 
-abstract public class AnomalyHandler : MonoBehaviour, ITagged
+abstract public class AnomalyHandler : MonoBehaviour, ITagged, DebugTools.IDebug_Name
 {
     [SerializeField] protected AnomalyData data;
     public AnomalyData Data => data;
@@ -17,6 +17,12 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged
     }
     protected AnomalyData parentData;
 
+    //[Header("DEBUG")]
+    //[Tooltip("ONLY USED FOR DEBUGGING PURPOSES")]
+    //[SerializeField] protected string humanReadableName = "[DEBUG NAME NOT SET]";
+    public string HumanReadableName() => data.name;
+    private string roomName = "[DEBUG NAME NOT SET]";
+
     virtual protected void Start()
     {
         if(!transform.parent.TryGetComponent(out AnomalyRoomManager roomManager))
@@ -26,6 +32,7 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged
         }
         if (data == null) return;
         roomManager.SubscribeToManager(this);
+        roomName = roomManager.HumanReadableName();
         //data.OnAnomalyTriggered += EnableAnomaly;
         data.OnAnomalyTriggered += () => {  AnomalyCentralController.Instance.CurrentlySpawned++; };
         data.OnAnomalyFixed += () => { data.previouslySeen = true; AnomalyCentralController.Instance.CurrentlySpawned--; };
@@ -43,6 +50,7 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged
         anomalyEnabled = true;
         if (data == null) return;
         data.OnAnomalyTriggered?.Invoke();
+        print($"DEBUG: {HumanReadableName()} has been spawned in {roomName}.");
     }
     virtual public void DisableAnomaly()
     {

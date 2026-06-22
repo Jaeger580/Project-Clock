@@ -3,7 +3,7 @@ using Unity.Cinemachine;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class AnomalyRoomManager : MonoBehaviour
+public class AnomalyRoomManager : MonoBehaviour, DebugTools.IDebug_Name
 {//controls WHICH anomaly spawns
     //[SerializeField] protected AnomalyDataSet anomaliesInRoomOLD;
     [SerializeField] protected int roomID;
@@ -15,9 +15,14 @@ public class AnomalyRoomManager : MonoBehaviour
     [SerializeField, ReadOnly] protected List<AnomalyHandler> anomaliesInRoom = new();
     public List<AnomalyHandler> AnomaliesInRoom => anomaliesInRoom;
 
-    [SerializeField, ReadOnly] private bool playerInRoom;
-    public bool PlayerInRoom => playerInRoom;
     [SerializeField] private LayerMask playerLayer;
+
+    [SerializeField] private Collider[] roomCheckColliders;
+
+    [Header("DEBUG")]
+    [Tooltip("ONLY USED FOR DEBUGGING PURPOSES")]
+    [SerializeField] protected string humanReadableName = "[DEBUG NAME NOT SET]";
+    public string HumanReadableName() => humanReadableName;
 
     //[ContextMenu("UPDATESTUFF")]
     //public void PlayerLayerFix()
@@ -25,6 +30,18 @@ public class AnomalyRoomManager : MonoBehaviour
     //    playerLayer.value = LayerMask.GetMask("Player");
     //    UnityEditor.EditorUtility.SetDirty(this);
     //}
+
+    public bool PlayerInRoom(Transform player)
+    {
+        if (player == null) return false;
+        bool inRoom = false;
+        foreach(var col in roomCheckColliders)
+        {
+            if (!col.bounds.Contains(player.position)) continue;
+            inRoom = true;
+        }
+        return inRoom;
+    }
 
     private void Start()
     {
@@ -40,6 +57,16 @@ public class AnomalyRoomManager : MonoBehaviour
         else
         {
             Debug.Log("No Manager");
+        }
+
+        roomCheckColliders = GetComponents<Collider>();
+        foreach(var col in roomCheckColliders)
+        {
+            if (!col.isTrigger)
+            {
+                Debug.LogWarning("WARNING: A room collider wasn't set to trigger - fixing for runtime only.", this);
+                col.isTrigger = true;
+            }
         }
     }
 
@@ -125,17 +152,5 @@ public class AnomalyRoomManager : MonoBehaviour
 
         Debug.LogWarning($"An anomaly was requested but no anomalies were found. Likely an empty list.", this);
         return false;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if((playerLayer.value & (1 << other.gameObject.layer)) > 0)
-            playerInRoom = true;
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if ((playerLayer.value & (1 << other.gameObject.layer)) > 0)
-            playerInRoom = false;
     }
 }

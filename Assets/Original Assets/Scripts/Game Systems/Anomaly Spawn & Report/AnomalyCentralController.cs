@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class AnomalyCentralController : MonoBehaviour
 {//controls WHEN and WHERE anomalies spawn (needs access to player position prolly)
-
     static public AnomalyCentralController Instance;
 
     [SerializeField] private List<int> sceneBuildIndices = new();
@@ -30,6 +29,8 @@ public class AnomalyCentralController : MonoBehaviour
     [SerializeField] private bool timeProgressesAtMaxAnomalies = true;
     [Tooltip("If the total of currently spawned anomalies exceeds max, does the player die? (Also controls whether it can even exceed max in the first place.)")]
     [SerializeField] private bool overMaxKills = true;
+
+    [SerializeField] private Transform playerTrans;
 
     private bool gameOver;
     private float graceTimer;
@@ -174,8 +175,12 @@ public class AnomalyCentralController : MonoBehaviour
         foreach(var room in managers)
         {
             if (nextAnomalyType.items.Contains(unseenTag) &&
-                (room.PlayerInRoom || 
-                (CameraManager.instance.PlayerInCams && CameraManager.instance.CamIndex == room.CamIndex))) continue;
+                (room.PlayerInRoom(playerTrans) ||
+                (CameraManager.instance.PlayerInCams && CameraManager.instance.CamIndex == room.CamIndex)))
+            {
+                print($"DEBUG: Unseen tag being used, but player can currently see into (or is too close to/within) {room.HumanReadableName()}, so that room will be ignored.");
+                continue;
+            }
             //^if it's supposed to be unseen and the player is in the room or in this room's cam, drop that room from the list
             shuffledRooms.Add(room);
         }
@@ -192,7 +197,12 @@ public class AnomalyCentralController : MonoBehaviour
 
         graceTimer = 0f;
 
-        if (!spawnComplete) Invoke(nameof(TriggerAnomalySpawn), 1);
+        if (!spawnComplete)
+        {
+            float retryTimer = 1f;
+            print($"DEBUG: SPAWN INCOMPLETE - trying again in {retryTimer} second(s).");
+            Invoke(nameof(TriggerAnomalySpawn), retryTimer);
+        }
         else anomalyTypeQueue.TryDequeue(out var _);
     }
 }

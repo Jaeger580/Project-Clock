@@ -2569,7 +2569,10 @@ GameObject:
   m_Component:
   - component: {fileID: 589720588}
   - component: {fileID: 589720590}
+  - component: {fileID: 589720593}
   - component: {fileID: 589720589}
+  - component: {fileID: 589720592}
+  - component: {fileID: 589720591}
   m_Layer: 0
   m_Name: Anomaly Room Manager (3)
   m_TagString: Untagged
@@ -2610,14 +2613,14 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1207
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.9438095, y: 3.8680587, z: 13.50153}
+  m_Center: {x: 1.0522957, y: -0.5828614, z: -1.1222668}
 --- !u!114 &589720590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2633,10 +2636,68 @@ MonoBehaviour:
   roomID: 1
   roomCam: {fileID: 1470117092}
   anomaliesInRoom: []
-  playerInRoom: 0
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  roomCheckColliders: []
+  humanReadableName: Exam Room
+--- !u!65 &589720591
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589720587}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1207
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6824837, y: 3.8680587, z: 6.514429}
+  m_Center: {x: -3.3938608, y: -0.5828614, z: 2.3712835}
+--- !u!65 &589720592
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589720587}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1207
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6824837, y: 3.8680587, z: 16.696316}
+  m_Center: {x: 5.81, y: -0.5828614, z: 3.81073}
+--- !u!114 &589720593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589720587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09614295a2e24ca1affb56af27bb538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_RoomButtonHolder
+  roomManager: {fileID: 589720590}
+  roomCamElementName: ExamButton
+  goToCamEvent: {fileID: 11400000, guid: 469b5166b7fce4380a8b9d19b8394b8c, type: 2}
 --- !u!1 &668634855
 GameObject:
   m_ObjectHideFlags: 0
