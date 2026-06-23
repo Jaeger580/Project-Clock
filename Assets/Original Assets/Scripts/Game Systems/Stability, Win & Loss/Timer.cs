@@ -41,4 +41,12 @@ public class Timer : MonoBehaviour
     {
         return totalElapsedTime >= totalShiftTime;
     }
+
+    //public void ForceTimer(float forcedTime)
+    //{
+    //    print($"DEBUG: FORCING TIMER TO {forcedTime} SECONDS");
+    //    totalElapsedTime = forcedTime;
+    //    visualTime = Mathf.Repeat(Mathf.Lerp(startTime, endTime, totalElapsedTime / totalShiftTime), 24);
+    //    UpdateTimer?.Invoke(visualTime);
+    //}
 }

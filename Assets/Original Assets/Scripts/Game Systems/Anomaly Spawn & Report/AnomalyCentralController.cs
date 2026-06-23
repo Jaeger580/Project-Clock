@@ -36,6 +36,9 @@ public class AnomalyCentralController : MonoBehaviour
     private float graceTimer;
 
     [SerializeField, ReadOnly] private int currentlySpawned;
+
+    private bool forcingSpeedUp = false;
+
     public int CurrentlySpawned
     {
         get
@@ -134,17 +137,22 @@ public class AnomalyCentralController : MonoBehaviour
         managers.Add(manager);
     }
 
+    [ContextMenu("Jump to Next Anomaly")]
+    public void JumpToNextAnomaly()
+    {
+        if (!forcingSpeedUp) forcingSpeedUp = true;
+        Time.timeScale = 100f;
+    }
+
     private IEnumerator SpawnRoutine()
     {
         if (anomalyTypeQueue.Count <= 0) yield break;
 
-        float journey = timer.TotalElapsedTime;
         float totalShiftTime = timer.TotalShiftTime;
         float destination = (totalSpawned + 1f) / anomalyTypeOrder.Count;
-        float curvedPercent = spawnCurve.Evaluate(journey/totalShiftTime);
+        float curvedPercent = spawnCurve.Evaluate(timer.TotalElapsedTime / totalShiftTime);
         //print($"Journey: {journey} || Destination: {destination}");
-
-        while (curvedPercent <= destination && journey <= totalShiftTime)
+        while (curvedPercent <= destination && timer.TotalElapsedTime <= totalShiftTime)
         {
             if(!overMaxKills && !timeProgressesAtMaxAnomalies && currentlySpawned == maxAnomaliesAllowed)
             {//if I can't spawn more than max but time does progress while at max, and I *AM* at max, pause the spawner
@@ -152,11 +160,15 @@ public class AnomalyCentralController : MonoBehaviour
                 continue;
             }
 
-            journey += Time.deltaTime;
-            curvedPercent = spawnCurve.Evaluate(journey / totalShiftTime);
+            curvedPercent = spawnCurve.Evaluate(timer.TotalElapsedTime / totalShiftTime);
             yield return null;
         }
 
+        if (forcingSpeedUp)
+        {
+            forcingSpeedUp = false;
+            Time.timeScale = 1f;
+        }
         TriggerAnomalySpawn();
         StartCoroutine(SpawnRoutine());
     }
