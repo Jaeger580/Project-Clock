@@ -5074,10 +5074,11 @@ MonoBehaviour:
   roomID: 0
   roomCam: {fileID: 0}
   anomaliesInRoom: []
-  playerInRoom: 0
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  roomCheckColliders: []
+  humanReadableName: '[DEBUG NAME NOT SET]'
 --- !u!4 &729666737
 Transform:
   m_ObjectHideFlags: 0
@@ -12024,6 +12025,7 @@ MonoBehaviour:
   graceAtMaxAnomalies: 20
   timeProgressesAtMaxAnomalies: 1
   overMaxKills: 1
+  playerTrans: {fileID: 6454685658537911956}
   currentlySpawned: 0
 --- !u!4 &1925868847
 Transform:
@@ -12954,10 +12956,11 @@ MonoBehaviour:
   roomID: 0
   roomCam: {fileID: 0}
   anomaliesInRoom: []
-  playerInRoom: 0
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  roomCheckColliders: []
+  humanReadableName: '[DEBUG NAME NOT SET]'
 --- !u!4 &2067809450
 Transform:
   m_ObjectHideFlags: 0
