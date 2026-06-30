@@ -83,7 +83,7 @@ public class AnomalyRoomManager : MonoBehaviour, DebugTools.IDebug_Name
         anomaliesInRoom.Add(handler);
     }
 
-    public bool SpawnAnomaly(List<Tag> tagsToMatch, MatchType matchType = MatchType.ANY, bool mustMatch = false)
+    public bool SpawnAnomaly(List<Tag> tagsToMatch, MatchType matchType = MatchType.ANY, bool mustMatch = false, bool shouldBeUnseen = false)
     {
         var validAnomalies = TagOperator.MatchQuery(tagsToMatch, anomaliesInRoom, matchType);
 
@@ -93,9 +93,9 @@ public class AnomalyRoomManager : MonoBehaviour, DebugTools.IDebug_Name
         {
             if (picked == null) return false;
             if (picked.AnomalyEnabled) return false;
-            picked.EnableAnomaly();
+            return picked.TryEnableAnomaly(shouldBeUnseen);
             //picked.Data.OnAnomalyTriggered?.Invoke();
-            return true;
+            //return true;
         }
 
         foreach (var anomaly in validAnomalies)
@@ -105,7 +105,7 @@ public class AnomalyRoomManager : MonoBehaviour, DebugTools.IDebug_Name
 
         validPool.Shuffle();
 
-        #region ROUND 1 : Unseen Valid Anomaly
+        #region ROUND 1 : Not Previously Viewed Valid Anomaly
 
         foreach(var option in validPool)
         {//go down the shuffled list until you hit one you haven't seen before

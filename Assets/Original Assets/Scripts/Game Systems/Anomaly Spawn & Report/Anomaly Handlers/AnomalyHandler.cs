@@ -22,10 +22,11 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged, DebugTools.IDebug
     //[SerializeField] protected string humanReadableName = "[DEBUG NAME NOT SET]";
     public string HumanReadableName() => data.name;
     private string roomName = "[DEBUG NAME NOT SET]";
+    private AnomalyRoomManager roomManager;
 
     virtual protected void Start()
     {
-        if(!transform.parent.TryGetComponent(out AnomalyRoomManager roomManager))
+        if(!transform.parent.TryGetComponent(out roomManager))
         {
             print("ERR: Anomaly isn't childed under a room manager, and will be ignored.");
             return;
@@ -43,6 +44,19 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged, DebugTools.IDebug
         if (data == null) return;
         data.OnAnomalyTriggered = null;
         data.OnAnomalyFixed = null;
+    }
+
+    virtual public bool TryEnableAnomaly(bool shouldBeUnseen = false)
+    {
+        if (shouldBeUnseen &&
+            AnomalyCentralController.Instance.PlayerSeesSpecificRoom(roomManager) &&
+            data.tags.Contains(AnomalyCentralController.Instance.UnseenTag))
+        {
+            print($"DEBUG: {HumanReadableName()} has been rerolled in {roomName} since it should go unseen.");
+            return false;
+        }
+        EnableAnomaly();
+        return true;
     }
 
     virtual public void EnableAnomaly()

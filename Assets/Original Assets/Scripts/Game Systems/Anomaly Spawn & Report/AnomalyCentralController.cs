@@ -15,6 +15,7 @@ public class AnomalyCentralController : MonoBehaviour
     private Queue<TagSearch> anomalyTypeQueue = new();
     private int totalSpawned;
     [SerializeField] private Tag unseenTag;
+    public Tag UnseenTag => unseenTag;
     [SerializeField] private AnimationCurve spawnCurve;
     [SerializeField, ReadOnly] private List<AnomalyRoomManager> managers = new();
     public List<AnomalyRoomManager> Managers => managers;
@@ -186,13 +187,13 @@ public class AnomalyCentralController : MonoBehaviour
         List<AnomalyRoomManager> shuffledRooms = new();
         foreach(var room in managers)
         {
-            if (nextAnomalyType.items.Contains(unseenTag) &&
-                (room.PlayerInRoom(playerTrans) ||
-                (CameraManager.instance.PlayerInCams && CameraManager.instance.CamIndex == room.CamIndex)))
-            {
-                print($"DEBUG: Unseen tag being used, but player can currently see into (or is too close to/within) {room.HumanReadableName()}, so that room will be ignored.");
-                continue;
-            }
+            //if (nextAnomalyType.items.Contains(unseenTag) &&
+            //    (room.PlayerInRoom(playerTrans) ||
+            //    (CameraManager.instance.PlayerInCams && CameraManager.instance.CamIndex == room.CamIndex)))
+            //{
+            //    print($"DEBUG: Unseen tag being used, but player can currently see into (or is too close to/within) {room.HumanReadableName()}, so that room will be ignored.");
+            //    continue;
+            //}
             //^if it's supposed to be unseen and the player is in the room or in this room's cam, drop that room from the list
             shuffledRooms.Add(room);
         }
@@ -202,7 +203,7 @@ public class AnomalyCentralController : MonoBehaviour
         int index = 0;
         while (!spawnComplete && index < shuffledRooms.Count)
         {//if we spawn something, OR we check every room and nothing spawns, then stop
-            spawnComplete = shuffledRooms[index].SpawnAnomaly(nextAnomalyType.items, nextAnomalyType.searchType);
+            spawnComplete = shuffledRooms[index].SpawnAnomaly(nextAnomalyType.items, nextAnomalyType.searchType, shouldBeUnseen:nextAnomalyType.items.Contains(unseenTag));
             index++;
         }
         //print("Spawning!");
@@ -216,5 +217,10 @@ public class AnomalyCentralController : MonoBehaviour
             Invoke(nameof(TriggerAnomalySpawn), retryTimer);
         }
         else anomalyTypeQueue.TryDequeue(out var _);
+    }
+
+    public bool PlayerSeesSpecificRoom(AnomalyRoomManager room)
+    {//so fucking dirty dude
+        return CameraManager.instance.PlayerInCams && CameraManager.instance.CamIndex == room.CamIndex || room.PlayerInRoom(playerTrans);
     }
 }
