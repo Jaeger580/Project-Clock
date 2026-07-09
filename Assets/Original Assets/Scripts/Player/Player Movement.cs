@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -27,11 +28,22 @@ public class PlayerMovement : MonoBehaviour
     private InputAction moveAction;
     private InputAction sprintAction;
 
+    [Header("Sound Effects")]
+    [SerializeField] private AudioSource sfxSource;
+    //[SerializeField] private AudioClip[] sfxJump;
+    [SerializeField]
+    private AudioClip footSteps;
+    private bool playWalkSound = false;
 
     private void Awake()
     {
         moveAction = playerInput.actions.FindAction("Move");
         sprintAction = playerInput.actions.FindAction("Sprint");
+    }
+
+    private void Start()
+    {
+        StartCoroutine(WalkSounds());
     }
 
     private void Update()
@@ -55,6 +67,17 @@ public class PlayerMovement : MonoBehaviour
 
         // Read Input
         Vector2 moveDirection = moveAction.ReadValue<Vector2>();
+
+        // If there is no input, don't play sounds
+        if (moveDirection == Vector2.zero)
+        {
+            playWalkSound = false;
+        }
+        else 
+        {
+            playWalkSound = true;
+        }
+
         Vector3 moveVector = transform.right * moveDirection.x + transform.forward * moveDirection.y;
         moveVector = Vector3.ClampMagnitude(moveVector, 1f);
 
@@ -90,5 +113,22 @@ public class PlayerMovement : MonoBehaviour
     private void OnDisable()
     {
         moveAction.Disable();
+    }
+
+    // Handles walking and sprinting sound effects
+    private IEnumerator WalkSounds()
+    {
+        while (true) 
+        {
+            if (playWalkSound && !sfxSource.isPlaying)
+            {
+                sfxSource.Play();
+            }
+            else if(!playWalkSound && sfxSource.isPlaying)
+            {
+                sfxSource.Pause();
+            }
+            yield return null;
+        }
     }
 }
