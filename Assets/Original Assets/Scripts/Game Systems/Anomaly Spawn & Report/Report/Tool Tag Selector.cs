@@ -95,7 +95,7 @@ public class ToolTagSelector : MonoBehaviour
             //secondText.ElapsedTime = 0.50f;
             //thirdText.ElapsedTime = 0.25f;
             //bottomText.ElapsedTime = 0.0f;
-            StartCoroutine(LerpTags(topText, firstText, secondText, thirdText, bottomText, 1f));
+            StartCoroutine(LerpTags(topText, firstText, secondText, thirdText, bottomText, 0.2f));
         }
     }
 
@@ -117,7 +117,8 @@ public class ToolTagSelector : MonoBehaviour
         if (botTime > 0.75f)
             botTime = 0f;
 
-        while (timeTaken < 1f) 
+
+        while (timeTaken < 0.25f) 
         {
             topTag.ElapsedTime = Mathf.Lerp(topTime, 0.999f, timeTaken / stepValue);
             firstTag.ElapsedTime = Mathf.Lerp(firstTime, 0.75f, timeTaken / stepValue);

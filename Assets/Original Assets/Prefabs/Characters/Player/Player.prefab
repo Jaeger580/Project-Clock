@@ -1036,6 +1036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4435024534516781322}
   - component: {fileID: 3263797278560256304}
+  - component: {fileID: 8393190854431597067}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1103,6 +1104,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &8393190854431597067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2986571291605505998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc4158b1d397ec40adb71447be42e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArmController
+  anim: {fileID: 659431973953133955}
 --- !u!1 &3372133175633851279
 GameObject:
   m_ObjectHideFlags: 0
@@ -2975,6 +2989,7 @@ GameObject:
   - component: {fileID: 7783459253944074052}
   - component: {fileID: 6605581527291998433}
   - component: {fileID: 8957459751181993003}
+  - component: {fileID: 659431973953133955}
   m_Layer: 0
   m_Name: Arm_IDK
   m_TagString: Untagged
@@ -3054,6 +3069,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &659431973953133955
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7444369229976987134}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8162fafbdc1dee344b1b0459f6d69de1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7701855043765653781
 GameObject:
   m_ObjectHideFlags: 0
@@ -3588,6 +3625,7 @@ GameObject:
   - component: {fileID: 3374969338502631891}
   - component: {fileID: 3628931087392716559}
   - component: {fileID: 5098156064800585746}
+  - component: {fileID: 8963135695624763069}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -3932,6 +3970,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c3c76d3b-a786-47a4-b280-8b6d3a5f821b
     m_ActionName: 'UI/Pause[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8393190854431597067}
+        m_TargetAssemblyTypeName: ArmController, Assembly-CSharp
+        m_MethodName: AdjustArm
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6b707584-d984-4573-ad69-37dd9ea48091
+    m_ActionName: 'Player/Alt Fire[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -4010,6 +4064,8 @@ MonoBehaviour:
   baseSpeed: 4
   sprintMulti: 1.55
   gravityValue: -9.81
+  sfxSource: {fileID: 8963135695624763069}
+  footSteps: {fileID: 8300000, guid: ab6ae64e6aef61a4a9e91d67dcd28264, type: 3}
 --- !u!114 &3374969338502631891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4059,6 +4115,103 @@ MonoBehaviour:
   tags: {fileID: 11400000, guid: 44610508c3ac6403fbb200ea6b011582, type: 2}
   input_FreeMouse: {fileID: 11400000, guid: 1f3666a6354e545a5bcaeaed6a27d8be, type: 2}
   input_LockMouse: {fileID: 11400000, guid: 05bf362415fc74199a02fd372203b10d, type: 2}
+--- !u!82 &8963135695624763069
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8132694383073465522}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -4527173372948702426, guid: 2c266607974283d46b7ee384f26a6dba, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: ab6ae64e6aef61a4a9e91d67dcd28264, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8666650609291427397
 GameObject:
   m_ObjectHideFlags: 0
