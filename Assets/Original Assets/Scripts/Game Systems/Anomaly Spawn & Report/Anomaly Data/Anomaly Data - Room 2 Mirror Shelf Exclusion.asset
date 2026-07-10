@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyData
   tags:
   - {fileID: 11400000, guid: 6e8ae048c57f34329aae64898a9bcc10, type: 2}
+  - {fileID: 11400000, guid: e8c5cb6ad4bd448469f561dccb8c207c, type: 2}
   previouslySeen: 0
