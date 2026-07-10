@@ -46,10 +46,11 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged, DebugTools.IDebug
         data.OnAnomalyFixed = null;
     }
 
-    virtual public bool TryEnableAnomaly(bool shouldBeUnseen = false)
+    [ContextMenu("Enable Anomaly")]
+    virtual public bool TryEnableAnomaly()
     {
-        if (shouldBeUnseen &&
-            AnomalyCentralController.Instance.PlayerSeesSpecificRoom(roomManager) &&
+        //print($"TRYING TO ENABLE AN ANOMALY | should: {data.tags.Contains(AnomalyCentralController.Instance.UnseenTag)} | is: {AnomalyCentralController.Instance.PlayerSeesSpecificRoom(roomManager)} ");
+        if (AnomalyCentralController.Instance.PlayerSeesSpecificRoom(roomManager) &&
             data.tags.Contains(AnomalyCentralController.Instance.UnseenTag))
         {
             print($"DEBUG: {HumanReadableName()} has been rerolled in {roomName} since it should go unseen.");
@@ -66,6 +67,8 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged, DebugTools.IDebug
         data.OnAnomalyTriggered?.Invoke();
         print($"DEBUG: {HumanReadableName()} has been spawned in {roomName}.");
     }
+
+    [ContextMenu("Disable Anomaly")]
     virtual public void DisableAnomaly()
     {
         anomalyEnabled = false;

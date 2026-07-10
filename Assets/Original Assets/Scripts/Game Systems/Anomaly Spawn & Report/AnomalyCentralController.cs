@@ -203,7 +203,7 @@ public class AnomalyCentralController : MonoBehaviour
         int index = 0;
         while (!spawnComplete && index < shuffledRooms.Count)
         {//if we spawn something, OR we check every room and nothing spawns, then stop
-            spawnComplete = shuffledRooms[index].SpawnAnomaly(nextAnomalyType.items, nextAnomalyType.searchType, shouldBeUnseen:nextAnomalyType.items.Contains(unseenTag));
+            spawnComplete = shuffledRooms[index].SpawnAnomaly(nextAnomalyType.items, nextAnomalyType.searchType);
             index++;
         }
         //print("Spawning!");

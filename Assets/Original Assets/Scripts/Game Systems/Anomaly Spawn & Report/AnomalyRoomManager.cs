@@ -83,7 +83,7 @@ public class AnomalyRoomManager : MonoBehaviour, DebugTools.IDebug_Name
         anomaliesInRoom.Add(handler);
     }
 
-    public bool SpawnAnomaly(List<Tag> tagsToMatch, MatchType matchType = MatchType.ANY, bool mustMatch = false, bool shouldBeUnseen = false)
+    public bool SpawnAnomaly(List<Tag> tagsToMatch, MatchType matchType = MatchType.ANY, bool mustMatch = false)
     {
         var validAnomalies = TagOperator.MatchQuery(tagsToMatch, anomaliesInRoom, matchType);
 
@@ -93,7 +93,7 @@ public class AnomalyRoomManager : MonoBehaviour, DebugTools.IDebug_Name
         {
             if (picked == null) return false;
             if (picked.AnomalyEnabled) return false;
-            return picked.TryEnableAnomaly(shouldBeUnseen);
+            return picked.TryEnableAnomaly();
             //picked.Data.OnAnomalyTriggered?.Invoke();
             //return true;
         }
