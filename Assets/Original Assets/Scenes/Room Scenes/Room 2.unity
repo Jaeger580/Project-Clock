@@ -15245,7 +15245,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1218321446}
   - component: {fileID: 1218321445}
+  - component: {fileID: 1218321450}
   - component: {fileID: 1218321447}
+  - component: {fileID: 1218321449}
+  - component: {fileID: 1218321448}
   m_Layer: 0
   m_Name: Anomaly Room Manager
   m_TagString: Untagged
@@ -15266,11 +15269,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyRoomManager
   roomID: 0
+  roomCam: {fileID: 4970597545316426451}
   anomaliesInRoom: []
-  playerInRoom: 0
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  roomCheckColliders: []
+  humanReadableName: Lounge
 --- !u!4 &1218321446
 Transform:
   m_ObjectHideFlags: 0
@@ -15312,14 +15317,71 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1207
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 20.770145, y: 4.2885437, z: 8.178677}
+  m_Center: {x: 1.0095196, y: -0.07904971, z: -1.5146875}
+--- !u!65 &1218321448
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218321444}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1207
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.7604904, y: 4.2885437, z: 18.188305}
+  m_Center: {x: -11.466843, y: -0.07904959, z: -2.4016302}
+--- !u!65 &1218321449
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218321444}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1207
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.830002, y: 4.2885437, z: 7.147995}
+  m_Center: {x: 6.9795914, y: -0.07904959, z: 6.1536617}
+--- !u!114 &1218321450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218321444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09614295a2e24ca1affb56af27bb538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_RoomButtonHolder
+  roomManager: {fileID: 1218321445}
+  roomCamElementName: LoungeButton
+  goToCamEvent: {fileID: 11400000, guid: 469b5166b7fce4380a8b9d19b8394b8c, type: 2}
 --- !u!1 &1225882235
 GameObject:
   m_ObjectHideFlags: 0
@@ -25518,6 +25580,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
   parentAnomaly: {fileID: 712615766}
+--- !u!114 &4970597545316426451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7630969910059656430, guid: 0511a90be31a7454d918c0727e2864cb, type: 3}
+  m_PrefabInstance: {fileID: 4970597545316426447}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

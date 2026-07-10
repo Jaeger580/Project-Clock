@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum LoopType { NONE, REPEAT, PINGPONG}
 
-abstract public class AnomalyHandler : MonoBehaviour, ITagged
+abstract public class AnomalyHandler : MonoBehaviour, ITagged, DebugTools.IDebug_Name
 {
     [SerializeField] protected AnomalyData data;
     public AnomalyData Data => data;
@@ -17,15 +17,23 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged
     }
     protected AnomalyData parentData;
 
+    //[Header("DEBUG")]
+    //[Tooltip("ONLY USED FOR DEBUGGING PURPOSES")]
+    //[SerializeField] protected string humanReadableName = "[DEBUG NAME NOT SET]";
+    public string HumanReadableName() => data.name;
+    private string roomName = "[DEBUG NAME NOT SET]";
+    private AnomalyRoomManager roomManager;
+
     virtual protected void Start()
     {
-        if(!transform.parent.TryGetComponent(out AnomalyRoomManager roomManager))
+        if(!transform.parent.TryGetComponent(out roomManager))
         {
             print("ERR: Anomaly isn't childed under a room manager, and will be ignored.");
             return;
         }
         if (data == null) return;
         roomManager.SubscribeToManager(this);
+        roomName = roomManager.HumanReadableName();
         //data.OnAnomalyTriggered += EnableAnomaly;
         data.OnAnomalyTriggered += () => {  AnomalyCentralController.Instance.CurrentlySpawned++; };
         data.OnAnomalyFixed += () => { data.previouslySeen = true; AnomalyCentralController.Instance.CurrentlySpawned--; };
@@ -38,12 +46,29 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged
         data.OnAnomalyFixed = null;
     }
 
+    [ContextMenu("Enable Anomaly")]
+    virtual public bool TryEnableAnomaly()
+    {
+        //print($"TRYING TO ENABLE AN ANOMALY | should: {data.tags.Contains(AnomalyCentralController.Instance.UnseenTag)} | is: {AnomalyCentralController.Instance.PlayerSeesSpecificRoom(roomManager)} ");
+        if (AnomalyCentralController.Instance.PlayerSeesSpecificRoom(roomManager) &&
+            data.tags.Contains(AnomalyCentralController.Instance.UnseenTag))
+        {
+            print($"DEBUG: {HumanReadableName()} has been rerolled in {roomName} since it should go unseen.");
+            return false;
+        }
+        EnableAnomaly();
+        return true;
+    }
+
     virtual public void EnableAnomaly()
     {
         anomalyEnabled = true;
         if (data == null) return;
         data.OnAnomalyTriggered?.Invoke();
+        print($"DEBUG: {HumanReadableName()} has been spawned in {roomName}.");
     }
+
+    [ContextMenu("Disable Anomaly")]
     virtual public void DisableAnomaly()
     {
         anomalyEnabled = false;

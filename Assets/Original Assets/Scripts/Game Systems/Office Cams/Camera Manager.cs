@@ -9,10 +9,15 @@ using Unity.Cinemachine;
 public class CameraManager : MonoBehaviour, IInteractable
 {
     private List<CinemachineCamera> roomCameras = new List<CinemachineCamera>();
+
     // Allows the camera objects to look for and call this script
     public static CameraManager instance;
 
+    private bool playerInCams = false;
+    public bool PlayerInCams => playerInCams;
+
     private int camIndex = 0;
+    public int CamIndex => camIndex;
 
     [SerializeField]
     private PlayerInput PlayerInput;
@@ -22,9 +27,13 @@ public class CameraManager : MonoBehaviour, IInteractable
     [SerializeField]
     private GameObject cameraHUD;
 
+    [SerializeField] private GameEvent goToCamEvent;
+
     private void Awake()
     {
         roomCameras.Clear();
+        if (instance != null)
+            Destroy(instance);
         instance = this;
     }
 
@@ -33,9 +42,12 @@ public class CameraManager : MonoBehaviour, IInteractable
         EnterCamera();
     }
 
-    public void AddCamera(CinemachineCamera roomCam) 
+
+    public int AddCamera(CinemachineCamera roomCam) 
     {
         roomCameras.Add(roomCam);
+        return roomCameras.IndexOf(roomCam);
+        //Debug.Log("Camera Added");
     }
 
     public void RemoveCamera(CinemachineCamera roomCam)
@@ -46,15 +58,14 @@ public class CameraManager : MonoBehaviour, IInteractable
     // Toggles which camera is active
     public void EnterCamera()
     {
+        playerInCams = true;
         camIndex = 0;
 
         playerHUD.SetActive(false);
         cameraHUD.SetActive(true);
 
-
         //roomCameras[camIndex].depth = 2;
-        var nextCam = roomCameras[camIndex];
-        nextCam.enabled = true;
+        SelectCam(camIndex);
 
         // Change player's input actions
         PlayerInput.SwitchCurrentActionMap("Cameras");
@@ -79,7 +90,7 @@ public class CameraManager : MonoBehaviour, IInteractable
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        playerInCams = false;
     }
 
     // Toggles which camera is active
@@ -89,12 +100,7 @@ public class CameraManager : MonoBehaviour, IInteractable
         {
             if (camIndex < roomCameras.Count - 1)
             {
-                var previousCam = roomCameras[camIndex];
-                var nextCam = roomCameras[++camIndex];
-
-                previousCam.enabled = false;
-                nextCam.enabled = true;
-
+                SelectCam(++camIndex);
             }
             else
             {
@@ -109,12 +115,7 @@ public class CameraManager : MonoBehaviour, IInteractable
         {
             if (camIndex > 0)
             {
-                var previousCam = roomCameras[camIndex];
-                var nextCam = roomCameras[--camIndex];
-
-                previousCam.enabled = false;
-                nextCam.enabled = true;
-
+                SelectCam(--camIndex);
             }
             else
             {
@@ -125,10 +126,9 @@ public class CameraManager : MonoBehaviour, IInteractable
 
     public void SelectCam(int camDex)
     {
-        var previousCam = roomCameras[camIndex];
-        var nextCam = roomCameras[camDex];
-
-        previousCam.enabled = false;
-        nextCam.enabled = true;
+        camIndex = camDex;
+        roomCameras[camDex].enabled = true;
+        foreach (var cam in roomCameras) if (cam != roomCameras[camDex]) cam.enabled = false;
+        goToCamEvent?.Trigger(camDex);
     }
 }

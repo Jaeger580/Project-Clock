@@ -3591,6 +3591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera Station
       objectReference: {fileID: 0}
+    - target: {fileID: 2532420233671006422, guid: a5d352c71993e3c4787b6d7cf7651968, type: 3}
+      propertyPath: uidoc
+      value: 
+      objectReference: {fileID: 2135090147}
     - target: {fileID: 8461438415752179188, guid: a5d352c71993e3c4787b6d7cf7651968, type: 3}
       propertyPath: cameraHUD
       value: 
@@ -5068,11 +5072,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyRoomManager
   roomID: 0
+  roomCam: {fileID: 0}
   anomaliesInRoom: []
-  playerInRoom: 0
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  roomCheckColliders: []
+  humanReadableName: '[DEBUG NAME NOT SET]'
 --- !u!4 &729666737
 Transform:
   m_ObjectHideFlags: 0
@@ -11958,6 +11964,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyCentralController
   sceneBuildIndices: 0300000004000000
+  maxLoadedRooms: 2
+  randomizeRooms: 0
   anomalyTypeOrder:
   - {fileID: 11400000, guid: 2170dd8bc5dc7422097f2ddfea334bbd, type: 2}
   - {fileID: 11400000, guid: 2170dd8bc5dc7422097f2ddfea334bbd, type: 2}
@@ -11969,6 +11977,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d4b610034c24e4e168ed4f0cddcb951d, type: 2}
   - {fileID: 11400000, guid: d4b610034c24e4e168ed4f0cddcb951d, type: 2}
   - {fileID: 11400000, guid: e1d9653e494aa481d90e725984193242, type: 2}
+  unseenTag: {fileID: 11400000, guid: e8c5cb6ad4bd448469f561dccb8c207c, type: 2}
   spawnCurve:
     serializedVersion: 2
     m_Curve:
@@ -12016,6 +12025,7 @@ MonoBehaviour:
   graceAtMaxAnomalies: 20
   timeProgressesAtMaxAnomalies: 1
   overMaxKills: 1
+  playerTrans: {fileID: 6454685658537911956}
   currentlySpawned: 0
 --- !u!4 &1925868847
 Transform:
@@ -12944,11 +12954,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyRoomManager
   roomID: 0
+  roomCam: {fileID: 0}
   anomaliesInRoom: []
-  playerInRoom: 0
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  roomCheckColliders: []
+  humanReadableName: '[DEBUG NAME NOT SET]'
 --- !u!4 &2067809450
 Transform:
   m_ObjectHideFlags: 0
@@ -13373,6 +13385,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7839366900028473383, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
   m_PrefabInstance: {fileID: 6454685658537911955}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2135090147 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1637378506915208666, guid: da530d8d5d3a389448afb54ef8051443, type: 3}
+  m_PrefabInstance: {fileID: 6454685658537911955}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135090146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!1 &2140072599
 GameObject:
   m_ObjectHideFlags: 0

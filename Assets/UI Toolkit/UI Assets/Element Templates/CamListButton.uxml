@@ -1,0 +1,4 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/BaseStyleSheet.uss?fileID=7433441132597879392&amp;guid=a330b67b1dff24c55b04d92c73580618&amp;type=3#BaseStyleSheet" />
+    <ui:Button text="ROOM 1" name="CamListButton" class="camListButton" style="-unity-font-definition: url(&quot;project://database/Assets/Original%20Assets/Art/UI/Fonts/VT323-Regular.ttf?fileID=12800000&amp;guid=8ad098bcf6a89344dbe881a7d4107d73&amp;type=3#VT323-Regular&quot;); font-size: 28px;" />
+</ui:UXML>
