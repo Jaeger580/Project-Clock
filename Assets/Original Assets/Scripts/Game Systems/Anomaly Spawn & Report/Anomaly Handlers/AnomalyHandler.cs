@@ -24,6 +24,8 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged, DebugTools.IDebug
     private string roomName = "[DEBUG NAME NOT SET]";
     private AnomalyRoomManager roomManager;
 
+    [SerializeField] protected AudioSource audioSource;
+
     virtual protected void Start()
     {
         if(!transform.parent.TryGetComponent(out roomManager))
@@ -65,6 +67,10 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged, DebugTools.IDebug
         anomalyEnabled = true;
         if (data == null) return;
         data.OnAnomalyTriggered?.Invoke();
+
+        // Play audio, if it exits
+        playAudio();
+
         print($"DEBUG: {HumanReadableName()} has been spawned in {roomName}.");
     }
 
@@ -74,11 +80,25 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged, DebugTools.IDebug
         anomalyEnabled = false;
         if (data == null) return;
         data.OnAnomalyFixed?.Invoke();
+
+        //Stop and reset audio
+        resetAudio();
     }
 
     public void SetData(AnomalyData parentData)
     {
         this.parentData = parentData;
+    }
+
+    virtual protected void playAudio() 
+    {
+        if(audioSource != null)
+            audioSource.Play();
+    }
+    virtual protected void resetAudio() 
+    {
+        if(audioSource != null)
+            audioSource.Stop();
     }
 }
 

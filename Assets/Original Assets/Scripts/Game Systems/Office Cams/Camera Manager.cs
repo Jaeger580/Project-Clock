@@ -102,10 +102,10 @@ public class CameraManager : MonoBehaviour, IInteractable
             {
                 SelectCam(++camIndex);
             }
-            else
-            {
-                ExitCamera();
-            }
+            //else
+            //{
+            //    ExitCamera();
+            //}
         }
     }
 
@@ -117,10 +117,10 @@ public class CameraManager : MonoBehaviour, IInteractable
             {
                 SelectCam(--camIndex);
             }
-            else
-            {
-                ExitCamera();
-            }
+            //else
+            //{
+            //    ExitCamera();
+            //}
         }
     }
 
@@ -130,5 +130,13 @@ public class CameraManager : MonoBehaviour, IInteractable
         roomCameras[camDex].enabled = true;
         foreach (var cam in roomCameras) if (cam != roomCameras[camDex]) cam.enabled = false;
         goToCamEvent?.Trigger(camDex);
+    }
+
+    public void ForceExit(InputAction.CallbackContext context) 
+    {
+        if (context.started) 
+        {
+            ExitCamera();
+        }
     }
 }

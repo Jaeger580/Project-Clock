@@ -1022,6 +1022,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "839c1578-fa9d-4a67-b134-e01c66f22d06",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "SwitchLeft",
                     "type": "Button",
                     "id": "4995d685-bb06-406e-a8ef-e1d7db914863",
@@ -1040,6 +1049,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "SwitchRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4a011092-3e76-4914-b4fa-5de6b32406ab",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Exit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
