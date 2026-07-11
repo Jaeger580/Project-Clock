@@ -10864,22 +10864,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Controller
       objectReference: {fileID: 0}
-    - target: {fileID: 7052149316065333446, guid: 44ac07c0fc803094e941769019fa4014, type: 3}
-      propertyPath: m_Pitch
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7052149316065333446, guid: 44ac07c0fc803094e941769019fa4014, type: 3}
-      propertyPath: m_Volume
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7052149316065333446, guid: 44ac07c0fc803094e941769019fa4014, type: 3}
-      propertyPath: MaxDistance
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 7052149316065333446, guid: 44ac07c0fc803094e941769019fa4014, type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
