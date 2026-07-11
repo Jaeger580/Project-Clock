@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &849255600329610609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4973291412520378396}
+  - component: {fileID: 7279892281648946553}
+  - component: {fileID: 5358812135927799209}
+  m_Layer: 0
+  m_Name: Anomaly Central Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4973291412520378396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849255600329610609}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7279892281648946553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849255600329610609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4dbf128be46049c68357a30cc8b7501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyCentralController
+  sceneBuildIndices: 0300000004000000
+  maxLoadedRooms: 2
+  randomizeRooms: 0
+  anomalyTypeOrder:
+  - {fileID: 11400000, guid: 2170dd8bc5dc7422097f2ddfea334bbd, type: 2}
+  - {fileID: 11400000, guid: 2170dd8bc5dc7422097f2ddfea334bbd, type: 2}
+  - {fileID: 11400000, guid: 2170dd8bc5dc7422097f2ddfea334bbd, type: 2}
+  - {fileID: 11400000, guid: f76260c6384ed43d9b5e4ea12f28aa7e, type: 2}
+  - {fileID: 11400000, guid: f76260c6384ed43d9b5e4ea12f28aa7e, type: 2}
+  - {fileID: 11400000, guid: f76260c6384ed43d9b5e4ea12f28aa7e, type: 2}
+  - {fileID: 11400000, guid: d4b610034c24e4e168ed4f0cddcb951d, type: 2}
+  - {fileID: 11400000, guid: d4b610034c24e4e168ed4f0cddcb951d, type: 2}
+  - {fileID: 11400000, guid: d4b610034c24e4e168ed4f0cddcb951d, type: 2}
+  - {fileID: 11400000, guid: e1d9653e494aa481d90e725984193242, type: 2}
+  unseenTag: {fileID: 11400000, guid: e8c5cb6ad4bd448469f561dccb8c207c, type: 2}
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.2
+      value: 0
+      inSlope: -0
+      outSlope: 1.3333334
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.95
+      value: 1
+      inSlope: 1.3333334
+      outSlope: 0
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  managers: []
+  maxAnomaliesAllowed: 5
+  graceAtMaxAnomalies: 20
+  timeProgressesAtMaxAnomalies: 1
+  overMaxKills: 1
+  playerTrans: {fileID: 0}
+  currentlySpawned: 0
+--- !u!114 &5358812135927799209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849255600329610609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5024a1cf2cd334e85bf7c4aaef5fed37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
+  totalShiftTime: 600
+  startTime: 22
+  endTime: 30
+  visualTime: 0

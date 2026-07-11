@@ -4762,6 +4762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Size
   data: {fileID: 11400000, guid: 204233a2396c54e0e907f349ef2b9bf8, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   gradualCurve:
     serializedVersion: 2
     m_Curve:
@@ -5508,6 +5509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Toggle
   data: {fileID: 11400000, guid: 9fa063474860e48b9bdcf2daa8e8093d, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   objsToToggleOn: []
   objsToToggleOff:
   - {fileID: 1920049035}
@@ -5959,6 +5961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Toggle
   data: {fileID: 11400000, guid: 351ea7546ad25431586de77e6cad1cb1, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   objsToToggleOn: []
   objsToToggleOff:
   - {fileID: 483882637}
@@ -6661,6 +6664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Toggle
   data: {fileID: 11400000, guid: 8746e4f98932349b9aa0eeabd3f763e9, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   objsToToggleOn:
   - {fileID: 1567582137}
   objsToToggleOff:
@@ -9379,6 +9383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Position
   data: {fileID: 0}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   gradualCurve:
     serializedVersion: 2
     m_Curve:
@@ -9429,6 +9434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Composite
   data: {fileID: 11400000, guid: 54ee6f6f55b4b4ff58202ebbc4bc662a, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   underlyingHandlers:
   - {fileID: 712615765}
 --- !u!1 &727576121
@@ -13185,6 +13191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Rotation
   data: {fileID: 0}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   gradualCurve:
     serializedVersion: 2
     m_Curve:
@@ -13228,6 +13235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Position
   data: {fileID: 0}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   gradualCurve:
     serializedVersion: 2
     m_Curve:
@@ -13273,6 +13281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Composite
   data: {fileID: 11400000, guid: 51aa724cc3c1d4ba29db3fd1d608a188, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   underlyingHandlers:
   - {fileID: 1021385383}
   - {fileID: 1021385382}
@@ -14375,6 +14384,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1387672182}
   - {fileID: 850334962}
   - {fileID: 1594090413}
   - {fileID: 934779666}
@@ -14397,6 +14407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Rotation
   data: {fileID: 0}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   gradualCurve:
     serializedVersion: 2
     m_Curve:
@@ -14463,6 +14474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Rotation
   data: {fileID: 0}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   gradualCurve:
     serializedVersion: 2
     m_Curve:
@@ -14529,6 +14541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Composite
   data: {fileID: 11400000, guid: 45c343bc13c144c2599dd0b927157013, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 1387672183}
   underlyingHandlers:
   - {fileID: 1174564504}
   - {fileID: 1174564503}
@@ -16978,6 +16991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Toggle
   data: {fileID: 11400000, guid: cee37b7f530c74c20ae9be2f4c02a4c9, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   objsToToggleOn:
   - {fileID: 67587450}
   objsToToggleOff:
@@ -17386,6 +17400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Rotation
   data: {fileID: 0}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   gradualCurve:
     serializedVersion: 2
     m_Curve:
@@ -17436,6 +17451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Position
   data: {fileID: 0}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   gradualCurve:
     serializedVersion: 2
     m_Curve:
@@ -17488,9 +17504,139 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Composite
   data: {fileID: 11400000, guid: 0a015488fb8f64a50a65f245cccbc044, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   underlyingHandlers:
   - {fileID: 1379064076}
   - {fileID: 1379064075}
+--- !u!1 &1387672181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387672182}
+  - component: {fileID: 1387672183}
+  m_Layer: 7
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1387672182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387672181}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.82, y: -0.91, z: 1.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1174564502}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1387672183
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387672181}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -4527173372948702426, guid: 2c266607974283d46b7ee384f26a6dba, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 01e207cd73eac35489f631951fc56392, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1390530215
 GameObject:
   m_ObjectHideFlags: 0
@@ -22638,6 +22784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Toggle
   data: {fileID: 11400000, guid: 9292685fcfebc412e9a99f70b8df51c4, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   objsToToggleOn: []
   objsToToggleOff:
   - {fileID: 845187731}
@@ -22801,6 +22948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Toggle
   data: {fileID: 11400000, guid: bde7c6305b19946109a3968b9527af90, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   objsToToggleOn:
   - {fileID: 883214518}
   objsToToggleOff: []
@@ -23102,6 +23250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Position
   data: {fileID: 0}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   gradualCurve:
     serializedVersion: 2
     m_Curve:
@@ -23149,6 +23298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Position
   data: {fileID: 0}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   gradualCurve:
     serializedVersion: 2
     m_Curve:
@@ -23196,6 +23346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Composite
   data: {fileID: 11400000, guid: 0a015488fb8f64a50a65f245cccbc044, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   underlyingHandlers:
   - {fileID: 1921738839}
   - {fileID: 1921738838}
