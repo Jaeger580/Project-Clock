@@ -5472,6 +5472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 431159050}
   - component: {fileID: 431159051}
+  - component: {fileID: 431159052}
   m_Layer: 7
   m_Name: Carpet Anomaly
   m_TagString: Untagged
@@ -5513,6 +5514,27 @@ MonoBehaviour:
   objsToToggleOn: []
   objsToToggleOff:
   - {fileID: 1920049035}
+--- !u!65 &431159052
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431159049}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.673561, y: 0.052611113, z: 3.643816}
+  m_Center: {x: -2.0515594, y: -2.118381, z: -0.6940851}
 --- !u!1 &438127222
 GameObject:
   m_ObjectHideFlags: 0
