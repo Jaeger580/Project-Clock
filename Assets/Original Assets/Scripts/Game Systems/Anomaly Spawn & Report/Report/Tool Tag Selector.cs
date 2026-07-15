@@ -21,27 +21,23 @@ public class ToolTagSelector : MonoBehaviour
     [SerializeField] private GameObject tagsCanvas;
     private List<GameObject> activeTags = new List<GameObject>();
 
-    // HARD CODED FOR NOW
-    //[SerializeField] TMP_Text textOne;
-    //[SerializeField] TMP_Text textTwo;
-    //[SerializeField] TMP_Text textThree;
 
     private bool isChanging = false;
 
-
     // Tracks which tag we currently have selected
     private int currentTagIndex = 0;
+
+    // Audio Source for clicks when tag changes
+    private AudioSource clickAudio;
 
     private void Start()
     {
         InitializeTags();
 
+        clickAudio = this.GetComponentInChildren<AudioSource>();
+
         // initiliaze
-        ChangeTagType(0);
-
-        // Display first three tags on the device
-        //UpdateText();
-
+        InitialTagType(0);
     }
 
     // Instantiates ui objects with the correct text based on the TagSet 
@@ -72,7 +68,6 @@ public class ToolTagSelector : MonoBehaviour
             //print("CHANGING TAG TYPE");
             taggerSpawner.anomalyType = tags.items[tagIndex];
             currentTagIndex = tagIndex;
-            //UpdateText();
 
             int topTag, firstTag, secondTag, thirdTag, bottomTag;
 
@@ -88,14 +83,40 @@ public class ToolTagSelector : MonoBehaviour
             SplineAnimate thirdText = activeTags[thirdTag].GetComponent<SplineAnimate>();
             SplineAnimate bottomText = activeTags[bottomTag].GetComponent<SplineAnimate>();
 
+            clickAudio.Play();
 
-
-            //topText.ElapsedTime = 0.99f;
-            //firstText.ElapsedTime = 0.75f;
-            //secondText.ElapsedTime = 0.50f;
-            //thirdText.ElapsedTime = 0.25f;
-            //bottomText.ElapsedTime = 0.0f;
             StartCoroutine(LerpTags(topText, firstText, secondText, thirdText, bottomText, 0.2f));
+        }
+    }
+
+    // change active tag the first time
+    private void InitialTagType(int tagIndex)
+    {
+        if (!isChanging)
+        {
+            //print("CHANGING TAG TYPE");
+            taggerSpawner.anomalyType = tags.items[tagIndex];
+            currentTagIndex = tagIndex;
+
+            int topTag, firstTag, secondTag, thirdTag, bottomTag;
+
+            secondTag = currentTagIndex;
+            topTag = (currentTagIndex + 2) % tags.items.Count;
+            firstTag = (currentTagIndex + 1) % tags.items.Count;
+            thirdTag = (currentTagIndex - 1 + tags.items.Count) % tags.items.Count;
+            bottomTag = (currentTagIndex - 2 + tags.items.Count) % tags.items.Count;
+
+            SplineAnimate topText = activeTags[topTag].GetComponent<SplineAnimate>();
+            SplineAnimate firstText = activeTags[firstTag].GetComponent<SplineAnimate>();
+            SplineAnimate secondText = activeTags[secondTag].GetComponent<SplineAnimate>();
+            SplineAnimate thirdText = activeTags[thirdTag].GetComponent<SplineAnimate>();
+            SplineAnimate bottomText = activeTags[bottomTag].GetComponent<SplineAnimate>();
+
+            topText.ElapsedTime = 0.999f;
+            firstText.ElapsedTime = 0.75f;
+            secondText.ElapsedTime = 0.50f;
+            thirdText.ElapsedTime = 0.25f;
+            bottomText.ElapsedTime = 0.0f;
         }
     }
 
@@ -134,83 +155,6 @@ public class ToolTagSelector : MonoBehaviour
         isChanging = false;
     }
 
-    // update the text on the device
-    private void UpdateText()
-    {
-        int topTag;
-        int firstTag;
-        int secondTag;
-        int thirdTag;
-        int bottomTag;
-
-        // check if we need to loop
-        if (currentTagIndex - 1 < 0)
-        {
-            firstTag = tags.items.Count - 1;
-            topTag = tags.items.Count - 2;
-        }
-        else if (currentTagIndex - 2 < 0)
-        {
-            topTag = tags.items.Count - 1;
-            firstTag = currentTagIndex - 1;
-        }
-        else 
-        {
-            firstTag = currentTagIndex - 1;
-            topTag = currentTagIndex - 2;
-        }
-
-        if (currentTagIndex + 1 > tags.items.Count - 1)
-        {
-            thirdTag = 0;
-            bottomTag = tags.items.Count - 1;
-        }
-        else if(currentTagIndex + 2 > tags.items.Count - 1)
-        {
-            thirdTag = currentTagIndex + 1;
-            bottomTag = 0;
-        }
-        else 
-        {
-            thirdTag = currentTagIndex + 1;
-            bottomTag = currentTagIndex + 2;
-        }
-
-        secondTag = currentTagIndex;
-        //// check if we need to loop
-        //if (currentTagIndex - 1 < 0)
-        //{
-        //    firstTag = tags.items.Count - 1;
-        //    secondTag = currentTagIndex;
-        //    thirdTag = currentTagIndex + 1;
-        //}
-        //else if (currentTagIndex + 1 > tags.items.Count - 1)
-        //{
-        //    firstTag = currentTagIndex - 1;
-        //    secondTag = currentTagIndex;
-        //    thirdTag = 0;
-        //}
-        //else 
-        //{
-        //    firstTag = currentTagIndex - 1;
-        //    secondTag = currentTagIndex;
-        //    thirdTag = currentTagIndex + 1;
-        //}
-
-        //textOne.text = tags.items[firstTag].humanReadableTagIdentifier;
-        //textTwo.text = tags.items[secondTag].humanReadableTagIdentifier;
-        //textThree.text = tags.items[thirdTag].humanReadableTagIdentifier;
-        activeTags[topTag].GetComponent<SplineAnimate>().ElapsedTime = 1.0f;
-        activeTags[firstTag].GetComponent<SplineAnimate>().ElapsedTime = 0.75f;
-        activeTags[secondTag].GetComponent<SplineAnimate>().ElapsedTime = 0.50f;
-        activeTags[thirdTag].GetComponent<SplineAnimate>().ElapsedTime = 0.25f;
-        activeTags[bottomTag].GetComponent<SplineAnimate>().ElapsedTime = 0.0f;
-
-        //activeTags[activeTags.Count - 1].GetComponent<SplineAnimate>().ElapsedTime = 1.0f;
-
-
-    }
-
     // Shift the index up or down. Should take +1 or -1 as inputs.
     public void ShiftTagsUp(InputAction.CallbackContext context)
     {
@@ -221,20 +165,6 @@ public class ToolTagSelector : MonoBehaviour
             int indexChange = (currentTagIndex + 1) % tags.items.Count;
 
             ChangeTagType(indexChange);
-
-            //int topTag, firstTag, secondTag, thirdTag, bottomTag;
-
-            //secondTag = currentTagIndex;
-            //topTag = (currentTagIndex + 2) % tags.items.Count;
-            //firstTag = (currentTagIndex + 1) % tags.items.Count;
-            //thirdTag = (currentTagIndex - 1 + tags.items.Count) % tags.items.Count;
-            //bottomTag = (currentTagIndex - 2 + tags.items.Count) % tags.items.Count;
-
-            //activeTags[topTag].GetComponent<SplineAnimate>().ElapsedTime = 1.0f;
-            //activeTags[firstTag].GetComponent<SplineAnimate>().ElapsedTime = 0.75f;
-            //activeTags[secondTag].GetComponent<SplineAnimate>().ElapsedTime = 0.50f;
-            //activeTags[thirdTag].GetComponent<SplineAnimate>().ElapsedTime = 0.25f;
-            //activeTags[bottomTag].GetComponent<SplineAnimate>().ElapsedTime = 0.0f;
 
         }
     }
@@ -248,20 +178,6 @@ public class ToolTagSelector : MonoBehaviour
             int indexChange = (currentTagIndex - 1 + tags.items.Count) % tags.items.Count;
 
             ChangeTagType(indexChange);
-
-            //int topTag, firstTag, secondTag, thirdTag, bottomTag;
-
-            //secondTag = currentTagIndex;
-            //topTag = (currentTagIndex + 2) % tags.items.Count;
-            //firstTag = (currentTagIndex + 1) % tags.items.Count;
-            //thirdTag = (currentTagIndex - 1 + tags.items.Count) % tags.items.Count;
-            //bottomTag = (currentTagIndex - 2 + tags.items.Count) % tags.items.Count;
-
-            //activeTags[topTag].GetComponent<SplineAnimate>().ElapsedTime = 1.0f;
-            //activeTags[firstTag].GetComponent<SplineAnimate>().ElapsedTime = 0.75f;
-            //activeTags[secondTag].GetComponent<SplineAnimate>().ElapsedTime = 0.50f;
-            //activeTags[thirdTag].GetComponent<SplineAnimate>().ElapsedTime = 0.25f;
-            //activeTags[bottomTag].GetComponent<SplineAnimate>().ElapsedTime = 0.0f;
         }
     }
 }

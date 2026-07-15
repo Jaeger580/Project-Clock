@@ -14472,7 +14472,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  duration: 0.63
+  duration: 2.702
   loopType: 1
   newLocalRotation: {x: 0, y: -90, z: 0}
   objsToMove:
@@ -14539,7 +14539,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  duration: 0.4
+  duration: 1.51
   loopType: 1
   newLocalRotation: {x: 0, y: -90, z: 0}
   objsToMove:
@@ -17573,7 +17573,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4527173372948702426, guid: 2c266607974283d46b7ee384f26a6dba, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 01e207cd73eac35489f631951fc56392, type: 3}
+  m_Resource: {fileID: 8300000, guid: 2de5556a6e0f7da4b967fc0cbd6ce767, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
