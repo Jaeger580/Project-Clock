@@ -14436,15 +14436,15 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 3.2009416
-      outSlope: 3.2009416
+      inSlope: -0.13895443
+      outSlope: -0.13895443
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.010007608
     - serializedVersion: 3
-      time: 0.436951
-      value: 0.52478004
+      time: 0.50241125
+      value: 0.7
       inSlope: -0.03826174
       outSlope: -0.03826174
       tangentMode: 0
@@ -14452,27 +14452,27 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.82549363
     - serializedVersion: 3
-      time: 0.67848414
-      value: 0.016552676
-      inSlope: -3.553166
-      outSlope: -0.051483233
-      tangentMode: 65
+      time: 0.7561469
+      value: 0.11893811
+      inSlope: -1.8938023
+      outSlope: -1.8938023
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.011546017
+      outSlope: 0.011546017
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.36996606
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  duration: 2.702
+  duration: 4.212
   loopType: 1
   newLocalRotation: {x: 0, y: -90, z: 0}
   objsToMove:
@@ -14503,43 +14503,43 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 3.2009416
-      outSlope: 3.2009416
+      inSlope: -0.13895443
+      outSlope: -0.13895443
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.010007608
     - serializedVersion: 3
-      time: 0.21200594
-      value: 0.57443976
-      inSlope: 0.47791913
-      outSlope: 0.47791913
+      time: 0.50241125
+      value: 0.7
+      inSlope: -0.03826174
+      outSlope: -0.03826174
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.82549363
     - serializedVersion: 3
-      time: 0.5
-      value: 0
-      inSlope: -3.553166
-      outSlope: 0
-      tangentMode: 65
+      time: 0.7561469
+      value: 0.11893811
+      inSlope: -1.8938023
+      outSlope: -1.8938023
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.011546017
+      outSlope: 0.011546017
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.36996606
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  duration: 1.51
+  duration: 4.212
   loopType: 1
   newLocalRotation: {x: 0, y: -90, z: 0}
   objsToMove:
@@ -17584,9 +17584,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
