@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,6 +11,8 @@ public class UI_CamButtonHandler : MonoBehaviour
     public UIDocument UIDoc => uidoc;
     [SerializeField] private VisualTreeAsset camListButtonPrefab;
     [SerializeField] private GameEvent goToCamEvent;
+    [SerializeField] private GameEvent onHoverEvent;
+
 
     private void Start()
     {
@@ -36,6 +39,9 @@ public class UI_CamButtonHandler : MonoBehaviour
             var template = camListButtonPrefab.CloneTree();
             var btn = template.Q<Button>();
             btn.clicked += () => CameraManager.instance.SelectCam(man.CamIndex);
+
+            btn.RegisterCallback<PointerEnterEvent>(OnMouseOver);
+
             btn.text = man.HumanReadableName();
             camList.Add(btn);
             //if (!btnIndexes.TryAdd(man.CamIndex, btn))
@@ -46,6 +52,19 @@ public class UI_CamButtonHandler : MonoBehaviour
                 btn.RemoveFromClassList("camListButtonSelected");
                 btn.Blur();
             }
+
         }
     }
+
+    // When player hovers over a button, trigger the event that will play sound.
+    private void OnMouseOver(PointerEnterEvent evt) 
+    {
+        Debug.Log("DJ, play that track!");
+        onHoverEvent.Trigger();
+    }
+
+    //private void OnMouseLeave()
+    //{
+
+    //}
 }

@@ -28,6 +28,10 @@ public class CameraManager : MonoBehaviour, IInteractable
     private GameObject cameraHUD;
 
     [SerializeField] private GameEvent goToCamEvent;
+    [SerializeField] private GameEvent camHoverEvent;
+    [SerializeField] private AudioSource audSource;
+    [SerializeField] private AudioClip clickSound;
+    [SerializeField] private AudioClip hoverSound;
 
     private void Awake()
     {
@@ -35,6 +39,13 @@ public class CameraManager : MonoBehaviour, IInteractable
         if (instance != null)
             Destroy(instance);
         instance = this;
+    }
+
+    private void Start()
+    {
+        var listener = GameEventListener.AddGeneralListener(gameObject, camHoverEvent);
+        listener.Response = new();
+        listener.Response.AddListener(() => PlayHoverSound());
     }
 
     public void Interact(object interactor) 
@@ -129,6 +140,10 @@ public class CameraManager : MonoBehaviour, IInteractable
         camIndex = camDex;
         roomCameras[camDex].enabled = true;
         foreach (var cam in roomCameras) if (cam != roomCameras[camDex]) cam.enabled = false;
+
+        // Play on click sound
+        audSource.PlayOneShot(clickSound);
+
         goToCamEvent?.Trigger(camDex);
     }
 
@@ -138,5 +153,10 @@ public class CameraManager : MonoBehaviour, IInteractable
         {
             ExitCamera();
         }
+    }
+
+    private void PlayHoverSound() 
+    {
+        audSource.PlayOneShot(hoverSound);
     }
 }
