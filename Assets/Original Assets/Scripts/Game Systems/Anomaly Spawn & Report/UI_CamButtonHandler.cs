@@ -40,7 +40,7 @@ public class UI_CamButtonHandler : MonoBehaviour
             var btn = template.Q<Button>();
             btn.clicked += () => CameraManager.instance.SelectCam(man.CamIndex);
 
-            btn.RegisterCallback<PointerEnterEvent>(OnMouseOver);
+            btn.RegisterCallback<PointerEnterEvent>(MouseHover);
 
             btn.text = man.HumanReadableName();
             camList.Add(btn);
@@ -57,14 +57,9 @@ public class UI_CamButtonHandler : MonoBehaviour
     }
 
     // When player hovers over a button, trigger the event that will play sound.
-    private void OnMouseOver(PointerEnterEvent evt) 
+    private void MouseHover(PointerEnterEvent evt) 
     {
         Debug.Log("DJ, play that track!");
         onHoverEvent.Trigger();
     }
-
-    //private void OnMouseLeave()
-    //{
-
-    //}
 }
