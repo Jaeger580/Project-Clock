@@ -5672,6 +5672,80 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7944432790586396481, guid: 40a09cb736fbff147ac812458568dabf, type: 3}
+--- !u!1001 &817101943
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2272988967967726672, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_text
+      value: Cameras
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272988967967726672, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_fontSize
+      value: 23.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.985
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735205936001692925, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_text
+      value: "Cameras can be used to view rooms remotely, but they cannot see everything!\r\n\nControls:
+        \r\nF - Enter \r\nEsc - Exit\r\nA/D + Mouse - Cycle"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735205936001692925, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_fontSize
+      value: 10.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862490013103222812, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
+      propertyPath: m_Name
+      value: Board One (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
 --- !u!1 &819347271
 GameObject:
   m_ObjectHideFlags: 0
@@ -11403,82 +11477,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 61172579025587351, guid: 36307d6dc5c06934eba5d8b24b3abc02, type: 3}
   m_PrefabInstance: {fileID: 1798046464}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1801818097
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2272988967967726672, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_text
-      value: Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 2272988967967726672, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_fontSize
-      value: 23.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5907488841749225389, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6735205936001692925, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_text
-      value: 'Interact with the camera using "e", (the grey box) .
-
-        In camera
-        view, you can swap cameras with A/D or by clicking on the list.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6735205936001692925, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_fontSize
-      value: 16.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 8862490013103222812, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
-      propertyPath: m_Name
-      value: Board One (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1148a82719da0ba4f9dc7e58b85c2fae, type: 3}
 --- !u!64 &1808953963
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13824,4 +13822,4 @@ SceneRoots:
   - {fileID: 1862081433}
   - {fileID: 7156859492115945025}
   - {fileID: 736478640}
-  - {fileID: 1801818097}
+  - {fileID: 817101943}

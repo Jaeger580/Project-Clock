@@ -656,6 +656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Position
   data: {fileID: 11400000, guid: c468a021afc237640ad410b1d4b48e38, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   gradualCurve:
     serializedVersion: 2
     m_Curve:
@@ -887,6 +888,68 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2532444, y: 0.32078806, z: 0.66967416}
   m_Center: {x: -0.0000009536743, y: 0.161451, z: -0.00000002980233}
+--- !u!1001 &198114532
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 589720588}
+    m_Modifications:
+    - target: {fileID: 2939163910951423161, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939163910951423161, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939163910951423161, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939163910951423161, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939163910951423161, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939163910951423161, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939163910951423161, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939163910951423161, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939163910951423161, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939163910951423161, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238105528765543546, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+      propertyPath: m_Name
+      value: The Festering
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+--- !u!4 &198114533 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2939163910951423161, guid: 59164b5f9cb52bf43a26b1fdedea8006, type: 3}
+  m_PrefabInstance: {fileID: 198114532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &220814043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,7 +2636,7 @@ GameObject:
   - component: {fileID: 589720589}
   - component: {fileID: 589720592}
   - component: {fileID: 589720591}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Anomaly Room Manager (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2598,6 +2661,7 @@ Transform:
   - {fileID: 761212519}
   - {fileID: 1446098909}
   - {fileID: 113589266}
+  - {fileID: 198114533}
   m_Father: {fileID: 734424649}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &589720589
@@ -2944,6 +3008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Toggle
   data: {fileID: 11400000, guid: 507bbfdba39bb470384943aa89b112cd, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   objsToToggleOn: []
   objsToToggleOff:
   - {fileID: 1109378791}
@@ -3120,6 +3185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Toggle
   data: {fileID: 11400000, guid: 3cfcb0d3bfa89a34581830ec1c244a88, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   objsToToggleOn:
   - {fileID: 527530727}
   objsToToggleOff: []
@@ -4031,6 +4097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Size
   data: {fileID: 11400000, guid: 5900ac86ccb5e874988660b492573a4b, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   gradualCurve:
     serializedVersion: 2
     m_Curve:
@@ -4842,6 +4909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Toggle
   data: {fileID: 11400000, guid: 9e2cd9e3c77614909aeb4bd471a048e2, type: 2}
   anomalyEnabled: 0
+  audioSource: {fileID: 0}
   objsToToggleOn:
   - {fileID: 224464661}
   objsToToggleOff:
