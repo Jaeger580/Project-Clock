@@ -223,4 +223,14 @@ public class AnomalyCentralController : MonoBehaviour
     {//so fucking dirty dude
         return CameraManager.instance.PlayerInCams && CameraManager.instance.CamIndex == room.CamIndex || room.PlayerInRoom(playerTrans);
     }
+
+    // End the game if the player is killed by an entity
+    public void TriggerAltEnd()
+    {
+        if (gameOver) return;
+        StopAllCoroutines();
+        gameOver = true;
+        print("GAME OVER, CAUGHT BY AN ENTITY.");
+        SceneManager.LoadScene("Loss Alt");
+    }
 }

@@ -15284,7 +15284,7 @@ GameObject:
   - component: {fileID: 1218321447}
   - component: {fileID: 1218321449}
   - component: {fileID: 1218321448}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Anomaly Room Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
