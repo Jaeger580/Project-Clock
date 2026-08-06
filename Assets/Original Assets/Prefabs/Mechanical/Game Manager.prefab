@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 297792587402505567}
-  - component: {fileID: 7987244494155318052}
+  - component: {fileID: 3358271788759494278}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7987244494155318052
+--- !u!114 &3358271788759494278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,12 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 139768357703312967}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d17f060845885a4fb266fd9b7c81e80, type: 3}
+  m_Script: {fileID: 11500000, guid: ed6806f113535084a9dd2639d538d561, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShiftTimer
-  digiClock: {fileID: 0}
-  startHour: 22
-  startMinute: 0
-  endHour: 6
-  endMinute: 0
-  timeScale: 48
+  m_EditorClassIdentifier: Assembly-CSharp::FPSLimit
+  frameRateTarget: 60
