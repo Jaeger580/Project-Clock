@@ -14,6 +14,9 @@ public class AnomalyResolver : MonoBehaviour
 
     [SerializeField, ReadOnly] private LayerMask anomalyLayer;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip successAC, failureAC, processAC;
+
     [Header("Processing Feedback")]
     [SerializeField] private Canvas processingCanvas;
     [SerializeField] private Image processingBar;
@@ -54,6 +57,7 @@ public class AnomalyResolver : MonoBehaviour
         instance = this;
 
         anomalyLayer = LayerMask.GetMask("Anomaly");
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void SubscribeToResolver(AnomalyTagger tagger)
@@ -157,6 +161,10 @@ public class AnomalyResolver : MonoBehaviour
         float journey = 0f;
         float destination = detectorSpawnCooldown;
         processingCanvas.enabled = true;
+
+        // Play processing sound
+        audioSource.PlayOneShot(processAC);
+
         while (journey <= destination)
         {
             journey += Time.deltaTime;
@@ -175,6 +183,9 @@ public class AnomalyResolver : MonoBehaviour
 
         if (anomalies.Count <= 0)
         {
+            // Failed Sound
+            audioSource.PlayOneShot(failureAC);
+
             noAnomaliesFoundCanvas.enabled = true;
             float journey = 0f;
             float destination = displayTime;
@@ -189,11 +200,16 @@ public class AnomalyResolver : MonoBehaviour
 
                 yield return null;
             }
+            
             noAnomaliesFoundCanvas.enabled = false;
 
             yield break;
         }
         //here's where we'd turn off the lights.... IF WE HAD SOME
+
+        // Success sound
+        audioSource.PlayOneShot(successAC);
+
         anomaliesFoundCanvas.enabled = true;
         yield return null;  //one-frame delay before turning everything off
         foreach (var anom in anomalies)
@@ -202,5 +218,7 @@ public class AnomalyResolver : MonoBehaviour
         }
         yield return new WaitForSeconds(resolutionDelay);
         anomaliesFoundCanvas.enabled = false;
+
+        
     }
 }
