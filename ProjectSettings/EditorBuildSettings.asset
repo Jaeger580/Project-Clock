@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Original Assets/Scenes/Room Scenes/Room 2.unity
     guid: 43340d5e2aba847b2bab9cde88cc7431
   - enabled: 1
+    path: Assets/Original Assets/Scenes/Room Scenes/Room 3.unity
+    guid: b09469cc9c3414f9e8b14da0830489ee
+  - enabled: 1
     path: Assets/Original Assets/Scenes/UI&Menus/Loss.unity
     guid: d90d3cc3dcb5b804d99c780741c3fd70
   - enabled: 1
