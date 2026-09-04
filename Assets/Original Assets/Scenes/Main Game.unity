@@ -12751,18 +12751,6 @@ PrefabInstance:
       propertyPath: playerTrans
       value: 
       objectReference: {fileID: 6454685658537911956}
-    - target: {fileID: 7279892281648946553, guid: 8dc8af27da1f5c44a93e28266c75e606, type: 3}
-      propertyPath: maxLoadedRooms
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7279892281648946553, guid: 8dc8af27da1f5c44a93e28266c75e606, type: 3}
-      propertyPath: sceneBuildIndices.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7279892281648946553, guid: 8dc8af27da1f5c44a93e28266c75e606, type: 3}
-      propertyPath: 'sceneBuildIndices.Array.data[2]'
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
