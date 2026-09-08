@@ -500,6 +500,82 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72489699}
   m_Mesh: {fileID: 9097391836688737549, guid: db223536f982ab849a50fa19569346c2, type: 3}
+--- !u!1 &82286912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82286913}
+  - component: {fileID: 82286914}
+  m_Layer: 2
+  m_Name: Heater Scale
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &82286913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82286912}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.01, y: -1.6, z: -4.79}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 589720588}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &82286914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82286912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7db6b47cc1c4b1a98ad88b1fcffdd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Size
+  data: {fileID: 11400000, guid: 7210a0c4f72498141b2cf94cbdd42e37, type: 2}
+  anomalyEnabled: 0
+  audioSource: {fileID: 0}
+  gradualCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 0.5
+  loopType: 0
+  intendedScale: {x: 0.5, y: 0.5, z: 0.5}
+  objsToChange:
+  - {fileID: 1958338509}
 --- !u!1 &98407916
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,6 +2382,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 307669732}
+  - {fileID: 82286913}
   m_Father: {fileID: 734424649}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &589720589
@@ -7399,8 +7476,9 @@ GameObject:
   - component: {fileID: 1958338509}
   - component: {fileID: 1958338511}
   - component: {fileID: 1958338510}
+  - component: {fileID: 1958338513}
   - component: {fileID: 1958338512}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Heater_AA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7499,6 +7577,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6710751, y: 0.97105205, z: 0.26211405}
   m_Center: {x: -0.0034295022, y: 0.485142, z: 0.0000009164214}
+--- !u!114 &1958338513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958338508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241085f4d5834c76ad7e54cc418bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnomalyHandlerPassthrough
+  parentAnomaly: {fileID: 82286914}
 --- !u!1001 &1996649468
 PrefabInstance:
   m_ObjectHideFlags: 0
