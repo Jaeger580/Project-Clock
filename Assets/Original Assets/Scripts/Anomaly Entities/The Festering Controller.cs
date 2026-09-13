@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TheFesteringController : MonoBehaviour
@@ -19,6 +20,8 @@ public class TheFesteringController : MonoBehaviour
     private LayerMask layerMask;
     public bool isActive;
 
+    [SerializeField]
+    AudioSource headAudio;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,7 +50,9 @@ public class TheFesteringController : MonoBehaviour
             {
                 if (hit.collider.tag.Equals("Player")) 
                 {
+                    // Player has been seen
                     animator.SetBool("In Range", true);
+                    StartAudio();
                 }
             }
             else 
@@ -64,6 +69,15 @@ public class TheFesteringController : MonoBehaviour
             var targetPos = new Vector3(playerTransform.position.x, playerTransform.position.y + 1, playerTransform.position.z);
 
             rootTransform.position = Vector3.MoveTowards(rootTransform.position, targetPos, speed * Time.deltaTime);
+        }
+    }
+
+    private void StartAudio() 
+    {
+        // If we aren't already playing, play
+        if (!headAudio.isPlaying)
+        {
+            headAudio.Play();
         }
     }
 }
