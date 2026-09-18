@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 // Terrible code for setting volume, but works for now.
@@ -15,6 +16,12 @@ public class SoundSlider : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        var prefValue = PlayerPrefs.GetFloat(soundMixer.ToString());
+        // if player pref exist, load it
+        if (prefValue != 0.0f)
+        {
+            SetVolume(prefValue);
+        }
     }
 
     private void SetVolume(float volume) 
