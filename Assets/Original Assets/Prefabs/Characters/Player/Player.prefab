@@ -1246,7 +1246,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundSlider
   soundSlider: {fileID: 6724062385718289446}
-  soundMixer: {fileID: 24300002, guid: 2c266607974283d46b7ee384f26a6dba, type: 2}
+  soundMixer: {fileID: 24100000, guid: 2c266607974283d46b7ee384f26a6dba, type: 2}
+  groupName: Master
 --- !u!114 &8126304566060346963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1260,7 +1261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundSlider
   soundSlider: {fileID: 789754978288344848}
-  soundMixer: {fileID: -4527173372948702426, guid: 2c266607974283d46b7ee384f26a6dba, type: 2}
+  soundMixer: {fileID: 24100000, guid: 2c266607974283d46b7ee384f26a6dba, type: 2}
+  groupName: SFX
 --- !u!114 &345188194204496680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1274,7 +1276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundSlider
   soundSlider: {fileID: 1673855533078255746}
-  soundMixer: {fileID: 6460769912685645752, guid: 2c266607974283d46b7ee384f26a6dba, type: 2}
+  soundMixer: {fileID: 24100000, guid: 2c266607974283d46b7ee384f26a6dba, type: 2}
+  groupName: Music
 --- !u!1 &2278006027603134514
 GameObject:
   m_ObjectHideFlags: 0

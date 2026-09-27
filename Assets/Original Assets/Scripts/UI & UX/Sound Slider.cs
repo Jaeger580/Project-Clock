@@ -11,12 +11,14 @@ using UnityEngine.UI;
 public class SoundSlider : MonoBehaviour
 {
     [SerializeField] Slider soundSlider;
-    [SerializeField] AudioMixerGroup soundMixer;
+    [SerializeField] AudioMixer soundMixer;
+    [SerializeField] string groupName;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        var prefValue = PlayerPrefs.GetFloat(soundMixer.ToString());
+        var prefValue = PlayerPrefs.GetFloat(groupName);
         // if player pref exist, load it
         if (prefValue != 0.0f)
         {
@@ -32,8 +34,8 @@ public class SoundSlider : MonoBehaviour
         }
 
         RefreshSlider(volume);
-        PlayerPrefs.SetFloat(soundMixer.ToString(), volume);
-        soundMixer.audioMixer.SetFloat(soundMixer.ToString(), Mathf.Log10(volume / 100) * 20);
+        PlayerPrefs.SetFloat(groupName, volume);
+        soundMixer.SetFloat(groupName, Mathf.Log10(volume / 100) * 20);
     }
 
     public void SetVolumeFromSlider() 
