@@ -104,6 +104,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Spawn Aberration",
+                    "type": "Button",
+                    "id": "bb1d6a2a-e10a-4953-be90-4fcac08852c2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "List Aberrations",
+                    "type": "Button",
+                    "id": "4854bd6d-2c78-4a30-a62a-e34f458107cb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -456,6 +474,28 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Alt Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a9285a6-90aa-4a33-8f12-8cf9c3ada927",
+                    "path": "<Keyboard>/minus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spawn Aberration",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9979777c-eaa8-4e1b-a597-5811794f6a92",
+                    "path": "<Keyboard>/equals",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "List Aberrations",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

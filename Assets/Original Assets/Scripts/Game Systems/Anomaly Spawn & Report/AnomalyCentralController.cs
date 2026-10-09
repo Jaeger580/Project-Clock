@@ -2,6 +2,9 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using System.Linq;
+using UnityEngine.InputSystem;
 
 public class AnomalyCentralController : MonoBehaviour
 {//controls WHEN and WHERE anomalies spawn (needs access to player position prolly)
@@ -37,6 +40,10 @@ public class AnomalyCentralController : MonoBehaviour
     private float graceTimer;
 
     [SerializeField, ReadOnly] private int currentlySpawned;
+
+    // Debug Variable
+    [SerializeField] private List<string> activeAberrations = new List<string>();
+    [SerializeField] private TextMeshProUGUI aberrationListText;
 
     private bool forcingSpeedUp = false;
 
@@ -139,10 +146,13 @@ public class AnomalyCentralController : MonoBehaviour
     }
 
     [ContextMenu("Jump to Next Anomaly")]
-    public void JumpToNextAnomaly()
+    public void JumpToNextAnomaly(InputAction.CallbackContext context)
     {
-        if (!forcingSpeedUp) forcingSpeedUp = true;
-        Time.timeScale = 100f;
+        if (context.started) 
+        {
+            if (!forcingSpeedUp) forcingSpeedUp = true;
+            Time.timeScale = 100f;
+        }
     }
 
     private IEnumerator SpawnRoutine()
@@ -232,5 +242,33 @@ public class AnomalyCentralController : MonoBehaviour
         gameOver = true;
         print("GAME OVER, CAUGHT BY AN ENTITY.");
         SceneManager.LoadScene("Loss Alt");
+    }
+
+    public void AddActiveAberrations(string aberrationInfo) 
+    {
+        activeAberrations.Add(aberrationInfo);
+        UpdateAberrationListText();
+    }
+
+    public void RemoveActiveAberrations(string aberrationInfo)
+    {
+        activeAberrations.Remove(aberrationInfo);
+        UpdateAberrationListText();
+    }
+
+    public void UpdateAberrationListText() 
+    {
+        string text = "";
+
+        foreach (string abName in activeAberrations) 
+        {
+            Debug.Log(abName);
+            text += "\n" + abName;
+        }
+
+        if (aberrationListText.IsActive()) 
+        {
+            aberrationListText.text = text;
+        }
     }
 }
