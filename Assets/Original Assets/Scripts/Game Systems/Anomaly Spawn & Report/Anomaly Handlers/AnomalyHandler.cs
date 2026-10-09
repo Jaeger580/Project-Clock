@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum LoopType { NONE, REPEAT, PINGPONG}
 
@@ -10,6 +12,9 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged, DebugTools.IDebug
     public AnomalyData Data => data;
     [SerializeField] protected bool anomalyEnabled;
     public bool AnomalyEnabled => anomalyEnabled;
+
+    // Debug Tool
+    private string activeAberration;
 
     public List<Tag> Tags()
     {
@@ -72,6 +77,9 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged, DebugTools.IDebug
         playAudio();
 
         print($"DEBUG: {HumanReadableName()} has been spawned in {roomName}.");
+
+        activeAberration = ($"DEBUG: {HumanReadableName()} has been spawned in {roomName}.");
+        AnomalyCentralController.Instance.AddActiveAberrations(activeAberration);
     }
 
     [ContextMenu("Disable Anomaly")]
@@ -81,6 +89,7 @@ abstract public class AnomalyHandler : MonoBehaviour, ITagged, DebugTools.IDebug
         if (data == null) return;
         data.OnAnomalyFixed?.Invoke();
 
+        AnomalyCentralController.Instance.RemoveActiveAberrations(activeAberration);
         //Stop and reset audio
         resetAudio();
     }
