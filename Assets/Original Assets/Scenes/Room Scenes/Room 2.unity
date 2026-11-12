@@ -23366,7 +23366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25cc679c01970402ebea1297ef7fd219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Anomaly_Composite
-  data: {fileID: 11400000, guid: 0a015488fb8f64a50a65f245cccbc044, type: 2}
+  data: {fileID: 11400000, guid: 162f0b67b856043719bb52de9574fe51, type: 2}
   anomalyEnabled: 0
   audioSource: {fileID: 0}
   underlyingHandlers:
